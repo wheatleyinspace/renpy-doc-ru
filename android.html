@@ -1,0 +1,528 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Android &mdash; Ren&#39;Py Documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c659a740" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+    <link rel="canonical" href="https://www.renpy.org/doc/html/android.html" />
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=ea47c46f"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="iOS" href="ios.html" />
+    <link rel="prev" title="Building Distributions" href="build.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+<a href="https://www.renpy.org/" style="margin-bottom: 0">Ren'Py Visual Novel Engine
+<img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
+</a>
+
+<a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gui.html">GUI Customization Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">The Ren'Py Language</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="language_basics.html">Language Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="label.html">Labels &amp; Control Flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dialogue.html">Dialogue and Narration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="displaying_images.html">Displaying Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="menus.html">In-Game Menus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">Python Statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conditional.html">Conditional Statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio_filters.html">Audio Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="movie.html">Movie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="voice.html">Voice</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Text, Displayables, Transforms, and Transitions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="text.html">Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation.html">Translation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="displayables.html">Displayables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transforms.html">Transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transform_properties.html">Transform Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="live2d.html">Live2D Cubism</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Customizing Ren'Py</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="style.html">Styles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="style_properties.html">Style Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screens.html">Screens and Screen Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screen_actions.html">Screen Actions, Values, and Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screen_special.html">Special Screen Names</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screen_optimization.html">Screen Language Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">Configuration Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preferences.html">Preference Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="store_variables.html">Store Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mouse.html">Custom Mouse Cursors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textshaders.html">Text Shaders</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="launcher.html">Launcher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer_tools.html">Developer Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="director.html">Interactive Director</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Other Functionality</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="nvl_mode.html">NVL-Mode Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bubble.html">Speech Bubbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input.html">Text Input</a></li>
+<li class="toctree-l1"><a class="reference internal" href="side_image.html">Side Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rooms.html">Image Gallery, Music Room, and Replay Actions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drag_drop.html">Drag and Drop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sprites.html">Sprites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="keymap.html">Customizing the Keymap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="achievement.html">Achievements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">Dialogue History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multiple.html">Multiple Character Dialogue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="splashscreen_presplash.html">Splashscreen and Presplash</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lifecycle.html">Lifecycle of a Ren'Py game</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python and Ren'Py</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="statement_equivalents.html">Statement Equivalents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="save_load_rollback.html">Saving, Loading, and Rollback</a></li>
+<li class="toctree-l1"><a class="reference internal" href="persistent.html">Persistent Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gui_advanced.html">Advanced GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screen_python.html">Screens and Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cdd.html">Creator-Defined Displayables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cds.html">Creator-Defined Statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom_text_tags.html">Custom Text Tags</a></li>
+<li class="toctree-l1"><a class="reference internal" href="character_callbacks.html">Character Callbacks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file_python.html">File Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="color_class.html">Color Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matrix.html">Matrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model.html">Model-Based Rendering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other.html">Other Functions and Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ren_py.html">_ren.py Files - Ren'Py in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fetch.html">HTTPS/HTTP Fetch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshot.html">Screenshots</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Building, Updating, and Other Platforms</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="build.html">Building Distributions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Android</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Необходимый текст</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#android-platform-differences">Различия платформ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4"><strong>Тестирование и эмуляция</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#android-building">Создание Android-приложений</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id6">Шаг 1: Установка зависимостей</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#android-sdk"><strong>Шаг 2: Настройка Android SDK и окружения разработки</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7"><strong>Шаг 3: Генерация ключей</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8"><strong>Шаг 4: Настройка вашей игры</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9"><strong>Шаг 5: Создание и установка пакета</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id10">Очень большие игры</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#presplash">Иконки и изображения Presplash</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id11">Иконки</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#android-presplash">Presplash</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pyjnius">Pyjnius</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#android-permissions">Разрешения</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ios.html">iOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="web.html">Web / HTML5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chromeos.html">Chrome OS/Chromebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raspi.html">Raspberry Pi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iap.html">In-App Purchasing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updater.html">HTTPS/HTTP Updater</a></li>
+<li class="toctree-l1"><a class="reference internal" href="downloader.html">Downloader for Large Games on Mobile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gesture.html">Gestures</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">End-User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="security.html">Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="problems.html">Dealing with Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="environment_variables.html">Environment Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="self_voicing.html">Self-Voicing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Library and Tool Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="template_projects.html">Template Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli.html">Command Line Interface</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Engine Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="editor.html">Text Editor Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="skins.html">Skins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translating_renpy.html">Translating Ren'Py</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Changes, License, and Credits</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog (Ren'Py 7.x-)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog6.html">Changelog (Ren'Py 6.11 - 6.99)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incompatible.html">Incompatible Changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sponsors.html">Ren'Py Development Sponsors</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Ren'Py Visual Novel Engine</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Android</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/renpy/renpy/blob/master/sphinx/source/android.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="android">
+<span id="id1"></span><h1>Android<a class="headerlink" href="#android" title="Link to this heading"></a></h1>
+<p>Ren'Py поддерживает устройства, работающие на операционной системе Android,
+такие как смартфоны и планшеты.
+Хотя эти устройства не поддерживают 100% функциональности Ren'Py,
+с минимальными изменениями визуальные новеллы можно упаковать и перенести на эти устройства.</p>
+<p>RAPT – инструмент упаковки Ren'Py для Android – это программа, загружаемая отдельно
+от Ren'Py, которая создает Android-пакет для тестирования или выпуска.</p>
+<p>Ren'Py работает на Android 5.0 и более поздних версиях,
+хотя у более старых устройств могут не быть ресурсов
+для правильной работы крупных игр.</p>
+<section id="id2">
+<h2>Необходимый текст<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<p>Некоторые из библиотек, используемых RAPT, лицензированы на условиях
+GNU Lesser/Library General Public License. Вам нужно будет соблюдать
+условия этой лицензии для распространения Ren'Py. Мы считаем, что
+добавление следующего текста в описание вашего приложения будет
+достаточным, но рекомендуется проконсультироваться с юристом, чтобы быть уверенным.</p>
+<blockquote>
+<div><p>Эта программа содержит свободное ПО, лицензированное по нескольким лицензиям,
+включая GNU Lesser General Public License. Полный список программного обеспечения
+доступен на <a class="reference external" href="https://www.renpy.org/l/license/">https://www.renpy.org/l/license/</a>.</p>
+</div></blockquote>
+<hr class="docutils" />
+<p>Когда игра Ren'Py запущена на Android, следующие клавиши работают:</p>
+<dl class="simple">
+<dt><cite>Домой</cite></dt><dd><p>Возвращает на главный экран Android, приостанавливая игру Ren'Py.
+В процессе приостановки Ren'Py автоматически сохраняет игру.
+Если необходимо, сохранение будет автоматически загружено при возвращении пользователя в игру.</p>
+</dd>
+<dt><cite>Увеличение громкости</cite>, <cite>Уменьшение громкости</cite></dt><dd><p>Управляют медиагромкостью Android.</p>
+</dd>
+</dl>
+</section>
+<section id="android-platform-differences">
+<span id="id3"></span><h2>Различия платформ<a class="headerlink" href="#android-platform-differences" title="Link to this heading"></a></h2>
+<p>Существует множество важных различий между платформой Android,
+основанной на сенсорном экране, и платформами, использующими мышь,
+которые поддерживает Ren'Py. Изменения, вызванные программным обеспечением
+и аппаратным обеспечением Android, следующие:</p>
+<ul class="simple">
+<li><p>Сенсорный экран обрабатывается как мышь. Однако он будет генерировать</p></li>
+</ul>
+<p>события мыши только тогда, когда пользователь активно касается экрана.</p>
+<ul class="simple">
+<li><p>Ввод текста (например, с помощью <code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.input()</span></code>) ограничен методами ввода,</p></li>
+</ul>
+<p>которые не требуют завершений для работы. (Западные языки, вероятно, работают,
+в то время как другие языки могут не поддерживаться.)</p>
+<p>Кроме того, могут потребоваться несколько изменений, связанные с особенностями использования:</p>
+<ul class="simple">
+<li><p>Поскольку смартфоны на Android могут быть меньше компьютерных мониторов,</p></li>
+</ul>
+<p>возможно, потребуется увеличить размер текста.</p>
+<ul class="simple">
+<li><p>Поскольку сенсорный ввод менее точен, чем ввод с помощью мыши,</p></li>
+</ul>
+<p>кнопки, управляемые с помощью сенсорного экрана, должны быть больше, чем кнопки для ввода с мышью.</p>
+<p>Для того чтобы помочь вам адаптироваться к этим различиям,
+Ren'Py для Android автоматически выбирает варианты экранов в зависимости от размера и возможностей экрана устройства.
+Подробнее см. в разделе <a class="reference internal" href="screens.html#screen-variants"><span class="std std-ref">Screen Variants</span></a>.</p>
+<p>Из-за политики безопасности мобильных устройств функциональность
+MultiPersistent ограничена только этой игрой и её обновлениями, т.е. она не может быть использована в другой игре.</p>
+</section>
+<section id="id4">
+<h2><strong>Тестирование и эмуляция</strong><a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<p>Для целей тестирования Ren'Py поддерживает три режима эмуляции Android.
+Эти режимы доступны на экране Android в лаунчере.</p>
+<dl>
+<dt><strong>Телефон</strong></dt><dd><p>Этот режим эмулирует Android-смартфон.
+Эмуляция касаний выполняется с помощью мыши,
+но только когда кнопка мыши нажата.
+Клавиша Escape соответствует кнопке меню, а Page Up — кнопке &quot;Назад&quot;.</p>
+</dd>
+<dt><strong>Планшет</strong></dt><dd><p>Этот режим эмулирует Android-планшет.
+Эмуляция касаний выполняется с помощью мыши,
+но только когда кнопка мыши нажата.
+Клавиша Esc соответствует кнопке меню, а Page Up — кнопке &quot;Назад&quot;.</p>
+</dd>
+<dt><strong>Телевизор</strong></dt><dd><p>Этот режим эмулирует Android-устройство для телевизора.
+Клавиатура отображает действия, которые можно выполнять с пульта или контроллера,
+при этом стрелки используются для навигации.
+Клавиша &quot;Enter&quot; соответствует кнопке &quot;Выбрать&quot;,
+клавиша Esc — меню, а Page Up — кнопке &quot;Назад&quot;.</p>
+<p>Этот режим также отображает наложение,
+показывающее &quot;небезопасную&quot; зону для телевизора.
+Контент, находящийся в этой зоне,
+может не отображаться на всех телевизорах.</p>
+</dd>
+</dl>
+<p>Хотя эти эмуляторы можно использовать для быстрого тестирования вашего проекта,
+лучше проводить тестирование на реальном оборудовании.
+Эмуляторы не решают некоторые проблемы, связанные с человеческим фактором, такие как размер пальцев пользователя.</p>
+</section>
+<section id="android-building">
+<span id="id5"></span><h2>Создание Android-приложений<a class="headerlink" href="#android-building" title="Link to this heading"></a></h2>
+<p>Ren'Py содержит инструменты, которые помогут вам использовать упаковочный подход к разработке Android-игр. В этом подходе вы будете использовать ПК для создания Android-пакета и загрузки его на ваше устройство. Затем вы сможете запустить игру как любое Android-приложение. Когда все будет работать корректно, вы можете загрузить созданный пакет в Google Play и другие магазины приложений.</p>
+<p>Создание Android-приложения состоит из четырех шагов:</p>
+<ol class="arabic simple">
+<li><p>Скачайте и установите Java Development Kit и драйвера Android USB (ссылки приведены ниже).</p></li>
+<li><p>Используйте лаунчер для установки Android SDK.</p></li>
+<li><p>Используйте лаунчер для генерации ключей.</p></li>
+<li><p>Используйте лаунчер для настройки сборки для Android.</p></li>
+<li><p>Используйте лаунчер для создания Android-приложения.</p></li>
+</ol>
+<p>После выполнения этих шагов у вас будет готовый для запуска Android-пакет. Шаг 3 нужно выполнять только тогда, когда вы решите внести изменения в конфигурацию игры или когда настраиваете новую игру; шаг 4 нужно выполнять чаще всего, когда вам нужно создать новый билд игры.</p>
+<p>---</p>
+<section id="id6">
+<h3>Шаг 1: Установка зависимостей<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
+<p>Есть три вещи, которые вам нужно будет скачать и установить вручную, прежде чем вы сможете создавать пакеты:</p>
+<p><strong>Java Development Kit.</strong>
+Java Development Kit (JDK) содержит несколько инструментов,
+которые используются RAPT, включая инструменты для генерации ключей
+и подписи пакетов. Его можно скачать по следующим ссылкам:</p>
+<blockquote>
+<div><p><a class="reference external" href="https://adoptopenjdk.net/releases.html">https://adoptopenjdk.net/releases.html</a>
+<a class="reference external" href="https://adoptium.net/temurin/releases/?version=21">https://adoptium.net/temurin/releases/?version=21</a></p>
+</div></blockquote>
+<p>Вам потребуется версия 21 JDK.</p>
+<p>Обратите внимание, что JDK, предназначенный для разработчиков, отличается от JRE, предназначенного для пользователей, и вам нужен именно JDK для создания Android-пакетов.</p>
+<p><strong>Android-устройство.</strong>
+Также вам нужно будет настроить ваше устройство для разработки. Включите режим разработчика на вашем устройстве и настройте компьютер для Android-разработки. Инструкции по настройке компьютера можно найти здесь:</p>
+<blockquote>
+<div><p><a class="reference external" href="https://developer.android.com/studio/run/device">https://developer.android.com/studio/run/device</a></p>
+</div></blockquote>
+<p>Вы также можете запустить ваше приложение в образе x86_64 на Android-эмуляторе (обратите внимание, что x86 не поддерживается). Настройка эмулятора выходит за рамки этого документа.</p>
+<p>---</p>
+</section>
+<section id="android-sdk">
+<h3><strong>Шаг 2: Настройка Android SDK и окружения разработки</strong><a class="headerlink" href="#android-sdk" title="Link to this heading"></a></h3>
+<p>Следующий шаг — настроить Android SDK и остальную часть вашего окружения для разработки. Этот шаг выполнит следующие действия:</p>
+<ul class="simple">
+<li><p>Проверит, что JDK установлен правильно.</p></li>
+<li><p>Установит Android SDK.</p></li>
+<li><p>Использует Android SDK для установки соответствующих пакетов для разработки.</p></li>
+</ul>
+<p>Для выполнения этого шага требуется доступ в Интернет.</p>
+<p>Для выполнения шага выберите &quot;Install SDK&quot; на экране Android в лаунчере Ren'Py. RAPT будет сообщать, что он делает. Он также предложит вам принять лицензии.</p>
+<p>Если вы не хотите скачивать SDK каждый раз, вы можете создать файл с именем sdk.txt, содержащий одну строку с путем к уже установленному SDK.</p>
+<p>---</p>
+</section>
+<section id="id7">
+<h3><strong>Шаг 3: Генерация ключей</strong><a class="headerlink" href="#id7" title="Link to this heading"></a></h3>
+<p>После этого выберите &quot;Генерировать ключи&quot; для генерации Android и Bundle ключей для вашего пакета.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Ключи, сгенерированные с помощью RAPT, создаются со стандартной фразой-паролем. Вы должны убедиться, что не потеряете доступ к этим файлам.</p>
+<p>Храните файлы android.keystore и bundle.keystore в безопасном месте. Также создайте их резервную копию, так как без ключа вы не сможете загрузить сгенерированные приложения.</p>
+<p>Убедитесь, что эти файлы никогда не становятся публичными, особенно если используется система контроля версий.</p>
+</div>
+<p>При создании Android-ключей Ren'Py будет делать их резервные копии в том же месте, где он сохраняет файлы сценариев. Однако это не заменяет создание ваших собственных резервных копий.</p>
+<p>---</p>
+</section>
+<section id="id8">
+<h3><strong>Шаг 4: Настройка вашей игры</strong><a class="headerlink" href="#id8" title="Link to this heading"></a></h3>
+<p>Прежде чем создавать пакет, вам нужно предоставить Ren'Py информацию о сборке Android-версии вашей игры. Для этого выберите &quot;Настроить&quot; на экране Android лаунчера Ren'Py.</p>
+<p>Если вам нужно изменить информацию, вы можете повторно выполнить команду настройки. Ваши предыдущие выборы будут сохранены.</p>
+<p>---</p>
+</section>
+<section id="id9">
+<h3><strong>Шаг 5: Создание и установка пакета</strong><a class="headerlink" href="#id9" title="Link to this heading"></a></h3>
+<p>Наконец, вы можете создать и установить пакет. Сначала выберите один из двух режимов выпуска:</p>
+<dl>
+<dt><strong>Play Bundle</strong></dt><dd><p>Релизы Play Bundle находятся в формате Android App Bundle (AAB) и
+подходят только для загрузки в Google Play,
+хотя такие релизы также могут быть установлены на устройствах с поддержкой Play.</p>
+<p>Play Bundle может быть размером до 2 ГБ, но это разделяется на 4 пакета по 500 МБ,
+причем каждый файл вашей игры присваивается одному из четырех пакетов.
+Это может стать проблемой, если файлов больше четырех — игра не сможет уместить 5 файлов по 300 МБ,
+так как для каждого пакета будет место только для одного файла.</p>
+</dd>
+<dt><strong>Универсальный APK</strong></dt><dd><p>Релизы Универсального APK подходят для прямой установки на устройства Android через Ren'Py,
+ADB, сторонние магазины приложений или установку через веб.</p>
+<p>Универсальный APK может быть размером до 2 ГБ, без ограничений по содержимому.</p>
+</dd>
+</dl>
+<p>Есть три команды, которые позволяют вам выполнять различные комбинации создания пакета,
+установки его на устройство и запуска приложения для тестирования.</p>
+<p>Возможно, вам нужно будет удалить приложение при переключении между режимами выпуска.</p>
+</section>
+</section>
+<section id="id10">
+<h2>Очень большие игры<a class="headerlink" href="#id10" title="Link to this heading"></a></h2>
+<p>Создание игр размером более 2 ГБ возможно.
+Это достигается с использованием <a class="reference internal" href="downloader.html"><span class="doc">Downloader for Large Games on Mobile</span></a>,
+где небольшая часть игры включается в пакет Play или универсальный APK,
+а остальная часть игры загружается с веб-сервера, способного обрабатывать такие запросы.</p>
+</section>
+<section id="presplash">
+<h2>Иконки и изображения Presplash<a class="headerlink" href="#presplash" title="Link to this heading"></a></h2>
+<section id="id11">
+<h3>Иконки<a class="headerlink" href="#id11" title="Link to this heading"></a></h3>
+<p>Ren'Py создаст иконку для вашего приложения из двух файлов в базовой директории игры:</p>
+<dl class="simple">
+<dt>android-icon_foreground.png</dt><dd><p>Передний слой иконки. Этот файл должен быть размером 432x432 пикселя и прозрачным.</p>
+</dd>
+<dt>android-icon_background.png</dt><dd><p>Задний слой иконки. Этот файл должен быть размером 432x432 пикселя и непрозрачным.</p>
+</dd>
+</dl>
+<p>Адаптивные иконки для Android работают путём наложения двух слоёв иконки на
+область размером как минимум 132x132 пикселя в центре. Область за пределами
+этой безопасной зоны может быть показана, но она может быть также замаскирована.
+Поощряется выход за пределы безопасной зоны. Эти два слоя могут немного двигаться
+относительно друг друга, когда иконка перетаскивается.</p>
+<p>Для дополнительной информации о адаптивных иконках, пожалуйста, ознакомьтесь с материалом:</p>
+<blockquote>
+<div><p><a class="reference external" href="https://medium.com/google-design/designing-adaptive-icons-515af294c783">https://medium.com/google-design/designing-adaptive-icons-515af294c783</a></p>
+</div></blockquote>
+<p>Обратите внимание, что 1dp соответствует 4 реальным пикселям.</p>
+<p>При генерации приложения Ren'Py конвертирует эти файлы в подходящий размер
+для каждого устройства и создаёт статичные иконки для устройств, которые
+не поддерживают адаптивные иконки.</p>
+</section>
+<section id="android-presplash">
+<span id="id12"></span><h3>Presplash<a class="headerlink" href="#android-presplash" title="Link to this heading"></a></h3>
+<p>Presplash показывается до полной загрузки Ren'Py,
+до появления основного экрана загрузки.
+Это особенно важно на Android,
+поскольку при первом запуске Ren'Py распаковывает поддерживающие файлы,
+что может занять некоторое время.</p>
+<dl>
+<dt>android-presplash.jpg</dt><dd><p>Изображение, которое используется во время загрузки приложения.
+Оно должно быть окружено 1px одноцветной рамкой.
+При отображении изображение масштабируется, чтобы соответствовать доступному пространству,
+сохраняя пропорции, а остальная часть экрана заполняется цветом рамки.</p>
+</dd>
+<dt>android-downloading.jpg</dt><dd><p>Изображение, которое используется, когда приложение загружает
+ресурсы из Google Play Asset Delivery.
+Оно должно быть окружено 1px одноцветной рамкой.
+При отображении изображение масштабируется, чтобы соответствовать доступному пространству,
+сохраняя пропорции, а остальная часть экрана заполняется цветом рамки.</p>
+<p>Полоска загрузки высотой 20px отображается на расстоянии 20px от нижней,
+левой и правой сторон экрана, показывая процесс загрузки.</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="pyjnius">
+<span id="id13"></span><h2>Pyjnius<a class="headerlink" href="#pyjnius" title="Link to this heading"></a></h2>
+<p>При работе на Android доступна версия библиотеки
+<cite>Pyjnius &lt;https://pyjnius.readthedocs.io/en/latest/&gt;</cite>.
+Это позволяет опытным пользователям обращаться к библиотекам Android.</p>
+<p>Может потребоваться получить основную активность.
+Она находится в поле mActivity класса org.renpy.android.PythonSDLActivity. Например:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>init python:
+    if renpy.android:
+        import jnius
+        mActivity = jnius.autoclass(&quot;org.renpy.android.PythonSDLActivity&quot;).mActivity
+    else:
+        mActivity = None
+</pre></div>
+</div>
+</section>
+<section id="android-permissions">
+<span id="id14"></span><h2>Разрешения<a class="headerlink" href="#android-permissions" title="Link to this heading"></a></h2>
+<p>Хотя Ren'Py не требует дополнительных разрешений для работы,
+если ваша игра использует Pyjnius для обращения к Android,
+может потребоваться запросить разрешения. Ren'Py имеет переменную
+и две функции для взаимодействия с системой разрешений Android.</p>
+<dl class="std var">
+<dt class="sig sig-object std" id="var-build.android_permissions">
+<span class="sig-name descname"><span class="pre">build.android_permissions</span></span> <span class="pre">=</span> <span class="pre">[</span> <span class="pre">]</span><a class="headerlink" href="#var-build.android_permissions" title="Link to this definition"></a></dt>
+<dd><p>Это список строк, каждая из которых даёт полное имя разрешения Android.
+Например, &quot;android.permission.WRITE_EXTERNAL_STORAGE&quot;.
+Это просто заявляет, что приложение может запросить эти разрешения,
+но для запроса разрешений необходимо использовать renpy.check_permission
+и renpy.request_permission по мере необходимости.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="build.html" class="btn btn-neutral float-left" title="Building Distributions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ios.html" class="btn btn-neutral float-right" title="iOS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>
