@@ -1,0 +1,376 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Statement Equivalents &mdash; Ren&#39;Py Documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c659a740" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+    <link rel="canonical" href="https://www.renpy.org/doc/html/statement_equivalents.html" />
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=ea47c46f"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Saving, Loading, and Rollback" href="save_load_rollback.html" />
+    <link rel="prev" title="Lifecycle of a Ren&#39;Py game" href="lifecycle.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+<a href="https://www.renpy.org/" style="margin-bottom: 0">Ren'Py Visual Novel Engine
+<img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
+</a>
+
+<a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gui.html">GUI Customization Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">The Ren'Py Language</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="language_basics.html">Language Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="label.html">Labels &amp; Control Flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dialogue.html">Dialogue and Narration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="displaying_images.html">Displaying Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="menus.html">In-Game Menus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">Python Statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conditional.html">Conditional Statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio_filters.html">Audio Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="movie.html">Movie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="voice.html">Voice</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Text, Displayables, Transforms, and Transitions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="text.html">Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation.html">Translation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="displayables.html">Displayables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transforms.html">Transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transform_properties.html">Transform Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="live2d.html">Live2D Cubism</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Customizing Ren'Py</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="style.html">Styles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="style_properties.html">Style Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screens.html">Screens and Screen Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screen_actions.html">Screen Actions, Values, and Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screen_special.html">Special Screen Names</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screen_optimization.html">Screen Language Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">Configuration Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preferences.html">Preference Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="store_variables.html">Store Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mouse.html">Custom Mouse Cursors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textshaders.html">Text Shaders</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="launcher.html">Launcher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer_tools.html">Developer Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="director.html">Interactive Director</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Other Functionality</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="nvl_mode.html">NVL-Mode Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bubble.html">Speech Bubbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input.html">Text Input</a></li>
+<li class="toctree-l1"><a class="reference internal" href="side_image.html">Side Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rooms.html">Image Gallery, Music Room, and Replay Actions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drag_drop.html">Drag and Drop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sprites.html">Sprites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="keymap.html">Customizing the Keymap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="achievement.html">Achievements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">Dialogue History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multiple.html">Multiple Character Dialogue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="splashscreen_presplash.html">Splashscreen and Presplash</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lifecycle.html">Lifecycle of a Ren'Py game</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python and Ren'Py</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Statement Equivalents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#dialogue">Dialogue</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#proxy-functions">Proxy functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dialogue-window-management">Dialogue Window Management</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#choice-menus">Choice Menus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#displaying-images">Displaying Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#transitions">Transitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#jump">Jump</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#call">Call</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pause">Pause</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#layeredimage">Layeredimage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="save_load_rollback.html">Saving, Loading, and Rollback</a></li>
+<li class="toctree-l1"><a class="reference internal" href="persistent.html">Persistent Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gui_advanced.html">Advanced GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screen_python.html">Screens and Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cdd.html">Creator-Defined Displayables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cds.html">Creator-Defined Statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom_text_tags.html">Custom Text Tags</a></li>
+<li class="toctree-l1"><a class="reference internal" href="character_callbacks.html">Character Callbacks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file_python.html">File Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="color_class.html">Color Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matrix.html">Matrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model.html">Model-Based Rendering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other.html">Other Functions and Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ren_py.html">_ren.py Files - Ren'Py in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fetch.html">HTTPS/HTTP Fetch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshot.html">Screenshots</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Building, Updating, and Other Platforms</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="build.html">Building Distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="android.html">Android</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios.html">iOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="web.html">Web / HTML5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chromeos.html">Chrome OS/Chromebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raspi.html">Raspberry Pi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iap.html">In-App Purchasing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updater.html">HTTPS/HTTP Updater</a></li>
+<li class="toctree-l1"><a class="reference internal" href="downloader.html">Downloader for Large Games on Mobile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gesture.html">Gestures</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">End-User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="security.html">Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="problems.html">Dealing with Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="environment_variables.html">Environment Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="self_voicing.html">Self-Voicing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Library and Tool Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="template_projects.html">Template Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli.html">Command Line Interface</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Engine Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="editor.html">Text Editor Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="skins.html">Skins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translating_renpy.html">Translating Ren'Py</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Changes, License, and Credits</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog (Ren'Py 7.x-)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog6.html">Changelog (Ren'Py 6.11 - 6.99)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incompatible.html">Incompatible Changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sponsors.html">Ren'Py Development Sponsors</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Ren'Py Visual Novel Engine</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Statement Equivalents</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/renpy/renpy/blob/master/sphinx/source/statement_equivalents.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="statement-equivalents">
+<h1>Statement Equivalents<a class="headerlink" href="#statement-equivalents" title="Link to this heading"></a></h1>
+<p>To allow Ren'Py to be scripted in Python, each Ren'Py statement has
+a Python equivalent. This usually consists of a Python function,
+but may also consist of a pattern of Python calls that perform an action
+equivalent to the statement.</p>
+<p>Note that using statement equivalents in lieu of the original statements
+usually removes any possible <a class="reference internal" href="developer_tools.html#lint"><span class="std std-ref">Lint</span></a> checks and prediction
+optimizations, making your game less easily checkable and possibly less
+fluid. It can also disable features in certain cases.</p>
+<section id="dialogue">
+<h2>Dialogue<a class="headerlink" href="#dialogue" title="Link to this heading"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Several features, such as skipping already-seen dialogues, are not
+available using the python version and only enabled when using the native
+say statement.</p>
+</div>
+<p>The Ren'Py <a class="reference internal" href="dialogue.html#say-statement"><span class="std std-ref">Say Statement</span></a> is equivalent to calling the character
+object (when any is present) as a function. Displaying narration (meaning when
+no character is supplied) can be done the same way, by using the <code class="docutils literal notranslate"><span class="pre">narrator</span></code>
+character.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">e</span> <span class="s2">&quot;Hello, world.&quot;</span>
+<span class="k">$</span> <span class="n">e</span><span class="p">(</span><span class="s2">&quot;Hello, world.&quot;</span><span class="p">)</span>
+
+<span class="s2">&quot;And then the sun exploded.&quot;</span>
+<span class="k">$</span> <span class="n">narrator</span><span class="p">(</span><span class="s2">&quot;And then the sun exploded.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<section id="proxy-functions">
+<span id="say-proxy"></span><h3>Proxy functions<a class="headerlink" href="#proxy-functions" title="Link to this heading"></a></h3>
+<p>This equivalence of characters and function objects works in the other
+direction as well. It is possible to declare a Python function, and
+then use that function in the place of a character object in a native say statement.
+For example, the following function uses a variable to choose between
+two characters.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">define</span> <span class="n">lucy_normal</span> <span class="o">=</span> <span class="n">Character</span><span class="p">(</span><span class="s2">&quot;Lucy&quot;</span><span class="p">)</span>
+<span class="k">define</span> <span class="n">lucy_evil</span> <span class="o">=</span> <span class="n">Character</span><span class="p">(</span><span class="s2">&quot;Evil Lucy&quot;</span><span class="p">)</span>
+
+<span class="k">init</span> <span class="k">python</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="nf">l</span><span class="p">(</span><span class="n">what</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">lucy_is_evil</span><span class="p">:</span>
+            <span class="n">lucy_evil</span><span class="p">(</span><span class="n">what</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">lucy_normal</span><span class="p">(</span><span class="n">what</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="k">label</span> <span class="n">start</span><span class="p">:</span>
+
+    <span class="k">$</span> <span class="n">lucy_is_evil</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="n">l</span> <span class="s2">&quot;Usually, I feel quite normal.&quot;</span>
+
+    <span class="k">$</span> <span class="n">lucy_is_evil</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="n">l</span> <span class="s2">&quot;But sometimes, I get really mad!&quot;</span>
+</pre></div>
+</div>
+<p>A function used in this way should either ignore unknown keyword
+arguments, or pass them to a character function. Doing this will
+allow the game to continue working if future versions of Ren'Py add additional
+keyword arguments to character calls.</p>
+<p>Note that unlike other possible arguments, <code class="docutils literal notranslate"><span class="pre">interact=True</span></code> will always be
+passed to the function - unless manually passing <code class="docutils literal notranslate"><span class="pre">(interact=False)</span></code>. A
+<a class="reference internal" href="dialogue.html#say-with-arguments"><span class="std std-ref">Say with Arguments</span></a> sees the arguments (including the supplementary
+<cite>interact</cite>) passed to the function. For example:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">e</span> <span class="s2">&quot;Hello, world.&quot;</span> <span class="p">(</span><span class="n">what_size</span><span class="o">=</span><span class="mi">32</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>resolves to the following call:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">e</span><span class="p">(</span><span class="s2">&quot;Hello, world.&quot;</span><span class="p">,</span> <span class="n">what_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">interact</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Note that it's not required to pass <code class="docutils literal notranslate"><span class="pre">interact=True</span></code> when calling a Character
+object for it to work as intended. The following works just as well:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">$</span> <span class="n">e</span><span class="p">(</span><span class="s2">&quot;Hello, world.&quot;</span><span class="p">,</span> <span class="n">what_size</span><span class="o">=</span><span class="mi">32</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>When e is a Character, this is further equivalent to:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">$</span> <span class="n">Character</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="n">e</span><span class="p">,</span> <span class="n">what_size</span><span class="o">=</span><span class="mi">32</span><span class="p">)(</span><span class="s2">&quot;Hello, world.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>But it's possible to use <a class="reference internal" href="config.html#var-config.say_arguments_callback"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.say_arguments_callback</span></code></a> or
+have <code class="docutils literal notranslate"><span class="pre">e</span></code> wrap a character to do things differently.</p>
+<p>There is one additional way of replacing the say statement using Python:</p>
+</section>
+<section id="dialogue-window-management">
+<h3>Dialogue Window Management<a class="headerlink" href="#dialogue-window-management" title="Link to this heading"></a></h3>
+<p><a class="reference internal" href="dialogue.html#dialogue-window-management"><span class="std std-ref">Window management</span></a> is performed by setting
+the <a class="reference internal" href="store_variables.html#var-_window"><code class="xref std std-var docutils literal notranslate"><span class="pre">_window</span></code></a> and <a class="reference internal" href="store_variables.html#var-_window_auto"><code class="xref std std-var docutils literal notranslate"><span class="pre">_window_auto</span></code></a> variables, and by using the following
+two functions:</p>
+</section>
+</section>
+<section id="choice-menus">
+<h2>Choice Menus<a class="headerlink" href="#choice-menus" title="Link to this heading"></a></h2>
+<p>The <a class="reference internal" href="menus.html"><span class="doc">menu statement</span></a> has an equivalent Python function.</p>
+</section>
+<section id="displaying-images">
+<h2>Displaying Images<a class="headerlink" href="#displaying-images" title="Link to this heading"></a></h2>
+<p>The image, scene, show, and hide statements each have an equivalent
+Python function (see <a class="reference internal" href="displaying_images.html"><span class="doc">Displaying Images</span></a> for the original statements).</p>
+</section>
+<section id="transitions">
+<h2>Transitions<a class="headerlink" href="#transitions" title="Link to this heading"></a></h2>
+<p>The equivalent of the <a class="reference internal" href="displaying_images.html#with-statement"><span class="std std-ref">With Statement</span></a> is the <code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.with_statement()</span></code>
+function.</p>
+</section>
+<section id="jump">
+<h2>Jump<a class="headerlink" href="#jump" title="Link to this heading"></a></h2>
+<p>The equivalent of the <a class="reference internal" href="label.html#jump-statement"><span class="std std-ref">Jump Statement</span></a> is the <code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.jump()</span></code> function.</p>
+</section>
+<section id="call">
+<h2>Call<a class="headerlink" href="#call" title="Link to this heading"></a></h2>
+<p>The equivalent of the <a class="reference internal" href="label.html#call-statement"><span class="std std-ref">Call Statement</span></a> is the <code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.call()</span></code> function.</p>
+</section>
+<section id="pause">
+<h2>Pause<a class="headerlink" href="#pause" title="Link to this heading"></a></h2>
+<p>The equivalent of the <a class="reference internal" href="quickstart.html#pause-statement"><span class="std std-ref">Pause Statement</span></a> is the <code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.pause()</span></code> function.</p>
+</section>
+<section id="layeredimage">
+<h2>Layeredimage<a class="headerlink" href="#layeredimage" title="Link to this heading"></a></h2>
+<p>The <a class="reference internal" href="layeredimage.html#layeredimage-statement"><span class="std std-ref">Layeredimage</span></a> statement has Python equivalents. The group
+statement does not: the name of the group is supplied to <code class="xref py py-class docutils literal notranslate"><span class="pre">Attribute</span></code>,
+and the <code class="docutils literal notranslate"><span class="pre">auto</span></code> feature can be implemented using <code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.list_images()</span></code>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="lifecycle.html" class="btn btn-neutral float-left" title="Lifecycle of a Ren&#39;Py game" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="save_load_rollback.html" class="btn btn-neutral float-right" title="Saving, Loading, and Rollback" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>
