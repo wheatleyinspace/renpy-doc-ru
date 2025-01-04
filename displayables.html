@@ -1,0 +1,524 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Displayables &mdash; Ren&#39;Py Documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c659a740" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+    <link rel="canonical" href="https://www.renpy.org/doc/html/displayables.html" />
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=ea47c46f"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Transforms" href="transforms.html" />
+    <link rel="prev" title="Translation" href="translation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+<a href="https://www.renpy.org/" style="margin-bottom: 0">Ren'Py Visual Novel Engine
+<img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
+</a>
+
+<a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gui.html">GUI Customization Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">The Ren'Py Language</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="language_basics.html">Language Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="label.html">Labels &amp; Control Flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dialogue.html">Dialogue and Narration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="displaying_images.html">Displaying Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="menus.html">In-Game Menus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">Python Statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conditional.html">Conditional Statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio_filters.html">Audio Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="movie.html">Movie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="voice.html">Voice</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Text, Displayables, Transforms, and Transitions</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="text.html">Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation.html">Translation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Displayables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#images">Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#svg-images">SVG Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#image-like-displayables">Image-Like Displayables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#text-displayables">Text Displayables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dynamic-displayables">Dynamic Displayables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#layer-displayables">Layer Displayables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#layout-boxes-and-grids">Layout Boxes and Grids</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#effects">Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#image-manipulators">Image Manipulators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#placeholders">Placeholders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#displayable-prefixes">Displayable Prefixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#see-also">See also</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="transforms.html">Transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transform_properties.html">Transform Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="live2d.html">Live2D Cubism</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Customizing Ren'Py</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="style.html">Styles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="style_properties.html">Style Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screens.html">Screens and Screen Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screen_actions.html">Screen Actions, Values, and Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screen_special.html">Special Screen Names</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screen_optimization.html">Screen Language Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">Configuration Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preferences.html">Preference Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="store_variables.html">Store Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mouse.html">Custom Mouse Cursors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textshaders.html">Text Shaders</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="launcher.html">Launcher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer_tools.html">Developer Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="director.html">Interactive Director</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Other Functionality</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="nvl_mode.html">NVL-Mode Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bubble.html">Speech Bubbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input.html">Text Input</a></li>
+<li class="toctree-l1"><a class="reference internal" href="side_image.html">Side Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rooms.html">Image Gallery, Music Room, and Replay Actions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drag_drop.html">Drag and Drop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sprites.html">Sprites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="keymap.html">Customizing the Keymap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="achievement.html">Achievements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">Dialogue History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multiple.html">Multiple Character Dialogue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="splashscreen_presplash.html">Splashscreen and Presplash</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lifecycle.html">Lifecycle of a Ren'Py game</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python and Ren'Py</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="statement_equivalents.html">Statement Equivalents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="save_load_rollback.html">Saving, Loading, and Rollback</a></li>
+<li class="toctree-l1"><a class="reference internal" href="persistent.html">Persistent Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gui_advanced.html">Advanced GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screen_python.html">Screens and Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cdd.html">Creator-Defined Displayables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cds.html">Creator-Defined Statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom_text_tags.html">Custom Text Tags</a></li>
+<li class="toctree-l1"><a class="reference internal" href="character_callbacks.html">Character Callbacks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file_python.html">File Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="color_class.html">Color Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matrix.html">Matrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model.html">Model-Based Rendering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other.html">Other Functions and Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ren_py.html">_ren.py Files - Ren'Py in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fetch.html">HTTPS/HTTP Fetch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screenshot.html">Screenshots</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Building, Updating, and Other Platforms</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="build.html">Building Distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="android.html">Android</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios.html">iOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="web.html">Web / HTML5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chromeos.html">Chrome OS/Chromebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raspi.html">Raspberry Pi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iap.html">In-App Purchasing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updater.html">HTTPS/HTTP Updater</a></li>
+<li class="toctree-l1"><a class="reference internal" href="downloader.html">Downloader for Large Games on Mobile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gesture.html">Gestures</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">End-User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="security.html">Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="problems.html">Dealing with Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="environment_variables.html">Environment Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="self_voicing.html">Self-Voicing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Library and Tool Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="template_projects.html">Template Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli.html">Command Line Interface</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Engine Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="editor.html">Text Editor Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="skins.html">Skins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translating_renpy.html">Translating Ren'Py</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Changes, License, and Credits</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog (Ren'Py 7.x-)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog6.html">Changelog (Ren'Py 6.11 - 6.99)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incompatible.html">Incompatible Changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sponsors.html">Ren'Py Development Sponsors</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Ren'Py Visual Novel Engine</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Displayables</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/renpy/renpy/blob/master/sphinx/source/displayables.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="displayables">
+<span id="id1"></span><h1>Displayables<a class="headerlink" href="#displayables" title="Link to this heading"></a></h1>
+<p>A displayable is an object that can be shown to the user. Ren'Py
+displayables can be used in many ways.</p>
+<ul class="simple">
+<li><p>Assignment to an image name using the <code class="docutils literal notranslate"><span class="pre">image</span></code> statement.</p></li>
+<li><p>Added to a screen using the screen language <code class="docutils literal notranslate"><span class="pre">add</span></code> statement.</p></li>
+<li><p>Assignment to certain config variables.</p></li>
+<li><p>Assignment to certain style properties.</p></li>
+</ul>
+<p>When a Ren'Py function or variable expects a displayable, there are
+five things that can be provided:</p>
+<ul class="simple">
+<li><p>An object of type Displayable, created by calling one of the
+functions given below.</p></li>
+<li><p>A string with a colon <code class="docutils literal notranslate"><span class="pre">:</span></code> in it. These are rare, but see the section on
+<a class="reference internal" href="#displayable-prefix"><span class="std std-ref">displayable prefixes</span></a> below.</p></li>
+<li><p>A string with a dot <code class="docutils literal notranslate"><span class="pre">.</span></code> in it. Such a string is interpreted as
+a filename by <code class="xref py py-func docutils literal notranslate"><span class="pre">Image()</span></code>.</p></li>
+<li><p>A color. A color may either be given as a hexadecimal color string in &quot;#rgb&quot;,
+&quot;#rgba&quot;, &quot;#rrggbb&quot;, or &quot;#rrggbbaa&quot; form, a <code class="xref py py-class docutils literal notranslate"><span class="pre">Color</span></code>, or an (r, g, b, a) tuple,
+where each component is an integer between 0 and 255. Colors are
+passed to <code class="xref py py-func docutils literal notranslate"><span class="pre">Solid()</span></code>.</p></li>
+<li><p>An image name. Any other string is interpreted as a reference to an
+image, either defined with the image statement or auto-defined from
+the <a class="reference internal" href="displaying_images.html#images-directory"><span class="std std-ref">images directory</span></a>.</p></li>
+<li><p>A list. If a list is provided, each item is expanded as described
+below, and checked to see if it matches a filename or image name.
+If so, expansion stops and the matched thing is then processed
+as described above.</p></li>
+</ul>
+<p>Strings may have one or more square-bracket substitutions in them,
+such as &quot;eileen [mood]&quot; or &quot;eileen_[outfit]_[mood].png&quot;. When such a
+string is given, a dynamic image is created. A dynamic image has
+<a class="reference internal" href="text.html#text-interpolation"><span class="std std-ref">text interpolation</span></a> performed at the start
+of each interaction (such as say statements and menus). The resulting
+string is processed according to the rules above.</p>
+<p>When a string has &quot;[prefix_]&quot; in it, that substitution is replaced with
+each of the style prefixes associated with the current displayable.</p>
+<section id="images">
+<span id="id2"></span><h2>Images<a class="headerlink" href="#images" title="Link to this heading"></a></h2>
+<p>The most commonly used displayable is Image, which loads a file from
+disk and displays it. Since Image is so commonly used, when a string
+giving a filename is used in a context that expects a displayable, an
+Image is automatically created. The only time it's necessary to use
+Image directly is when you want to create an image with style
+properties.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="c1"># These two lines are equivalent.</span>
+<span class="k">image</span> <span class="n">logo</span> <span class="o">=</span> <span class="s2">&quot;logo.png&quot;</span>
+<span class="k">image</span> <span class="n">logo</span> <span class="o">=</span> <span class="n">Image</span><span class="p">(</span><span class="s2">&quot;logo.png&quot;</span><span class="p">)</span>
+
+<span class="c1"># Using Image allows us to specify a default position as part of</span>
+<span class="c1"># an image.</span>
+<span class="k">image</span> <span class="n">logo</span> <span class="n">right</span> <span class="o">=</span> <span class="n">Image</span><span class="p">(</span><span class="s2">&quot;logo.png&quot;</span><span class="p">,</span> <span class="na">xalign</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>There are four image file formats we recommend you use:</p>
+<ul class="simple">
+<li><p>AVIF</p></li>
+<li><p>WEBP</p></li>
+<li><p>PNG</p></li>
+<li><p>JPG</p></li>
+</ul>
+<p>And one vector image file format we recommend:</p>
+<ul class="simple">
+<li><p>SVG</p></li>
+</ul>
+<p>Non-animated GIF and BMP files are also supported, but should not be
+used in modern games.</p>
+<p>Loading an Image from a file on disk and decoding it so it can be
+drawn to the screen takes a long amount of time. While measured in the
+tenths or hundreds of seconds, the duration of the loading process is
+long enough that it can prevent an acceptable framerate, and become
+annoying to the user.</p>
+<p>Since an Image is of a fixed size, and doesn't change in response to
+input, game state, or the size of the area available to it, an Image
+can be loaded before it is needed and placed into an area of memory
+known as the image cache. Once an Image is decoded and in the cache,
+it can be quickly drawn to the screen.</p>
+<p>Ren'Py attempts to predict the images that will be used in the future,
+and loads them into the image cache before they are used. When space
+in the cache is needed for other images, Ren'Py will remove images
+that are no longer being used.</p>
+<p>By default, Ren'Py will predictively cache up to 8 screens worth of
+image data. (If your screen is 800x600, then a screen's worth of data
+is one 800x600 image, two 400x600 images, and so on.) This can be
+changed with the <a class="reference internal" href="config.html#var-config.image_cache_size"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.image_cache_size</span></code></a> configuration
+variable.</p>
+<p>Although the precise amount is dependent on implementation details and
+there is significant overhead, as a rule of thumb, each pixel in the
+image cache consumes 4 bytes of main memory and 4 bytes of video
+memory.</p>
+</section>
+<section id="svg-images">
+<h2>SVG Images<a class="headerlink" href="#svg-images" title="Link to this heading"></a></h2>
+<p>Ren'Py supports many SVG 1.0 images, using the NanoSVG library.
+Some unsupported features include:</p>
+<ul class="simple">
+<li><p>Text elements are ignored. If the text is converted into a path, it will
+be rendered.</p></li>
+<li><p>Embedded bitmaps are ignored.</p></li>
+<li><p>Scripts are ignored.</p></li>
+<li><p>Animations are ignored.</p></li>
+</ul>
+<p>A list of features NanoSVG supports may be found
+<a class="reference external" href="https://core.tcl-lang.org/tips/doc/trunk/tip/507.md">here</a>.</p>
+<p>It's recommended to convert everything in an SVG image that will not
+render properly into paths.</p>
+<p>Ren'Py will render SVG images as if the virtual screen was 96dpi.
+If the window is enlarged or shrunk, the SVG image will be scaled
+up or down, respectively, and <a class="reference internal" href="displaying_images.html#oversampling"><span class="std std-ref">oversampling</span></a> will
+be used to ensture the image is rendered at the correct virtual
+size.</p>
+<p>This ensures the SVG will be rendered sharp if it is not scaled.</p>
+</section>
+<section id="image-like-displayables">
+<h2>Image-Like Displayables<a class="headerlink" href="#image-like-displayables" title="Link to this heading"></a></h2>
+<p>We call these displayables image-like because they take up a
+rectangular area of the screen, and do not react to input.  These
+differ from normal images by varying their size to fill an area
+(Frame, Tile, and Solid), or by allowing the user to specify their
+size (Composite, Crop, Null). They are not image manipulators.</p>
+<p>Image-like displayables take <a class="reference internal" href="style_properties.html#position-style-properties"><span class="std std-ref">Position Style Properties</span></a>.</p>
+</section>
+<section id="text-displayables">
+<h2>Text Displayables<a class="headerlink" href="#text-displayables" title="Link to this heading"></a></h2>
+<p>See <a class="reference internal" href="text.html#text-displayables"><span class="std std-ref">Text Displayables</span></a>.</p>
+</section>
+<section id="dynamic-displayables">
+<h2>Dynamic Displayables<a class="headerlink" href="#dynamic-displayables" title="Link to this heading"></a></h2>
+<p>Dynamic displayables display a child displayable based on the state of
+the game.</p>
+<p>Note that these dynamic displayables always display their current state.
+Because of this, a dynamic displayable will not participate in a
+transition. (Or more precisely, it will display the same thing in both the
+old and new states of the transition.)</p>
+<p>By design, dynamic displayables are intended to be used for things that
+change rarely and when an image defined this way is off screen (Such as
+a character customization system). It is not designed for things that
+change frequently, such as character emotions.</p>
+</section>
+<section id="layer-displayables">
+<h2>Layer Displayables<a class="headerlink" href="#layer-displayables" title="Link to this heading"></a></h2>
+<p>Layer displayables display the contents of a layer based on the state of the
+game. They are intended for use with <a class="reference internal" href="config.html#var-config.detached_layers"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.detached_layers</span></code></a>.</p>
+<p>Note that similar to dynamic displayables, the layers shown within always
+display their current state. Because of this, the contents of a layer
+displayable will not participate in a transition, unless that transition is
+targeted at the layer being displayed.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="c1"># A new detached layer to hold the contents of a broadcast.</span>
+<span class="k">define</span> <span class="n">config</span><span class="o">.</span><span class="n">detached_layers</span> <span class="o">+=</span> <span class="p">[</span> <span class="s2">&quot;broadcast&quot;</span> <span class="p">]</span>
+
+<span class="c1"># A layer displayable to represent a TV and watch the broadcast layer.</span>
+<span class="k">image</span> <span class="n">tv</span> <span class="o">=</span> <span class="n">Window</span><span class="p">(</span><span class="n">Layer</span><span class="p">(</span><span class="s2">&quot;broadcast&quot;</span><span class="p">),</span> <span class="na">background</span><span class="o">=</span><span class="s1">&#39;#000&#39;</span><span class="p">,</span> <span class="na">padding</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="k">style</span><span class="o">=</span><span class="s2">&quot;default&quot;</span><span class="p">)</span>
+
+<span class="k">image</span> <span class="n">living_room</span> <span class="o">=</span> <span class="n">Placeholder</span><span class="p">(</span><span class="s1">&#39;bg&#39;</span><span class="p">,</span> <span class="k">text</span><span class="o">=</span><span class="s1">&#39;living_room&#39;</span><span class="p">)</span>
+<span class="k">image</span> <span class="n">studio</span> <span class="o">=</span> <span class="n">Solid</span><span class="p">(</span><span class="s1">&#39;7c7&#39;</span><span class="p">)</span>
+<span class="k">image</span> <span class="n">eileen</span> <span class="o">=</span> <span class="n">Placeholder</span><span class="p">(</span><span class="s1">&#39;girl&#39;</span><span class="p">)</span>
+
+<span class="k">label</span> <span class="n">example</span><span class="p">:</span>
+    <span class="k">pause</span>
+
+    <span class="c1"># Set up the broadcast scene.</span>
+    <span class="k">scene</span> <span class="n">studio</span> <span class="k">onlayer</span> <span class="n">broadcast</span>
+    <span class="k">with</span> <span class="kc">None</span>
+
+    <span class="c1"># Begin a new scene in the living room.</span>
+    <span class="k">scene</span> <span class="n">living_room</span>
+
+    <span class="c1"># Show the TV in the lower right corner of ths screen.</span>
+    <span class="k">show</span> <span class="n">tv</span><span class="p">:</span>
+      <span class="na">align</span> <span class="p">(</span><span class="mf">.75</span><span class="p">,</span> <span class="mf">.75</span><span class="p">)</span> <span class="na">zoom</span> <span class="mf">.3</span>
+
+    <span class="c1"># Show Eileen in the broadcast.</span>
+    <span class="k">show</span> <span class="n">eileen</span> <span class="k">onlayer</span> <span class="n">broadcast</span>
+
+    <span class="c1"># Dissolve into the living room, as Eileen enters the TV from the right.</span>
+    <span class="k">with</span> <span class="p">{</span><span class="s1">&#39;master&#39;</span><span class="p">:</span> <span class="n">dissolve</span><span class="p">,</span> <span class="s1">&#39;broadcast&#39;</span><span class="p">:</span> <span class="n">moveinright</span><span class="p">}</span>
+    <span class="k">pause</span>
+</pre></div>
+</div>
+</section>
+<section id="layout-boxes-and-grids">
+<h2>Layout Boxes and Grids<a class="headerlink" href="#layout-boxes-and-grids" title="Link to this heading"></a></h2>
+<p>Layout boxes are displayables that lay out their children on the
+screen. They can lay out the children in a horizontal or vertical
+manner, or lay them out using the standard positioning algorithm.</p>
+<p>The box displayables take any number of positional and keyword
+arguments. Positional arguments should be displayables that are
+added to the box as children. Keyword arguments are style properties
+that are applied to the box.</p>
+<p>Boxes take <a class="reference internal" href="style_properties.html#position-style-properties"><span class="std std-ref">Position Style Properties</span></a> and <a class="reference internal" href="style_properties.html#box-style-properties"><span class="std std-ref">Box Style Properties</span></a>.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="c1"># Display two logos, to the left and right of each other.</span>
+<span class="k">image</span> <span class="n">logo</span> <span class="k">hbox</span> <span class="o">=</span> <span class="n">HBox</span><span class="p">(</span><span class="s2">&quot;logo.png&quot;</span><span class="p">,</span> <span class="s2">&quot;logo.png&quot;</span><span class="p">)</span>
+
+<span class="c1"># Display two logos, one on top of the other.</span>
+<span class="k">image</span> <span class="n">logo</span> <span class="k">vbox</span> <span class="o">=</span> <span class="n">VBox</span><span class="p">(</span><span class="s2">&quot;logo.png&quot;</span><span class="p">,</span> <span class="s2">&quot;logo.png&quot;</span><span class="p">)</span>
+
+<span class="c1"># Display two logos. Since both default to the upper-left</span>
+<span class="c1"># corner of the screen, we need to use Image to place</span>
+<span class="c1"># those logos on the screen.</span>
+<span class="k">image</span> <span class="n">logo</span> <span class="k">fixed</span> <span class="o">=</span> <span class="n">Fixed</span><span class="p">(</span>
+    <span class="n">Image</span><span class="p">(</span><span class="s2">&quot;logo.png&quot;</span><span class="p">,</span> <span class="na">xalign</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="na">yalign</span><span class="o">=</span><span class="mf">0.0</span><span class="p">),</span>
+    <span class="n">Image</span><span class="p">(</span><span class="s2">&quot;logo.png&quot;</span><span class="p">,</span> <span class="na">xalign</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="na">yalign</span><span class="o">=</span><span class="mf">1.0</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>The Grid layout displays its children in a grid on the screen. It takes
+<a class="reference internal" href="style_properties.html#position-style-properties"><span class="std std-ref">Position Style Properties</span></a> and the <a class="reference internal" href="style_properties.html#style-property-spacing"><code class="xref std std-propref docutils literal notranslate"><span class="pre">spacing</span></code></a> style
+property.</p>
+</section>
+<section id="effects">
+<h2>Effects<a class="headerlink" href="#effects" title="Link to this heading"></a></h2>
+<p>These displayables are used to create certain visual effects.</p>
+</section>
+<section id="image-manipulators">
+<h2>Image Manipulators<a class="headerlink" href="#image-manipulators" title="Link to this heading"></a></h2>
+<p><a class="reference internal" href="im.html"><span class="doc">Image manipulators</span></a> are an historic kind of displayables that
+apply transformations or operations exclusively to other images or image
+manipulators - to the exclusion of the other kinds of displayables.</p>
+<p>An image manipulator can be used any place a displayable can, but not
+vice-versa. An <code class="xref py py-func docutils literal notranslate"><span class="pre">Image()</span></code> is a kind of image manipulator, so an
+Image can be used whenever an image manipulator is required.</p>
+<p>Their use is historic. A number of image manipulators that had been documented
+in a distant past should no longer be used, as they suffer from inherent
+problems, and in general (except for <code class="xref py py-func docutils literal notranslate"><span class="pre">im.Data()</span></code>), the <a class="reference internal" href="transforms.html#Transform" title="Transform"><code class="xref py py-func docutils literal notranslate"><span class="pre">Transform()</span></code></a>
+displayable provides similar functionality while fixing the problems.</p>
+<p>For the list of image manipulators, see the <a class="reference internal" href="im.html"><span class="doc">image manipulator</span></a>
+documentation.</p>
+</section>
+<section id="placeholders">
+<h2>Placeholders<a class="headerlink" href="#placeholders" title="Link to this heading"></a></h2>
+<p>The Placeholder displayable is used to display background or character
+images as appropriate. Placeholders are used automatically when an undefined
+image is used in developer mode. Placeholder displayables can also be used
+manually when the defaults are inappropriate.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="c1"># By default, the girl placeholder will be used.</span>
+<span class="k">image</span> <span class="n">sue</span> <span class="o">=</span> <span class="n">Placeholder</span><span class="p">(</span><span class="s2">&quot;boy&quot;</span><span class="p">)</span>
+
+<span class="k">label</span> <span class="n">start</span><span class="p">:</span>
+    <span class="k">show</span> <span class="n">sue</span> <span class="n">angry</span>
+    <span class="s2">&quot;Sue&quot;</span> <span class="s2">&quot;How do you do? Now you gonna die!&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="displayable-prefixes">
+<span id="displayable-prefix"></span><h2>Displayable Prefixes<a class="headerlink" href="#displayable-prefixes" title="Link to this heading"></a></h2>
+<p>Displayable prefixes make it possible for a creator to define their own
+displayables, and refer to them anywhere a displayable can be used in
+Ren'Py. A prefixed displayable is a string with a colon in it. The prefix
+is to the left of the colon, and the argument is anything to the right of
+it. The <a class="reference internal" href="config.html#var-config.displayable_prefix"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.displayable_prefix</span></code></a> variable maps a prefix to a function.
+The function takes the argument, and either returns a displayable or None.</p>
+<p>For example, this makes the big prefix return an image that is twice as
+big as the original.</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">init</span> <span class="o">-</span><span class="mi">10</span> <span class="k">python</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">embiggen</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">Transform</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="na">zoom</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+    <span class="n">config</span><span class="o">.</span><span class="n">displayable_prefix</span><span class="p">[</span><span class="s2">&quot;big&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">embiggen</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">init</span> <span class="pre">-10</span></code> makes sure the prefix is defined before any images that use it.
+The prefix can then be used to define images:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">image</span> <span class="n">eileen</span> <span class="n">big</span> <span class="o">=</span> <span class="s2">&quot;big:eileen happy&quot;</span>
+</pre></div>
+</div>
+<p>or in any other place where a displayable is required.</p>
+</section>
+<section id="see-also">
+<h2>See also<a class="headerlink" href="#see-also" title="Link to this heading"></a></h2>
+<p><a class="reference internal" href="displaying_images.html"><span class="doc">Displaying Images</span></a> : the basics of how to make all these displayables
+appear on the screen.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="translation.html" class="btn btn-neutral float-left" title="Translation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="transforms.html" class="btn btn-neutral float-right" title="Transforms" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>
