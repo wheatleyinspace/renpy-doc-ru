@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" data-content_root="./">
+<html class="writer-html5" lang="ru" data-content_root="./">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -17,14 +17,15 @@
     <link rel="canonical" href="https://www.renpy.org/doc/html/launcher.html" />
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=ea47c46f"></script>
+      <script src="_static/documentation_options.js?v=8441e6a0"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=cd1d70c9"></script>
       <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
       <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
     <link rel="next" title="Developer Tools" href="developer_tools.html" />
     <link rel="prev" title="Text Shaders" href="textshaders.html" /> 
 </head>
@@ -36,18 +37,18 @@
         <div class="wy-side-nav-search" >
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
 
 <a href="https://www.renpy.org/" style="margin-bottom: 0">Ren'Py Visual Novel Engine
-<img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
+<img src="_static/navbar-logo.png" alt="Логотип" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
 <a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
@@ -77,7 +78,7 @@
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Сцена</a></li>
 <li class="toctree-l1"><a class="reference internal" href="live2d.html">Live2D Cubism</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Customizing Ren'Py</span></p>
@@ -97,6 +98,7 @@
 <p class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Launcher</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#project-folders">Project Folders</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#projects-txt">Projects.txt</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#no-launcher-links">No Launcher Links</a></li>
 </ul>
@@ -185,19 +187,19 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Ren'Py Visual Novel Engine</a>
       </nav>
 
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+          <div role="navigation" aria-label="Навигация по страницам">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Launcher</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/renpy/renpy/blob/master/sphinx/source/launcher.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/renpy/renpy/blob/master/sphinx/source/launcher.rst" class="fa fa-github"> Редактировать на GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -206,18 +208,30 @@
            <div itemprop="articleBody">
              
   <section id="launcher">
-<h1>Launcher<a class="headerlink" href="#launcher" title="Link to this heading"></a></h1>
+<h1>Launcher<a class="headerlink" href="#launcher" title="Ссылка на этот заголовок"></a></h1>
 <p>The Ren'Py launcher is mostly documented in other portions of the manual. This
 page contains information about the launcher that doesn't fit anywhere else.</p>
+<section id="project-folders">
+<h2>Project Folders<a class="headerlink" href="#project-folders" title="Ссылка на этот заголовок"></a></h2>
+<p>The launcher supports folders. You can create a folder by creating a directory
+under the projects directory, and moving the project into it, then clicking Refresh.
+Only one level of folders is supported, so you can't create a folder inside a folder.</p>
+<p>Folders can be expanded and collapsed by clicking on the name in the launcher.</p>
+<div class="admonition warning">
+<p class="admonition-title">Предупреждение</p>
+<p>Currently, the Ren'Py launcher only supports one project with a given name. So it's not
+possible to have the same project name in different folders.</p>
+</div>
+</section>
 <section id="projects-txt">
-<h2>Projects.txt<a class="headerlink" href="#projects-txt" title="Link to this heading"></a></h2>
+<h2>Projects.txt<a class="headerlink" href="#projects-txt" title="Ссылка на этот заголовок"></a></h2>
 <p>If a file named <code class="docutils literal notranslate"><span class="pre">projects.txt</span></code> exists in the projects directory, it's expected
 to contain a list of full paths, one per line. These paths are treated as if
 they were inside the projects directory, and projects they contain show
 up in the launcher.</p>
 </section>
 <section id="no-launcher-links">
-<h2>No Launcher Links<a class="headerlink" href="#no-launcher-links" title="Link to this heading"></a></h2>
+<h2>No Launcher Links<a class="headerlink" href="#no-launcher-links" title="Ссылка на этот заголовок"></a></h2>
 <p>If a file named <code class="docutils literal notranslate"><span class="pre">no_launcher_links.txt</span></code> exists in the Ren'Py base directory (the one with
 renpy.exe, renpy.sh, and renpy.app in it), the launcher will disable links to renpy.org. While
 not guaranteed, this is intended in educational and homeschool environments to prevent young
@@ -228,9 +242,9 @@ Ren'Py users from seeing adult sponsors.</p>
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="textshaders.html" class="btn btn-neutral float-left" title="Text Shaders" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="developer_tools.html" class="btn btn-neutral float-right" title="Developer Tools" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Нижняя область">
+        <a href="textshaders.html" class="btn btn-neutral float-left" title="Text Shaders" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+        <a href="developer_tools.html" class="btn btn-neutral float-right" title="Developer Tools" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -239,9 +253,9 @@ Ren'Py users from seeing adult sponsors.</p>
     <p></p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

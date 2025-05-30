@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" data-content_root="./">
+<html class="writer-html5" lang="ru" data-content_root="./">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -17,14 +17,15 @@
     <link rel="canonical" href="https://www.renpy.org/doc/html/rooms.html" />
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=ea47c46f"></script>
+      <script src="_static/documentation_options.js?v=8441e6a0"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=cd1d70c9"></script>
       <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
       <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
     <link rel="next" title="Drag and Drop" href="drag_drop.html" />
     <link rel="prev" title="Side Images" href="side_image.html" /> 
 </head>
@@ -36,18 +37,18 @@
         <div class="wy-side-nav-search" >
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
 
 <a href="https://www.renpy.org/" style="margin-bottom: 0">Ren'Py Visual Novel Engine
-<img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
+<img src="_static/navbar-logo.png" alt="Логотип" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
 <a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
@@ -77,7 +78,7 @@
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Сцена</a></li>
 <li class="toctree-l1"><a class="reference internal" href="live2d.html">Live2D Cubism</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Customizing Ren'Py</span></p>
@@ -107,9 +108,65 @@
 <li class="toctree-l1"><a class="reference internal" href="input.html">Text Input</a></li>
 <li class="toctree-l1"><a class="reference internal" href="side_image.html">Side Images</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Image Gallery, Music Room, and Replay Actions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#image-gallery">Image Gallery</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#music-room">Music Room</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#replay">Replay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#image-gallery">Image Gallery</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Gallery"><code class="docutils literal notranslate"><span class="pre">Gallery</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Gallery.enter_transition"><code class="docutils literal notranslate"><span class="pre">Gallery.enter_transition</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Gallery.intra_transition"><code class="docutils literal notranslate"><span class="pre">Gallery.intra_transition</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Gallery.exit_transition"><code class="docutils literal notranslate"><span class="pre">Gallery.exit_transition</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Gallery.transition"><code class="docutils literal notranslate"><span class="pre">Gallery.transition</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Gallery.locked_button"><code class="docutils literal notranslate"><span class="pre">Gallery.locked_button</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Gallery.hover_border"><code class="docutils literal notranslate"><span class="pre">Gallery.hover_border</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Gallery.idle_border"><code class="docutils literal notranslate"><span class="pre">Gallery.idle_border</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Gallery.unlocked_advance"><code class="docutils literal notranslate"><span class="pre">Gallery.unlocked_advance</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Gallery.navigation"><code class="docutils literal notranslate"><span class="pre">Gallery.navigation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Gallery.span_buttons"><code class="docutils literal notranslate"><span class="pre">Gallery.span_buttons</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Gallery.slideshow_delay"><code class="docutils literal notranslate"><span class="pre">Gallery.slideshow_delay</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Gallery.Action"><code class="docutils literal notranslate"><span class="pre">Gallery.Action()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Gallery.Next"><code class="docutils literal notranslate"><span class="pre">Gallery.Next()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Gallery.Previous"><code class="docutils literal notranslate"><span class="pre">Gallery.Previous()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Gallery.Return"><code class="docutils literal notranslate"><span class="pre">Gallery.Return()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Gallery.ToggleSlideshow"><code class="docutils literal notranslate"><span class="pre">Gallery.ToggleSlideshow()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Gallery.allprior"><code class="docutils literal notranslate"><span class="pre">Gallery.allprior()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Gallery.button"><code class="docutils literal notranslate"><span class="pre">Gallery.button()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Gallery.condition"><code class="docutils literal notranslate"><span class="pre">Gallery.condition()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Gallery.get_fraction"><code class="docutils literal notranslate"><span class="pre">Gallery.get_fraction()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Gallery.image"><code class="docutils literal notranslate"><span class="pre">Gallery.image()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Gallery.make_button"><code class="docutils literal notranslate"><span class="pre">Gallery.make_button()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Gallery.transform"><code class="docutils literal notranslate"><span class="pre">Gallery.transform()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Gallery.unlock"><code class="docutils literal notranslate"><span class="pre">Gallery.unlock()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Gallery.unlock_image"><code class="docutils literal notranslate"><span class="pre">Gallery.unlock_image()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#music-room">Music Room</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#MusicRoom"><code class="docutils literal notranslate"><span class="pre">MusicRoom</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#MusicRoom.Next"><code class="docutils literal notranslate"><span class="pre">MusicRoom.Next()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#MusicRoom.Play"><code class="docutils literal notranslate"><span class="pre">MusicRoom.Play()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#MusicRoom.Previous"><code class="docutils literal notranslate"><span class="pre">MusicRoom.Previous()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#MusicRoom.RandomPlay"><code class="docutils literal notranslate"><span class="pre">MusicRoom.RandomPlay()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#MusicRoom.SetLoop"><code class="docutils literal notranslate"><span class="pre">MusicRoom.SetLoop()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#MusicRoom.SetShuffle"><code class="docutils literal notranslate"><span class="pre">MusicRoom.SetShuffle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#MusicRoom.SetSingleTrack"><code class="docutils literal notranslate"><span class="pre">MusicRoom.SetSingleTrack()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#MusicRoom.Stop"><code class="docutils literal notranslate"><span class="pre">MusicRoom.Stop()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#MusicRoom.ToggleLoop"><code class="docutils literal notranslate"><span class="pre">MusicRoom.ToggleLoop()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#MusicRoom.TogglePause"><code class="docutils literal notranslate"><span class="pre">MusicRoom.TogglePause()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#MusicRoom.TogglePlay"><code class="docutils literal notranslate"><span class="pre">MusicRoom.TogglePlay()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#MusicRoom.ToggleShuffle"><code class="docutils literal notranslate"><span class="pre">MusicRoom.ToggleShuffle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#MusicRoom.ToggleSingleTrack"><code class="docutils literal notranslate"><span class="pre">MusicRoom.ToggleSingleTrack()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#MusicRoom.add"><code class="docutils literal notranslate"><span class="pre">MusicRoom.add()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#MusicRoom.is_unlocked"><code class="docutils literal notranslate"><span class="pre">MusicRoom.is_unlocked()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#replay">Replay</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#EndReplay"><code class="docutils literal notranslate"><span class="pre">EndReplay()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Replay"><code class="docutils literal notranslate"><span class="pre">Replay()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.call_replay"><code class="docutils literal notranslate"><span class="pre">renpy.call_replay()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.end_replay"><code class="docutils literal notranslate"><span class="pre">renpy.end_replay()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="drag_drop.html">Drag and Drop</a></li>
@@ -186,19 +243,19 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Ren'Py Visual Novel Engine</a>
       </nav>
 
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+          <div role="navigation" aria-label="Навигация по страницам">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Image Gallery, Music Room, and Replay Actions</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/renpy/renpy/blob/master/sphinx/source/rooms.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/renpy/renpy/blob/master/sphinx/source/rooms.rst" class="fa fa-github"> Редактировать на GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -207,9 +264,9 @@
            <div itemprop="articleBody">
              
   <section id="image-gallery-music-room-and-replay-actions">
-<h1>Image Gallery, Music Room, and Replay Actions<a class="headerlink" href="#image-gallery-music-room-and-replay-actions" title="Link to this heading"></a></h1>
+<h1>Image Gallery, Music Room, and Replay Actions<a class="headerlink" href="#image-gallery-music-room-and-replay-actions" title="Ссылка на этот заголовок"></a></h1>
 <section id="image-gallery">
-<span id="id1"></span><h2>Image Gallery<a class="headerlink" href="#image-gallery" title="Link to this heading"></a></h2>
+<span id="id1"></span><h2>Image Gallery<a class="headerlink" href="#image-gallery" title="Ссылка на этот заголовок"></a></h2>
 <p>A image gallery is a screen that allows the player to unlock images,
 and then view those images. The screen has one or more buttons associated
 with it, and each button has one or more associated images. Buttons and
@@ -230,17 +287,17 @@ when all associated conditions are satisfied.</p>
 determine if the buttons and images they belong to are unlocked. This
 is also a multi-step process.</p>
 <ol class="arabic simple">
-<li><p>Declare a new button by calling <code class="xref py py-meth docutils literal notranslate"><span class="pre">Gallery.button()</span></code>.</p></li>
+<li><p>Declare a new button by calling <a class="reference internal" href="#Gallery.button" title="Gallery.button"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Gallery.button()</span></code></a>.</p></li>
 <li><p>Optionally, add one or more unlock conditions to the button by
-calling <code class="xref py py-meth docutils literal notranslate"><span class="pre">Gallery.unlock()</span></code> or <code class="xref py py-meth docutils literal notranslate"><span class="pre">Gallery.condition()</span></code>.</p></li>
-<li><p>Declare an image by calling <code class="xref py py-meth docutils literal notranslate"><span class="pre">Gallery.image()</span></code> with one or more
+calling <a class="reference internal" href="#Gallery.unlock" title="Gallery.unlock"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Gallery.unlock()</span></code></a> or <a class="reference internal" href="#Gallery.condition" title="Gallery.condition"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Gallery.condition()</span></code></a>.</p></li>
+<li><p>Declare an image by calling <a class="reference internal" href="#Gallery.image" title="Gallery.image"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Gallery.image()</span></code></a> with one or more
 displayables as arguments. Or call the convenience method
-<code class="xref py py-meth docutils literal notranslate"><span class="pre">Gallery.unlock_image()</span></code> instead.</p></li>
-<li><p>Optionally, call <code class="xref py py-meth docutils literal notranslate"><span class="pre">Gallery.transform()</span></code> to associate
+<a class="reference internal" href="#Gallery.unlock_image" title="Gallery.unlock_image"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Gallery.unlock_image()</span></code></a> instead.</p></li>
+<li><p>Optionally, call <a class="reference internal" href="#Gallery.transform" title="Gallery.transform"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Gallery.transform()</span></code></a> to associate
 transforms with the displayables.</p></li>
 <li><p>Optionally, add one or more unlock conditions to the image by
-calling <code class="xref py py-meth docutils literal notranslate"><span class="pre">Gallery.unlock()</span></code>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">Gallery.condition()</span></code>,
-or <code class="xref py py-meth docutils literal notranslate"><span class="pre">Gallery.allprior()</span></code>.</p></li>
+calling <a class="reference internal" href="#Gallery.unlock" title="Gallery.unlock"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Gallery.unlock()</span></code></a>, <a class="reference internal" href="#Gallery.condition" title="Gallery.condition"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Gallery.condition()</span></code></a>,
+or <a class="reference internal" href="#Gallery.allprior" title="Gallery.allprior"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Gallery.allprior()</span></code></a>.</p></li>
 </ol>
 <p>Additional images can be added to a button by repeating steps 3-5,
 while additional buttons can be added to the gallery by repeating
@@ -268,7 +325,7 @@ image galleries, or to return to the main or extras menu.</p></li>
     <span class="n">g</span><span class="o">.</span><span class="k">image</span><span class="p">(</span><span class="s2">&quot;dawn1&quot;</span><span class="p">)</span>
     <span class="n">g</span><span class="o">.</span><span class="n">unlock</span><span class="p">(</span><span class="s2">&quot;dawn1&quot;</span><span class="p">)</span>
 
-    <span class="c1"># This button has multiple images assocated with it. We use unlock_image</span>
+    <span class="c1"># This button has multiple images associated with it. We use unlock_image</span>
     <span class="c1"># so we don&#39;t have to call both .image and .unlock. We also apply a</span>
     <span class="c1"># transform to the first image.</span>
     <span class="n">g</span><span class="o">.</span><span class="k">button</span><span class="p">(</span><span class="s2">&quot;dark&quot;</span><span class="p">)</span>
@@ -369,9 +426,277 @@ accomplishing it is to add the following line:</p>
 </pre></div>
 </div>
 <p>to the main menu screen.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="Gallery">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Gallery</span></span><a class="headerlink" href="#Gallery" title="Ссылка на это определение"></a></dt>
+<dd><p>This class supports the creation of an image gallery by handling the
+locking of images, providing an action that can show one or more images,
+and a providing method that creates buttons that use that action.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Gallery.enter_transition">
+<span class="sig-name descname"><span class="pre">enter_transition</span></span><a class="headerlink" href="#Gallery.enter_transition" title="Ссылка на это определение"></a></dt>
+<dd><p>The transition that is used when displaying the first image associated
+with a gallery button.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Gallery.intra_transition">
+<span class="sig-name descname"><span class="pre">intra_transition</span></span><a class="headerlink" href="#Gallery.intra_transition" title="Ссылка на это определение"></a></dt>
+<dd><p>The transition that is used when displaying images associated with
+gallery buttons, apart from the first.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Gallery.exit_transition">
+<span class="sig-name descname"><span class="pre">exit_transition</span></span><a class="headerlink" href="#Gallery.exit_transition" title="Ссылка на это определение"></a></dt>
+<dd><p>The transition that is used when returning from the last image associated
+with a gallery button to the gallery screen.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Gallery.transition">
+<span class="sig-name descname"><span class="pre">transition</span></span><a class="headerlink" href="#Gallery.transition" title="Ссылка на это определение"></a></dt>
+<dd><p>This is used in place of enter_transition, intra_transition, or exit_transition
+if one or more of them has not been set.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Gallery.locked_button">
+<span class="sig-name descname"><span class="pre">locked_button</span></span><a class="headerlink" href="#Gallery.locked_button" title="Ссылка на это определение"></a></dt>
+<dd><p>The default displayable used by make_button for a locked button.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Gallery.hover_border">
+<span class="sig-name descname"><span class="pre">hover_border</span></span><a class="headerlink" href="#Gallery.hover_border" title="Ссылка на это определение"></a></dt>
+<dd><p>The default hover border used by make_button.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Gallery.idle_border">
+<span class="sig-name descname"><span class="pre">idle_border</span></span><a class="headerlink" href="#Gallery.idle_border" title="Ссылка на это определение"></a></dt>
+<dd><p>The default idle border used by make_button.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Gallery.unlocked_advance">
+<span class="sig-name descname"><span class="pre">unlocked_advance</span></span><a class="headerlink" href="#Gallery.unlocked_advance" title="Ссылка на это определение"></a></dt>
+<dd><p>If true, the gallery will only advance through unlocked images.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Gallery.navigation">
+<span class="sig-name descname"><span class="pre">navigation</span></span><a class="headerlink" href="#Gallery.navigation" title="Ссылка на это определение"></a></dt>
+<dd><p>If true, the gallery will display navigation and slideshow
+buttons on top of the images.</p>
+<p>To customize the look of the navigation, you may override the
+gallery_navigation screen. The default screen is defined in
+renpy/common/00gallery.rpy</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Gallery.span_buttons">
+<span class="sig-name descname"><span class="pre">span_buttons</span></span><a class="headerlink" href="#Gallery.span_buttons" title="Ссылка на это определение"></a></dt>
+<dd><p>If true, the gallery will advance between buttons.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Gallery.slideshow_delay">
+<span class="sig-name descname"><span class="pre">slideshow_delay</span></span><a class="headerlink" href="#Gallery.slideshow_delay" title="Ссылка на это определение"></a></dt>
+<dd><p>The time it will take for the gallery to advance between images
+in slideshow mode.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">image_screen</span> <span class="pre">=</span> <span class="pre">&quot;_gallery&quot;</span></span></dt>
+<dd><p>The screen that is used to show individual images in this gallery.
+This screen is supplied the following keyword arguments:</p>
+<dl class="simple">
+<dt><cite>locked</cite></dt><dd><p>True if the image is locked.</p>
+</dd>
+<dt><cite>displayables</cite></dt><dd><p>A list of transformed displayables that should be shown to the user.</p>
+</dd>
+<dt><cite>index</cite></dt><dd><p>A 1-based index of the image being shown.</p>
+</dd>
+<dt><cite>count</cite></dt><dd><p>The number of images attached to the current button.</p>
+</dd>
+<dt><cite>gallery</cite></dt><dd><p>The image gallery object.</p>
+</dd>
+</dl>
+<p>Additional arguments may be supplied by prefixing them with
+<cite>show_</cite> in calls to Gallery.image and Gallery.unlock image.</p>
+<p>The default screen is defined at the bottom of renpy/common/00gallery.rpy.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Gallery.Action">
+<span class="sig-name descname"><span class="pre">Action</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gallery.Action" title="Ссылка на это определение"></a></dt>
+<dd><p>An action that displays the images associated with the given button
+name.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Gallery.Next">
+<span class="sig-name descname"><span class="pre">Next</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unlocked</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gallery.Next" title="Ссылка на это определение"></a></dt>
+<dd><p>Advances to the next image in the gallery.</p>
+<dl class="simple">
+<dt><cite>unlocked</cite></dt><dd><p>If true, only considers unlocked images.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Gallery.Previous">
+<span class="sig-name descname"><span class="pre">Previous</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unlocked</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gallery.Previous" title="Ссылка на это определение"></a></dt>
+<dd><p>Goes to the previous image in the gallery.</p>
+<dl class="simple">
+<dt><cite>unlocked</cite></dt><dd><p>If true, only considers unlocked images.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Gallery.Return">
+<span class="sig-name descname"><span class="pre">Return</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gallery.Return" title="Ссылка на это определение"></a></dt>
+<dd><p>Stops displaying gallery images.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Gallery.ToggleSlideshow">
+<span class="sig-name descname"><span class="pre">ToggleSlideshow</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gallery.ToggleSlideshow" title="Ссылка на это определение"></a></dt>
+<dd><p>Toggles slideshow mode.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Gallery.allprior">
+<span class="sig-name descname"><span class="pre">allprior</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gallery.allprior" title="Ссылка на это определение"></a></dt>
+<dd><p>A condition that is true if all prior images associated with the
+current button have been unlocked.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Gallery.button">
+<span class="sig-name descname"><span class="pre">button</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gallery.button" title="Ссылка на это определение"></a></dt>
+<dd><p>Creates a new button, named <cite>name</cite>.</p>
+<dl class="simple">
+<dt><cite>name</cite></dt><dd><p>The name of the button being created.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Gallery.condition">
+<span class="sig-name descname"><span class="pre">condition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expression</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gallery.condition" title="Ссылка на это определение"></a></dt>
+<dd><p>A condition that is satisfied when an expression evaluates to true.</p>
+<dl class="simple">
+<dt><cite>expression</cite></dt><dd><p>A string giving a Python expression.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Gallery.get_fraction">
+<span class="sig-name descname"><span class="pre">get_fraction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'{seen}/{total}'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gallery.get_fraction" title="Ссылка на это определение"></a></dt>
+<dd><p>Returns a text string giving the number of unlocked images and total number of images in the button
+named <cite>name</cite>. If <cite>name</cite> is None, returns the same information for all buttons.</p>
+<dl>
+<dt><cite>format</cite></dt><dd><p>A Python format string that's used to format the numbers. This has three values that
+can be substituted in:</p>
+<dl class="simple">
+<dt>{seen}</dt><dd><p>The number of images that have been seen.</p>
+</dd>
+<dt>{total}</dt><dd><p>The total number of images in the button.</p>
+</dd>
+<dt>{locked}</dt><dd><p>The number of images that are still locked.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Gallery.image">
+<span class="sig-name descname"><span class="pre">image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">displayables</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gallery.image" title="Ссылка на это определение"></a></dt>
+<dd><p>Adds a new image to the current button, where an image consists
+of one or more displayables.</p>
+<p>Properties beginning with <cite>show_</cite> have that prefix stripped off,
+and are passed to the gallery.image_screen screen as additional
+keyword arguments.</p>
+<p>This takes one keword argument:</p>
+<dl class="simple">
+<dt><cite>movie</cite></dt><dd><p>This should be set to true if one of the displayables is a
+movie with sound. This will cause the movie to be hidden
+during a transition.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Gallery.make_button">
+<span class="sig-name descname"><span class="pre">make_button</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unlocked</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">locked</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hover_border</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">idle_border</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gallery.make_button" title="Ссылка на это определение"></a></dt>
+<dd><p>This creates a button that displays the images associated with the given
+button name.</p>
+<dl class="simple">
+<dt><cite>name</cite></dt><dd><p>The name of the button that will be created.</p>
+</dd>
+<dt><cite>unlocked</cite></dt><dd><p>A displayable that is displayed for this button when it is
+unlocked.</p>
+</dd>
+<dt><cite>locked</cite></dt><dd><p>A displayable that is displayed for this button when it is
+locked. If None, the locked_button field of the gallery
+object is used instead.</p>
+</dd>
+<dt><cite>hover_border</cite></dt><dd><p>A displayable that is used to overlay this button when
+it is unlocked and has focus. If None, the hover_border
+field of the gallery object is used.</p>
+</dd>
+<dt><cite>idle_border</cite></dt><dd><p>A displayable that is used to overlay this button when
+it is unlocked but unfocused. If None, the idle_border
+field of the gallery object is used.</p>
+</dd>
+<dt><cite>style</cite></dt><dd><p>The style the button inherits from. When None, defaults
+to the &quot;empty&quot; style, so as not to inherit borders and
+so on.</p>
+</dd>
+</dl>
+<p>Additional keyword arguments become style properties of the
+created button object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Gallery.transform">
+<span class="sig-name descname"><span class="pre">transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">transforms</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gallery.transform" title="Ссылка на это определение"></a></dt>
+<dd><p>Applies transforms to the last image registered. This should be
+called with the same number of transforms as the image has
+displayables. The transforms are applied to the corresponding
+displayables.</p>
+<p>If a transform is None, the default transform is used.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Gallery.unlock">
+<span class="sig-name descname"><span class="pre">unlock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">images</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gallery.unlock" title="Ссылка на это определение"></a></dt>
+<dd><p>A condition that takes one or more image names as argument, and
+is satisfied when all the named images have been seen by the
+player. The image names should be given as strings.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Gallery.unlock_image">
+<span class="sig-name descname"><span class="pre">unlock_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">images</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gallery.unlock_image" title="Ссылка на это определение"></a></dt>
+<dd><p>A convenience method that is equivalent to calling image and unlock
+with the same parameters. (Keyword arguments beginning with <code class="docutils literal notranslate"><span class="pre">show_</span></code> are
+only passed to image.) This will cause an image to be displayed
+if it has been seen before.</p>
+<p>The images should be specified as strings giving image names.</p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 <section id="music-room">
-<span id="id2"></span><h2>Music Room<a class="headerlink" href="#music-room" title="Link to this heading"></a></h2>
+<span id="id2"></span><h2>Music Room<a class="headerlink" href="#music-room" title="Ссылка на этот заголовок"></a></h2>
 <p>A music room is a screen that allows the user to select and play music
 tracks from the game. These tracks may start off locked when the user
 first begins playing a particular game, and will be unlocked as the
@@ -446,14 +771,163 @@ accomplishing it is to add the following line:</p>
 <p>Using the <code class="xref py py-func docutils literal notranslate"><span class="pre">Preferences()</span></code> function, especially
 <code class="docutils literal notranslate"><span class="pre">Preferences(&quot;music</span> <span class="pre">volume&quot;)</span></code>, it's possible to include a volume
 slider on the music screen.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="MusicRoom">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MusicRoom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'music'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fadeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fadein</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">single_track</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shuffle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop_action</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#MusicRoom" title="Ссылка на это определение"></a></dt>
+<dd><p>A music room that contains a series of songs that can be unlocked
+by the user, and actions that can play entries from the list in
+order.</p>
+<dl class="simple">
+<dt><cite>channel</cite></dt><dd><p>The channel that this music room will operate on.</p>
+</dd>
+<dt><cite>fadeout</cite></dt><dd><p>The number of seconds it takes to fade out the old
+music when changing tracks.</p>
+</dd>
+<dt><cite>fadein</cite></dt><dd><p>The number of seconds it takes to fade in the new
+music when changing tracks.</p>
+</dd>
+<dt><cite>loop</cite></dt><dd><p>Determines if playback will loop or stop when it reaches
+the end of the playlist.</p>
+</dd>
+<dt><cite>single_track</cite></dt><dd><p>If true, only a single track will play. If loop is true,
+that track will loop. Otherwise, playback will stop when the
+track finishes.</p>
+</dd>
+<dt><cite>shuffle</cite></dt><dd><p>If true, the tracks are shuffled, and played in the shuffled
+order. If false, the tracks are played in the order they're
+added to the MusicRoom.</p>
+</dd>
+<dt><cite>stop_action</cite></dt><dd><p>An action to run when the music has stopped.</p>
+</dd>
+</dl>
+<p>Single_track and shuffle conflict with each other. Only one should
+be true at a time. (Actions that set single_track and shuffle
+enforce this.)</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="MusicRoom.Next">
+<span class="sig-name descname"><span class="pre">Next</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MusicRoom.Next" title="Ссылка на это определение"></a></dt>
+<dd><p>An action that causes the music room to play the next unlocked file
+in the playlist.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="MusicRoom.Play">
+<span class="sig-name descname"><span class="pre">Play</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#MusicRoom.Play" title="Ссылка на это определение"></a></dt>
+<dd><p>This action causes the music room to start playing. If <cite>filename</cite> is given, that
+file begins playing. Otherwise, the currently playing file starts
+over (if it's unlocked), or the first file starts playing.</p>
+<p>If <cite>filename</cite> is given, buttons with this action will be insensitive
+while <cite>filename</cite> is locked, and will be selected when <cite>filename</cite>
+is playing.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="MusicRoom.Previous">
+<span class="sig-name descname"><span class="pre">Previous</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MusicRoom.Previous" title="Ссылка на это определение"></a></dt>
+<dd><p>An action that causes the music room to play the previous unlocked
+file in the playlist.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="MusicRoom.RandomPlay">
+<span class="sig-name descname"><span class="pre">RandomPlay</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MusicRoom.RandomPlay" title="Ссылка на это определение"></a></dt>
+<dd><p>This action causes the music room to start playing a randomly selected unlocked
+music track.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="MusicRoom.SetLoop">
+<span class="sig-name descname"><span class="pre">SetLoop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#MusicRoom.SetLoop" title="Ссылка на это определение"></a></dt>
+<dd><p>This action sets the value of the loop property.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="MusicRoom.SetShuffle">
+<span class="sig-name descname"><span class="pre">SetShuffle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#MusicRoom.SetShuffle" title="Ссылка на это определение"></a></dt>
+<dd><p>This action sets the value of the shuffle property.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="MusicRoom.SetSingleTrack">
+<span class="sig-name descname"><span class="pre">SetSingleTrack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#MusicRoom.SetSingleTrack" title="Ссылка на это определение"></a></dt>
+<dd><p>This action sets the value of the single_track property.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="MusicRoom.Stop">
+<span class="sig-name descname"><span class="pre">Stop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MusicRoom.Stop" title="Ссылка на это определение"></a></dt>
+<dd><p>This action stops the music.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="MusicRoom.ToggleLoop">
+<span class="sig-name descname"><span class="pre">ToggleLoop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MusicRoom.ToggleLoop" title="Ссылка на это определение"></a></dt>
+<dd><p>This action toggles the value of the loop property.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="MusicRoom.TogglePause">
+<span class="sig-name descname"><span class="pre">TogglePause</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MusicRoom.TogglePause" title="Ссылка на это определение"></a></dt>
+<dd><p>If music is playing, pauses or unpauses the music as appropriate.</p>
+<p>This button is selected when the music is paused.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="MusicRoom.TogglePlay">
+<span class="sig-name descname"><span class="pre">TogglePlay</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MusicRoom.TogglePlay" title="Ссылка на это определение"></a></dt>
+<dd><p>If no music is currently playing, this action starts playing the first
+unlocked track. Otherwise, stops the currently playing music.</p>
+<p>This button is selected when any music is playing.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="MusicRoom.ToggleShuffle">
+<span class="sig-name descname"><span class="pre">ToggleShuffle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MusicRoom.ToggleShuffle" title="Ссылка на это определение"></a></dt>
+<dd><p>This action toggles the value of the shuffle property.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="MusicRoom.ToggleSingleTrack">
+<span class="sig-name descname"><span class="pre">ToggleSingleTrack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MusicRoom.ToggleSingleTrack" title="Ссылка на это определение"></a></dt>
+<dd><p>This action toggles the value of the single_track property.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="MusicRoom.add">
+<span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">always_unlocked</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#MusicRoom.add" title="Ссылка на это определение"></a></dt>
+<dd><p>Adds the music file <cite>filename</cite> to this music room. The music room
+will play unlocked files in the order that they are added to the
+room.</p>
+<dl>
+<dt><cite>always_unlocked</cite></dt><dd><p>If true, the music file will be always unlocked. This allows
+the file to show up in the music room before it has been
+played in the game.</p>
+</dd>
+<dt><cite>action</cite></dt><dd><p>This is a action or the list of actions. these are called when this
+file is played.</p>
+<p>For example, These actions is used to change a screen or background, description
+by the playing file.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="MusicRoom.is_unlocked">
+<span class="sig-name descname"><span class="pre">is_unlocked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#MusicRoom.is_unlocked" title="Ссылка на это определение"></a></dt>
+<dd><p>Returns true if the filename has been unlocked (or is always
+unlocked), and false if it is still locked.</p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 <section id="replay">
-<span id="id3"></span><h2>Replay<a class="headerlink" href="#replay" title="Link to this heading"></a></h2>
+<span id="id3"></span><h2>Replay<a class="headerlink" href="#replay" title="Ссылка на этот заголовок"></a></h2>
 <p>Ren'Py also includes the ability to replay a sequence from inside the
 main or game menu. This can be used to create a &quot;sequence gallery&quot;, or
 memory gallery that allows the player to repeat important sequence.
 After the sequence finishes, Ren'Py returns to where the replay was launched.</p>
-<p>Sequence replay is also possible using the <code class="xref py py-func docutils literal notranslate"><span class="pre">Start()</span></code> action. The
+<p>Sequence replay is also possible using the <a class="reference internal" href="screen_actions.html#Start" title="Start"><code class="xref py py-func docutils literal notranslate"><span class="pre">Start()</span></code></a> action. The
 difference between the two modes are:</p>
 <ul class="simple">
 <li><p>A replay can be launched from any screen while Start can only be
@@ -464,11 +938,11 @@ menu, for example. If a game is in progress when replay is called,
 game state is preserved.</p></li>
 <li><p>Saving is disabled while in replay mode. Reloading, which requires
 saving, is also disabled.</p></li>
-<li><p>While in replay mode, a call to <code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.end_replay()</span></code> will end
+<li><p>While in replay mode, a call to <a class="reference internal" href="#renpy.end_replay" title="renpy.end_replay"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.end_replay()</span></code></a> will end
 the replay. In normal mode, end_replay does nothing.</p></li>
 </ul>
 <p>To take advantage of the replay mode, a sequence should begin with a label,
-and end with a call to <code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.end_replay()</span></code>. The sequence should make
+and end with a call to <a class="reference internal" href="#renpy.end_replay" title="renpy.end_replay"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.end_replay()</span></code></a>. The sequence should make
 no assumption as to the state of the layers or variables, which can be
 very different in normal and replay mode (except those set through the
 <cite>scope</cite> parameter when entering replay). When a replay begins, the label
@@ -503,7 +977,7 @@ Replay action:</p>
 <p>There is one store variable used by replay mode:</p>
 <dl class="std var">
 <dt class="sig sig-object std" id="var-_in_replay">
-<span class="sig-name descname"><span class="pre">_in_replay</span></span><a class="headerlink" href="#var-_in_replay" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">_in_replay</span></span><a class="headerlink" href="#var-_in_replay" title="Ссылка на это определение"></a></dt>
 <dd><p>When in replay mode, this is sent to the label at which replay
 mode was started - the label that was called, not the one the
 call originated from. Outside of replay mode, this is None.</p>
@@ -516,15 +990,56 @@ to the cleaned store when entering a replay, and by default sets
 <a class="reference internal" href="store_variables.html#var-_game_menu_screen"><code class="xref std std-var docutils literal notranslate"><span class="pre">_game_menu_screen</span></code></a> to cause right-clicking in a replay to
 default to showing the preferences screen.</p>
 <p>The following variables and actions are used in replay mode:</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="EndReplay">
+<span class="sig-name descname"><span class="pre">EndReplay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">confirm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EndReplay" title="Ссылка на это определение"></a></dt>
+<dd><p>Ends the current replay.</p>
+<dl class="simple">
+<dt><cite>confirm</cite></dt><dd><p>If true, prompts the user for confirmation before ending the
+replay.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Replay">
+<span class="sig-name descname"><span class="pre">Replay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scope</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">locked</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Replay" title="Ссылка на это определение"></a></dt>
+<dd><p>An action that starts <cite>label</cite> as a replay.</p>
+<dl class="simple">
+<dt><cite>scope</cite></dt><dd><p>A dictionary mapping variable name to value. These variables are set
+when entering the replay.</p>
+</dd>
+<dt><cite>locked</cite></dt><dd><p>If true, this action is insensitive and will not do anything when triggered.
+If false, it will behave normally. If None, it will be locked if the label
+has not been seen in any playthrough.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="renpy.call_replay">
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">call_replay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scope</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.call_replay" title="Ссылка на это определение"></a></dt>
+<dd><p>Calls a label as a memory.</p>
+<p>The <cite>scope</cite> argument is used to set the initial values of variables in the
+memory context.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="renpy.end_replay">
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">end_replay</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.end_replay" title="Ссылка на это определение"></a></dt>
+<dd><p>If we're in a replay, ends the replay immediately. Otherwise, does
+nothing.</p>
+</dd></dl>
+
 </section>
 </section>
 
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="side_image.html" class="btn btn-neutral float-left" title="Side Images" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="drag_drop.html" class="btn btn-neutral float-right" title="Drag and Drop" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Нижняя область">
+        <a href="side_image.html" class="btn btn-neutral float-left" title="Side Images" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+        <a href="drag_drop.html" class="btn btn-neutral float-right" title="Drag and Drop" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -533,9 +1048,9 @@ default to showing the preferences screen.</p>
     <p></p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

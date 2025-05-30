@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" data-content_root="./">
+<html class="writer-html5" lang="ru" data-content_root="./">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -17,14 +17,15 @@
     <link rel="canonical" href="https://www.renpy.org/doc/html/fetch.html" />
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=ea47c46f"></script>
+      <script src="_static/documentation_options.js?v=8441e6a0"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=cd1d70c9"></script>
       <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
       <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
     <link rel="next" title="Screenshots" href="screenshot.html" />
     <link rel="prev" title="_ren.py Files - Ren&#39;Py in Python" href="ren_py.html" /> 
 </head>
@@ -36,18 +37,18 @@
         <div class="wy-side-nav-search" >
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
 
 <a href="https://www.renpy.org/" style="margin-bottom: 0">Ren'Py Visual Novel Engine
-<img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
+<img src="_static/navbar-logo.png" alt="Логотип" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
 <a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
@@ -77,7 +78,7 @@
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Сцена</a></li>
 <li class="toctree-l1"><a class="reference internal" href="live2d.html">Live2D Cubism</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Customizing Ren'Py</span></p>
@@ -134,6 +135,7 @@
 <li class="toctree-l1"><a class="reference internal" href="other.html">Other Functions and Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ren_py.html">_ren.py Files - Ren'Py in Python</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">HTTPS/HTTP Fetch</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#renpy.fetch"><code class="docutils literal notranslate"><span class="pre">renpy.fetch()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#requests">Requests</a></li>
 </ul>
 </li>
@@ -184,19 +186,19 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Ren'Py Visual Novel Engine</a>
       </nav>
 
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+          <div role="navigation" aria-label="Навигация по страницам">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">HTTPS/HTTP Fetch</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/renpy/renpy/blob/master/sphinx/source/fetch.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/renpy/renpy/blob/master/sphinx/source/fetch.rst" class="fa fa-github"> Редактировать на GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -205,7 +207,7 @@
            <div itemprop="articleBody">
              
   <section id="https-http-fetch">
-<h1>HTTPS/HTTP Fetch<a class="headerlink" href="#https-http-fetch" title="Link to this heading"></a></h1>
+<h1>HTTPS/HTTP Fetch<a class="headerlink" href="#https-http-fetch" title="Ссылка на этот заголовок"></a></h1>
 <p>Ren'Py supports fetching information over HTTP and HTTPS using the
 renpy.fetch function. This function:</p>
 <ul class="simple">
@@ -230,11 +232,60 @@ originally served the game, the server must support <a class="reference external
 to be considered when using renpy.fetch, especially when displaying media
 returned this way. (Ren'Py is generally not hardened against malicious images,
 movies, and audio files.)</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="renpy.fetch">
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">fetch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">json</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">result</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'bytes'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.fetch" title="Ссылка на это определение"></a></dt>
+<dd><p>This performs an HTTP (or HTTPS) request to the given URL, and returns
+the content of that request. If it fails, raises a FetchError exception,
+with text that describes the failure. (But may not be suitable for
+presentation to the user.)</p>
+<dl class="simple">
+<dt><cite>url</cite></dt><dd><p>The URL to fetch.</p>
+</dd>
+<dt><cite>method</cite></dt><dd><p>The method to use. Generally one of &quot;GET&quot;, &quot;POST&quot;, or &quot;PUT&quot;, but other
+HTTP methods are possible. If <cite>data</cite> or <cite>json</cite> are not None, defaults to
+&quot;POST&quot;, otherwise defaults to GET.</p>
+</dd>
+<dt><cite>data</cite></dt><dd><p>If not None, a byte string of data to send with the request.</p>
+</dd>
+<dt><cite>json</cite></dt><dd><p>If not None, a JSON object to send with the request. This takes precendence
+over <cite>data</cite>.</p>
+</dd>
+<dt><cite>content_type</cite></dt><dd><p>The content type of the data. If not given, defaults to &quot;application/json&quot;
+if <cite>json</cite> is not None, or &quot;application/octet-stream&quot; otherwise. Only
+used on a POST or PUT request.</p>
+</dd>
+<dt><cite>timeout</cite></dt><dd><p>The number of seconds to wait for the request to complete.</p>
+</dd>
+<dt><cite>result</cite></dt><dd><p>How to process the result. If &quot;bytes&quot;, returns the raw bytes of the result.
+If &quot;text&quot;, decodes the result using UTF-8 and returns a unicode string. If &quot;json&quot;,
+decodes the result as JSON. (Other exceptions may be generated by the decoding
+process.)</p>
+</dd>
+<dt><cite>params</cite></dt><dd><p>A dictionary of parameters that are added to the URL as a query string.</p>
+</dd>
+<dt><cite>headers</cite></dt><dd><p>A dictionary of headers to send with the request.</p>
+</dd>
+</dl>
+<p>This may be called from inside or outside of an interaction.</p>
+<ul class="simple">
+<li><p>Outside of an interation, while waiting for <cite>timeout</cite> to pass, this will
+repeatedly call <a class="reference internal" href="statement_equivalents.html#renpy.pause" title="renpy.pause"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.pause()</span></code></a>, so Ren'Py doesn't lock up. It
+may make sense to display a screen to the user to let them know what is going on.</p></li>
+<li><p>Inside of an interaction (for example, inside an Action), this will block
+the display system until the fetch request finishes or times out. It will try
+to service the audio system, so audio will continue to play.</p></li>
+</ul>
+<p>This function should work on all platforms. However, on the web platform,
+requests going to a different origin than the game will fail unless allowed
+by CORS.</p>
+</dd></dl>
+
 <section id="requests">
-<h2>Requests<a class="headerlink" href="#requests" title="Link to this heading"></a></h2>
+<h2>Requests<a class="headerlink" href="#requests" title="Ссылка на этот заголовок"></a></h2>
 <p>On desktop and mobile, Ren'Py includes the <a class="reference external" href="https://requests.readthedocs.io/">Requests</a>
 library. This is more powerful, but doesn't integrate as well as renpy.fetch.
-(For example, Ren'Py will call <code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.pause()</span></code> to wait for data, while
+(For example, Ren'Py will call <a class="reference internal" href="statement_equivalents.html#renpy.pause" title="renpy.pause"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.pause()</span></code></a> to wait for data, while
 requests will block, which could lead to problems like audio stalling.)</p>
 </section>
 </section>
@@ -242,9 +293,9 @@ requests will block, which could lead to problems like audio stalling.)</p>
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="ren_py.html" class="btn btn-neutral float-left" title="_ren.py Files - Ren&#39;Py in Python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="screenshot.html" class="btn btn-neutral float-right" title="Screenshots" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Нижняя область">
+        <a href="ren_py.html" class="btn btn-neutral float-left" title="_ren.py Files - Ren&#39;Py in Python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+        <a href="screenshot.html" class="btn btn-neutral float-right" title="Screenshots" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -253,9 +304,9 @@ requests will block, which could lead to problems like audio stalling.)</p>
     <p></p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

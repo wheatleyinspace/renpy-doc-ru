@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" data-content_root="./">
+<html class="writer-html5" lang="ru" data-content_root="./">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -17,14 +17,15 @@
     <link rel="canonical" href="https://www.renpy.org/doc/html/bubble.html" />
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=ea47c46f"></script>
+      <script src="_static/documentation_options.js?v=8441e6a0"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=cd1d70c9"></script>
       <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
       <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
     <link rel="next" title="Text Input" href="input.html" />
     <link rel="prev" title="NVL-Mode Tutorial" href="nvl_mode.html" /> 
 </head>
@@ -36,18 +37,18 @@
         <div class="wy-side-nav-search" >
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
 
 <a href="https://www.renpy.org/" style="margin-bottom: 0">Ren'Py Visual Novel Engine
-<img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
+<img src="_static/navbar-logo.png" alt="Логотип" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
 <a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
@@ -77,7 +78,7 @@
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Сцена</a></li>
 <li class="toctree-l1"><a class="reference internal" href="live2d.html">Live2D Cubism</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Customizing Ren'Py</span></p>
@@ -188,19 +189,19 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Ren'Py Visual Novel Engine</a>
       </nav>
 
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+          <div role="navigation" aria-label="Навигация по страницам">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Speech Bubbles</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/renpy/renpy/blob/master/sphinx/source/bubble.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/renpy/renpy/blob/master/sphinx/source/bubble.rst" class="fa fa-github"> Редактировать на GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -209,7 +210,7 @@
            <div itemprop="articleBody">
              
   <section id="speech-bubbles">
-<h1>Speech Bubbles<a class="headerlink" href="#speech-bubbles" title="Link to this heading"></a></h1>
+<h1>Speech Bubbles<a class="headerlink" href="#speech-bubbles" title="Ссылка на этот заголовок"></a></h1>
 <p>Ren'Py supports dialogue that's displayed in speech bubbles, which can be
 interactively positioned on the screen. This provides an alternative to
 the textboxes used by ADV-style games, and the full screen dialogue used
@@ -241,7 +242,7 @@ the corresponding line is brighter. If the values are being inherited from
 a prior line of dialogue or the default, the button is dimmed out. Right
 clicking on a button will prevent the current line from setting the value.</p>
 <section id="retained-bubbles">
-<span id="id1"></span><h2>Retained Bubbles<a class="headerlink" href="#retained-bubbles" title="Link to this heading"></a></h2>
+<span id="id1"></span><h2>Retained Bubbles<a class="headerlink" href="#retained-bubbles" title="Ссылка на этот заголовок"></a></h2>
 <p>Ren'Py supports a mode in which bubbles are retained between lines of
 dialogue, so they pop up one by one, until the previous bubbles are
 cleared from the screen. To enable this mode, set a bubble character's
@@ -255,7 +256,7 @@ pressing the &quot;(clear retained bubbles)&quot; button will remove all of the
 retained bubbles from the screen, except for the most recent.</p>
 </section>
 <section id="tips">
-<h2>Tips<a class="headerlink" href="#tips" title="Link to this heading"></a></h2>
+<h2>Tips<a class="headerlink" href="#tips" title="Ссылка на этот заголовок"></a></h2>
 <p>The speech bubbles use the same identifiers used by the translation system,
 see the <a class="reference internal" href="translation.html#translation-tips"><span class="std std-ref">Translation Tips</span></a> for more information
 about them. These identifiers can change if:</p>
@@ -268,35 +269,53 @@ a label with the <code class="docutils literal notranslate"><span class="pre">hi
 <p>If you edit a scene, it's suggested that you replay through it to make sure
 the changes did not affect speech bubble placement.</p>
 <p>It's possible to apply transforms to the speech bubble by editing the <a class="reference internal" href="#bubble-screen"><span class="std std-ref">Bubble Screen</span></a>.</p>
+<p id="bubble-ctc">If you'd like a CTC indicator to be part of the bubble screen, consider giving the
+<cite>ctc_position</cite> argument to Character the value of &quot;screen-variable&quot;. You may also need
+to add:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">showif</span> <span class="n">ctc</span><span class="p">:</span>
+    <span class="k">add</span> <span class="n">ctc</span>
+</pre></div>
+</div>
+<p>to the end of the bubble screen, if this is not present. You'd then define the character as:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>define e = Character(</dt><dd><p>None,
+image=&quot;eileen&quot;,
+kind=bubble,
+ctc_position=&quot;screen-variable&quot;,
+ctc=Transform(&quot;ctc_image.png&quot;, align=(0.5, 1.0))</p>
+</dd>
+</dl>
+</div></blockquote>
 </section>
 <section id="configuration-variables">
-<h2>Configuration Variables<a class="headerlink" href="#configuration-variables" title="Link to this heading"></a></h2>
+<h2>Configuration Variables<a class="headerlink" href="#configuration-variables" title="Ссылка на этот заголовок"></a></h2>
 <p>The speech bubble system is controlled by variables in the <code class="docutils literal notranslate"><span class="pre">bubble</span></code> namespace,
 and by the <code class="docutils literal notranslate"><span class="pre">bubble</span></code> screen and its associated styles.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">bubble</span></code> namespace contains the following variables:</p>
 <dl class="std var">
 <dt class="sig sig-object std" id="var-bubble.db_filename">
-<span class="sig-name descname"><span class="pre">bubble.db_filename</span></span> <span class="pre">=</span> <span class="pre">&quot;bubble.json&quot;</span><a class="headerlink" href="#var-bubble.db_filename" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">bubble.db_filename</span></span> <span class="pre">=</span> <span class="pre">&quot;bubble.json&quot;</span><a class="headerlink" href="#var-bubble.db_filename" title="Ссылка на это определение"></a></dt>
 <dd><p>The database file, stored in the game directory, that contains the
 speech bubble information.</p>
 </dd></dl>
 
 <dl class="std var">
 <dt class="sig sig-object std" id="var-bubble.clear_retain_statements">
-<span class="sig-name descname"><span class="pre">bubble.clear_retain_statements</span></span> <span class="pre">=</span> <span class="pre">[</span> <span class="pre">&quot;call</span> <span class="pre">screen&quot;,</span> <span class="pre">&quot;menu&quot;,</span>&#160; <span class="pre">&quot;say&quot;,</span> <span class="pre">&quot;say-centered&quot;,</span> <span class="pre">&quot;say-nvl&quot;,</span> <span class="pre">&quot;scene&quot;,</span> <span class="pre">]</span><a class="headerlink" href="#var-bubble.clear_retain_statements" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">bubble.clear_retain_statements</span></span> <span class="pre">=</span> <span class="pre">[</span> <span class="pre">&quot;call</span> <span class="pre">screen&quot;,</span> <span class="pre">&quot;menu&quot;,</span>&#160; <span class="pre">&quot;say&quot;,</span> <span class="pre">&quot;say-centered&quot;,</span> <span class="pre">&quot;say-nvl&quot;,</span> <span class="pre">&quot;scene&quot;,</span> <span class="pre">]</span><a class="headerlink" href="#var-bubble.clear_retain_statements" title="Ссылка на это определение"></a></dt>
 <dd><p>This is a list of statements that will automatically cause retained bubbles to be cleared.</p>
 </dd></dl>
 
 <dl class="std var">
 <dt class="sig sig-object std" id="var-bubble.cols">
-<span class="sig-name descname"><span class="pre">bubble.cols</span></span> <span class="pre">=</span> <span class="pre">24</span><a class="headerlink" href="#var-bubble.cols" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">bubble.cols</span></span> <span class="pre">=</span> <span class="pre">24</span><a class="headerlink" href="#var-bubble.cols" title="Ссылка на это определение"></a></dt>
 <dd><p>The granularity of the grid that's used to position and size speech bubbles,
 in the horizontal direction.</p>
 </dd></dl>
 
 <dl class="std var">
 <dt class="sig sig-object std" id="var-bubble.default_area">
-<span class="sig-name descname"><span class="pre">bubble.default_area</span></span> <span class="pre">=</span> <span class="pre">(15,</span> <span class="pre">1,</span> <span class="pre">8,</span> <span class="pre">5)</span><a class="headerlink" href="#var-bubble.default_area" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">bubble.default_area</span></span> <span class="pre">=</span> <span class="pre">(15,</span> <span class="pre">1,</span> <span class="pre">8,</span> <span class="pre">5)</span><a class="headerlink" href="#var-bubble.default_area" title="Ссылка на это определение"></a></dt>
 <dd><p>This is the default area that speech bubbles are placed in, if no other
 area is specified. This is a tuple of the form (x, y, w, h),
 where each value is a number of grid cells.</p>
@@ -304,7 +323,7 @@ where each value is a number of grid cells.</p>
 
 <dl class="std var">
 <dt class="sig sig-object std" id="var-bubble.expand_area">
-<span class="sig-name descname"><span class="pre">bubble.expand_area</span></span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">...</span> <span class="pre">}</span><a class="headerlink" href="#var-bubble.expand_area" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">bubble.expand_area</span></span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">...</span> <span class="pre">}</span><a class="headerlink" href="#var-bubble.expand_area" title="Ссылка на это определение"></a></dt>
 <dd><p>This is a map from the name of a set of properties to a (left, top, right, bottom)
 tuple. If found in this set, the area of the speech bubble is expanded by the
 given number of pixels.</p>
@@ -325,18 +344,18 @@ put when the set of properties is changed and the tail moves.</p>
 
 <dl class="std var">
 <dt class="sig sig-object std" id="var-bubble.layer">
-<span class="sig-name descname"><span class="pre">bubble.layer</span></span> <span class="pre">=</span> <span class="pre">&quot;screens&quot;</span><a class="headerlink" href="#var-bubble.layer" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">bubble.layer</span></span> <span class="pre">=</span> <span class="pre">&quot;screens&quot;</span><a class="headerlink" href="#var-bubble.layer" title="Ссылка на это определение"></a></dt>
 <dd><p>The layer that non-retained bubbles are placed on.</p>
 </dd></dl>
 
 <dl class="std var">
 <dt class="sig sig-object std" id="var-bubble.properties">
-<span class="sig-name descname"><span class="pre">bubble.properties</span></span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">...</span> <span class="pre">}</span><a class="headerlink" href="#var-bubble.properties" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">bubble.properties</span></span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">...</span> <span class="pre">}</span><a class="headerlink" href="#var-bubble.properties" title="Ссылка на это определение"></a></dt>
 <dd><p>These are properties, apart from the area, that can be used to customize
 the speech bubble. This is a map from the name of a set of properties
 to a dictionary of properties and values. These properties supersede those
 given to the character, and are then supplied to the <code class="docutils literal notranslate"><span class="pre">bubble</span></code> screen.</p>
-<p>This uses the same prefixing system as <code class="xref py py-func docutils literal notranslate"><span class="pre">Character()</span></code> does. Properties
+<p>This uses the same prefixing system as <a class="reference internal" href="dialogue.html#Character" title="Character"><code class="xref py py-func docutils literal notranslate"><span class="pre">Character()</span></code></a> does. Properties
 beginning with <code class="docutils literal notranslate"><span class="pre">window_</span></code> have the prefix removed, and are passed to the
 displayable with id &quot;window&quot; in the bubble screen, which is the bubble
 itself. Properties with <code class="docutils literal notranslate"><span class="pre">what_</span></code> have the prefix removed, and are passed
@@ -378,7 +397,7 @@ room for the tail.</p>
 
 <dl class="std var">
 <dt class="sig sig-object std" id="var-bubble.properties_order">
-<span class="sig-name descname"><span class="pre">bubble.properties_order</span></span> <span class="pre">=</span> <span class="pre">[</span> <span class="pre">]</span><a class="headerlink" href="#var-bubble.properties_order" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">bubble.properties_order</span></span> <span class="pre">=</span> <span class="pre">[</span> <span class="pre">]</span><a class="headerlink" href="#var-bubble.properties_order" title="Ссылка на это определение"></a></dt>
 <dd><p>This is a list of the names of the sets of properties, in the order they should
 be cycled through in the speech bubble editor. If the names of the sets of properties
 are not given, the properties are cycled through in alphabetical order.</p>
@@ -386,7 +405,7 @@ are not given, the properties are cycled through in alphabetical order.</p>
 
 <dl class="std var">
 <dt class="sig sig-object std" id="var-bubble.properties_callback">
-<span class="sig-name descname"><span class="pre">bubble.properties_callback</span></span> <span class="pre">=</span> <span class="pre">None</span><a class="headerlink" href="#var-bubble.properties_callback" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">bubble.properties_callback</span></span> <span class="pre">=</span> <span class="pre">None</span><a class="headerlink" href="#var-bubble.properties_callback" title="Ссылка на это определение"></a></dt>
 <dd><p>If not None, this should be a function that takes an image tag, and returns
 a list or tuple of property names that should be used for that image tag, in
 the order those names should be cycled through. This takes precedence over
@@ -396,20 +415,20 @@ properties by character.</p>
 
 <dl class="std var">
 <dt class="sig sig-object std" id="var-bubble.retain_layer">
-<span class="sig-name descname"><span class="pre">bubble.retain_layer</span></span> <span class="pre">=</span> <span class="pre">&quot;screens&quot;</span><a class="headerlink" href="#var-bubble.retain_layer" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">bubble.retain_layer</span></span> <span class="pre">=</span> <span class="pre">&quot;screens&quot;</span><a class="headerlink" href="#var-bubble.retain_layer" title="Ссылка на это определение"></a></dt>
 <dd><p>The layer that retained bubbles are placed on.</p>
 </dd></dl>
 
 <dl class="std var">
 <dt class="sig sig-object std" id="var-bubble.rows">
-<span class="sig-name descname"><span class="pre">bubble.rows</span></span> <span class="pre">=</span> <span class="pre">24</span><a class="headerlink" href="#var-bubble.rows" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">bubble.rows</span></span> <span class="pre">=</span> <span class="pre">24</span><a class="headerlink" href="#var-bubble.rows" title="Ссылка на это определение"></a></dt>
 <dd><p>The granularity of the grid that's used to position and size speech bubbles,
 in the vertical direction.</p>
 </dd></dl>
 
 </section>
 <section id="bubble-screen">
-<span id="id2"></span><h2>Bubble Screen<a class="headerlink" href="#bubble-screen" title="Link to this heading"></a></h2>
+<span id="id2"></span><h2>Bubble Screen<a class="headerlink" href="#bubble-screen" title="Ссылка на этот заголовок"></a></h2>
 <p>The default <code class="docutils literal notranslate"><span class="pre">bubble</span></code> screen can be found in <code class="docutils literal notranslate"><span class="pre">screens.rpy</span></code>, and is similar
 to the default <code class="docutils literal notranslate"><span class="pre">say</span></code> screen:</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">screen</span> <span class="n">bubble</span><span class="p">(</span><span class="n">who</span><span class="p">,</span> <span class="n">what</span><span class="p">):</span>
@@ -467,7 +486,7 @@ transform events, like:</p>
 </div>
 </section>
 <section id="adding-bubble-support-to-a-game">
-<h2>Adding Bubble Support to a Game<a class="headerlink" href="#adding-bubble-support-to-a-game" title="Link to this heading"></a></h2>
+<h2>Adding Bubble Support to a Game<a class="headerlink" href="#adding-bubble-support-to-a-game" title="Ссылка на этот заголовок"></a></h2>
 <p>Games made before the release of Ren'Py 8.1 won't include the default screens
 and settings required for the speech bubble system. There are two things you
 need to do to fix this. First, download:</p>
@@ -572,9 +591,9 @@ the end of screens.rpy:</p>
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="nvl_mode.html" class="btn btn-neutral float-left" title="NVL-Mode Tutorial" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="input.html" class="btn btn-neutral float-right" title="Text Input" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Нижняя область">
+        <a href="nvl_mode.html" class="btn btn-neutral float-left" title="NVL-Mode Tutorial" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+        <a href="input.html" class="btn btn-neutral float-right" title="Text Input" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -583,9 +602,9 @@ the end of screens.rpy:</p>
     <p></p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

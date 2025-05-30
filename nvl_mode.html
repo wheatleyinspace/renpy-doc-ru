@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" data-content_root="./">
+<html class="writer-html5" lang="ru" data-content_root="./">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -17,14 +17,15 @@
     <link rel="canonical" href="https://www.renpy.org/doc/html/nvl_mode.html" />
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=ea47c46f"></script>
+      <script src="_static/documentation_options.js?v=8441e6a0"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=cd1d70c9"></script>
       <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
       <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
     <link rel="next" title="Speech Bubbles" href="bubble.html" />
     <link rel="prev" title="Interactive Director" href="director.html" /> 
 </head>
@@ -36,18 +37,18 @@
         <div class="wy-side-nav-search" >
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
 
 <a href="https://www.renpy.org/" style="margin-bottom: 0">Ren'Py Visual Novel Engine
-<img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
+<img src="_static/navbar-logo.png" alt="Логотип" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
 <a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
@@ -77,7 +78,7 @@
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Сцена</a></li>
 <li class="toctree-l1"><a class="reference internal" href="live2d.html">Live2D Cubism</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Customizing Ren'Py</span></p>
@@ -108,7 +109,13 @@
 <li class="toctree-l2"><a class="reference internal" href="#showing-and-hiding-the-nvl-mode-window">Showing and Hiding the NVL-mode Window</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#customizing-characters">Customizing Characters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#config-variables">Config Variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#python-functions">Python Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python-functions">Python Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#nvl_clear"><code class="docutils literal notranslate"><span class="pre">nvl_clear()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nvl_hide"><code class="docutils literal notranslate"><span class="pre">nvl_hide()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nvl_menu"><code class="docutils literal notranslate"><span class="pre">nvl_menu()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nvl_show"><code class="docutils literal notranslate"><span class="pre">nvl_show()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#paged-rollback">Paged Rollback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#script-of-the-question-nvl-mode-edition">Script of The Question (NVL-mode Edition)</a></li>
 </ul>
@@ -191,19 +198,19 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Ren'Py Visual Novel Engine</a>
       </nav>
 
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+          <div role="navigation" aria-label="Навигация по страницам">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">NVL-Mode Tutorial</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/renpy/renpy/blob/master/sphinx/source/nvl_mode.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/renpy/renpy/blob/master/sphinx/source/nvl_mode.rst" class="fa fa-github"> Редактировать на GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -212,7 +219,7 @@
            <div itemprop="articleBody">
              
   <section id="nvl-mode-tutorial">
-<h1>NVL-Mode Tutorial<a class="headerlink" href="#nvl-mode-tutorial" title="Link to this heading"></a></h1>
+<h1>NVL-Mode Tutorial<a class="headerlink" href="#nvl-mode-tutorial" title="Ссылка на этот заголовок"></a></h1>
 <p>There are two main styles of presentation used for visual
 novels. ADV-style games present dialogue and narration one line at a
 time, generally in a window at the bottom of the screen. NVL-style
@@ -222,7 +229,7 @@ takes up the entire screen.</p>
 Ren'Py. This tutorial assumes that you are already familiar with the
 basics of Ren'Py, as explained in the <a class="reference internal" href="quickstart.html"><span class="doc">Quickstart manual</span></a>.</p>
 <section id="getting-started">
-<h2>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading"></a></h2>
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Ссылка на этот заголовок"></a></h2>
 <p>NVL-mode can be added to a Ren'Py script in two steps. The first is to
 declare the characters to use NVL-mode, and the second is to add <code class="docutils literal notranslate"><span class="pre">nvl</span>
 <span class="pre">clear</span></code> statements at the end of each page.</p>
@@ -287,7 +294,7 @@ of an <code class="docutils literal notranslate"><span class="pre">nvl</span> <s
 </div>
 </section>
 <section id="nvl-mode-menus">
-<span id="nvl-mode-menu"></span><h2>NVL-mode Menus<a class="headerlink" href="#nvl-mode-menus" title="Link to this heading"></a></h2>
+<span id="nvl-mode-menu"></span><h2>NVL-mode Menus<a class="headerlink" href="#nvl-mode-menus" title="Ссылка на этот заголовок"></a></h2>
 <p>By default, menus are displayed in ADV-mode, taking up the full
 screen. There is also an alternate NVL-mode menu presentation, which
 displays the menus immediately after the current page of NVL-mode
@@ -313,7 +320,7 @@ menus in a single game.</p>
 </div>
 </section>
 <section id="showing-and-hiding-the-nvl-mode-window">
-<h2>Showing and Hiding the NVL-mode Window<a class="headerlink" href="#showing-and-hiding-the-nvl-mode-window" title="Link to this heading"></a></h2>
+<h2>Showing and Hiding the NVL-mode Window<a class="headerlink" href="#showing-and-hiding-the-nvl-mode-window" title="Ссылка на этот заголовок"></a></h2>
 <p>The NVL-mode window can be controlled with the standard <code class="docutils literal notranslate"><span class="pre">window</span> <span class="pre">show</span></code>
 and <code class="docutils literal notranslate"><span class="pre">window</span> <span class="pre">hide</span></code> statements. To select the default transitions to be
 used for showing and hiding the window, add the following to your game:</p>
@@ -361,7 +368,7 @@ hide the NVL-mode window. These take an optional transition, and can be
 used in games that use a mix of NVL-mode and ADV-mode windows.</p>
 </section>
 <section id="customizing-characters">
-<h2>Customizing Characters<a class="headerlink" href="#customizing-characters" title="Link to this heading"></a></h2>
+<h2>Customizing Characters<a class="headerlink" href="#customizing-characters" title="Ссылка на этот заголовок"></a></h2>
 <p>NVL-mode characters can be customized to have several looks, hopefully allowing
 you to pick the one that is most appropriate to the game you are creating.</p>
 <ol class="arabic">
@@ -406,53 +413,90 @@ often used for the narrator.)</p>
 </ol>
 </section>
 <section id="config-variables">
-<h2>Config Variables<a class="headerlink" href="#config-variables" title="Link to this heading"></a></h2>
+<h2>Config Variables<a class="headerlink" href="#config-variables" title="Ссылка на этот заголовок"></a></h2>
 <p>The following config variables control nvl-related functionality.</p>
 <dl class="std var">
 <dt class="sig sig-object std" id="var-config.nvl_layer">
-<span class="pre">define</span> <span class="sig-name descname"><span class="pre">config.nvl_layer</span></span> <span class="pre">=</span> <span class="pre">&quot;screens&quot;</span><a class="headerlink" href="#var-config.nvl_layer" title="Link to this definition"></a></dt>
+<span class="pre">define</span> <span class="sig-name descname"><span class="pre">config.nvl_layer</span></span> <span class="pre">=</span> <span class="pre">&quot;screens&quot;</span><a class="headerlink" href="#var-config.nvl_layer" title="Ссылка на это определение"></a></dt>
 <dd><p>The layer the nvl screens are shown on.</p>
 </dd></dl>
 
 <dl class="std var">
 <dt class="sig sig-object std" id="var-config.nvl_list_length">
-<span class="pre">define</span> <span class="sig-name descname"><span class="pre">config.nvl_list_length</span></span> <span class="pre">=</span> <span class="pre">None</span><a class="headerlink" href="#var-config.nvl_list_length" title="Link to this definition"></a></dt>
+<span class="pre">define</span> <span class="sig-name descname"><span class="pre">config.nvl_list_length</span></span> <span class="pre">=</span> <span class="pre">None</span><a class="headerlink" href="#var-config.nvl_list_length" title="Ссылка на это определение"></a></dt>
 <dd><p>If not None, the maximum length of the list of NVL dialogue.
-This can be set (often in conjuction with forcing the dialogue to
+This can be set (often in conjunction with forcing the dialogue to
 have a fixed height) in order to emulate an infinite scrolling
 NVL window.</p>
 </dd></dl>
 
 <dl class="std var">
 <dt class="sig sig-object std" id="var-config.nvl_page_ctc">
-<span class="pre">define</span> <span class="sig-name descname"><span class="pre">config.nvl_page_ctc</span></span> <span class="pre">=</span> <span class="pre">None</span><a class="headerlink" href="#var-config.nvl_page_ctc" title="Link to this definition"></a></dt>
+<span class="pre">define</span> <span class="sig-name descname"><span class="pre">config.nvl_page_ctc</span></span> <span class="pre">=</span> <span class="pre">None</span><a class="headerlink" href="#var-config.nvl_page_ctc" title="Ссылка на это определение"></a></dt>
 <dd><p>If not None, this is the click-to-continue indicator that is used for NVL mode
 characters that are at the end of a page. (That is, immediately
 followed by an nvl clear statement.) This replaces the ctc parameter
-of <code class="xref py py-func docutils literal notranslate"><span class="pre">Character()</span></code>.</p>
+of <a class="reference internal" href="dialogue.html#Character" title="Character"><code class="xref py py-func docutils literal notranslate"><span class="pre">Character()</span></code></a>.</p>
 </dd></dl>
 
 <dl class="std var">
 <dt class="sig sig-object std" id="var-config.nvl_page_ctc_position">
-<span class="pre">define</span> <span class="sig-name descname"><span class="pre">config.nvl_page_ctc_position</span></span> <span class="pre">=</span> <span class="pre">&quot;nestled&quot;</span><a class="headerlink" href="#var-config.nvl_page_ctc_position" title="Link to this definition"></a></dt>
+<span class="pre">define</span> <span class="sig-name descname"><span class="pre">config.nvl_page_ctc_position</span></span> <span class="pre">=</span> <span class="pre">&quot;nestled&quot;</span><a class="headerlink" href="#var-config.nvl_page_ctc_position" title="Ссылка на это определение"></a></dt>
 <dd><p>If not None, this is the click-to-continue indicator position that is used for NVL mode
 characters that are at the end of a page. (That is, immediately
 followed by an nvl clear statement.) This replaces the ctc_position parameter
-of <code class="xref py py-func docutils literal notranslate"><span class="pre">Character()</span></code>.</p>
+of <a class="reference internal" href="dialogue.html#Character" title="Character"><code class="xref py py-func docutils literal notranslate"><span class="pre">Character()</span></code></a>.</p>
 </dd></dl>
 
 <dl class="std var">
 <dt class="sig sig-object std" id="var-config.nvl_paged_rollback">
-<span class="pre">define</span> <span class="sig-name descname"><span class="pre">config.nvl_paged_rollback</span></span> <span class="pre">=</span> <span class="pre">False</span><a class="headerlink" href="#var-config.nvl_paged_rollback" title="Link to this definition"></a></dt>
+<span class="pre">define</span> <span class="sig-name descname"><span class="pre">config.nvl_paged_rollback</span></span> <span class="pre">=</span> <span class="pre">False</span><a class="headerlink" href="#var-config.nvl_paged_rollback" title="Ссылка на это определение"></a></dt>
 <dd><p>If true, NVL-mode rollback will occur a full page at a time.</p>
 </dd></dl>
 
 </section>
 <section id="python-functions">
-<h2>Python Functions<a class="headerlink" href="#python-functions" title="Link to this heading"></a></h2>
+<h2>Python Functions<a class="headerlink" href="#python-functions" title="Ссылка на этот заголовок"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="nvl_clear">
+<span class="sig-name descname"><span class="pre">nvl_clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nvl_clear" title="Ссылка на это определение"></a></dt>
+<dd><p>The Python equivalent of the <code class="docutils literal notranslate"><span class="pre">nvl</span> <span class="pre">clear</span></code> statement.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nvl_hide">
+<span class="sig-name descname"><span class="pre">nvl_hide</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">with_</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nvl_hide" title="Ссылка на это определение"></a></dt>
+<dd><p>The Python equivalent of the <code class="docutils literal notranslate"><span class="pre">nvl</span> <span class="pre">hide</span></code> statement.</p>
+<dl class="simple">
+<dt><cite>with_</cite></dt><dd><p>The transition to use to hide the NVL-mode window.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nvl_menu">
+<span class="sig-name descname"><span class="pre">nvl_menu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">items</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nvl_menu" title="Ссылка на это определение"></a></dt>
+<dd><p>A Python function that displays a menu in NVL style. This is rarely
+used directly. Instead, it's assigned to the <a class="reference internal" href="store_variables.html#var-menu"><code class="xref std std-var docutils literal notranslate"><span class="pre">menu</span></code></a> variable,
+using something like:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">define</span> <span class="k">menu</span> <span class="o">=</span> <span class="n">nvl_menu</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nvl_show">
+<span class="sig-name descname"><span class="pre">nvl_show</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">with_</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nvl_show" title="Ссылка на это определение"></a></dt>
+<dd><p>The Python equivalent of the <code class="docutils literal notranslate"><span class="pre">nvl</span> <span class="pre">show</span></code> statement.</p>
+<dl class="simple">
+<dt><cite>with_</cite></dt><dd><p>The transition to use to show the NVL-mode window.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 <section id="paged-rollback">
-<h2>Paged Rollback<a class="headerlink" href="#paged-rollback" title="Link to this heading"></a></h2>
+<h2>Paged Rollback<a class="headerlink" href="#paged-rollback" title="Ссылка на этот заголовок"></a></h2>
 <p>Paged rollback causes Ren'Py to rollback one NVL-mode page at a time,
 rather than one block of text at a time.  It can be enabled by
 including the following in your script.</p>
@@ -462,7 +506,7 @@ including the following in your script.</p>
 </div>
 </section>
 <section id="script-of-the-question-nvl-mode-edition">
-<h2>Script of The Question (NVL-mode Edition)<a class="headerlink" href="#script-of-the-question-nvl-mode-edition" title="Link to this heading"></a></h2>
+<h2>Script of The Question (NVL-mode Edition)<a class="headerlink" href="#script-of-the-question-nvl-mode-edition" title="Ссылка на этот заголовок"></a></h2>
 <p>You can view the full script of the NVL-mode edition of ''The Question''
 <a class="reference internal" href="thequestion_nvl.html"><span class="doc">here</span></a>.</p>
 </section>
@@ -471,9 +515,9 @@ including the following in your script.</p>
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="director.html" class="btn btn-neutral float-left" title="Interactive Director" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="bubble.html" class="btn btn-neutral float-right" title="Speech Bubbles" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Нижняя область">
+        <a href="director.html" class="btn btn-neutral float-left" title="Interactive Director" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+        <a href="bubble.html" class="btn btn-neutral float-right" title="Speech Bubbles" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -482,9 +526,9 @@ including the following in your script.</p>
     <p></p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" data-content_root="./">
+<html class="writer-html5" lang="ru" data-content_root="./">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -17,14 +17,15 @@
     <link rel="canonical" href="https://www.renpy.org/doc/html/save_load_rollback.html" />
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=ea47c46f"></script>
+      <script src="_static/documentation_options.js?v=8441e6a0"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=cd1d70c9"></script>
       <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
       <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
     <link rel="next" title="Persistent Data" href="persistent.html" />
     <link rel="prev" title="Statement Equivalents" href="statement_equivalents.html" /> 
 </head>
@@ -36,18 +37,18 @@
         <div class="wy-side-nav-search" >
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
 
 <a href="https://www.renpy.org/" style="margin-bottom: 0">Ren'Py Visual Novel Engine
-<img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
+<img src="_static/navbar-logo.png" alt="Логотип" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
 <a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
@@ -77,7 +78,7 @@
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Сцена</a></li>
 <li class="toctree-l1"><a class="reference internal" href="live2d.html">Live2D Cubism</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Customizing Ren'Py</span></p>
@@ -124,19 +125,65 @@
 <li class="toctree-l2"><a class="reference internal" href="#what-isn-t-saved">What isn't Saved</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#where-ren-py-saves">Where Ren'Py Saves</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#what-ren-py-can-save">What Ren'Py Can Save</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#what-ren-py-can-t-save">What Ren'Py Can't Save</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#save-functions-and-variables">Save Functions and Variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#retaining-data-after-load">Retaining Data After Load</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-ren-py-can-t-save">What Ren'Py Can't Save</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#save-file-structure">Save File Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#traceback-saves">Traceback Saves</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#save-functions-and-variables">Save Functions and Variables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.can_load"><code class="docutils literal notranslate"><span class="pre">renpy.can_load()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.copy_save"><code class="docutils literal notranslate"><span class="pre">renpy.copy_save()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.get_save_data"><code class="docutils literal notranslate"><span class="pre">renpy.get_save_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.list_slots"><code class="docutils literal notranslate"><span class="pre">renpy.list_slots()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.load"><code class="docutils literal notranslate"><span class="pre">renpy.load()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.newest_slot"><code class="docutils literal notranslate"><span class="pre">renpy.newest_slot()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.rename_save"><code class="docutils literal notranslate"><span class="pre">renpy.rename_save()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.save"><code class="docutils literal notranslate"><span class="pre">renpy.save()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.slot_json"><code class="docutils literal notranslate"><span class="pre">renpy.slot_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.slot_mtime"><code class="docutils literal notranslate"><span class="pre">renpy.slot_mtime()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.slot_screenshot"><code class="docutils literal notranslate"><span class="pre">renpy.slot_screenshot()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.take_screenshot"><code class="docutils literal notranslate"><span class="pre">renpy.take_screenshot()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.unlink_save"><code class="docutils literal notranslate"><span class="pre">renpy.unlink_save()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#retaining-data-after-load">Retaining Data After Load</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.retain_after_load"><code class="docutils literal notranslate"><span class="pre">renpy.retain_after_load()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#rollback">Rollback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#what-data-is-rolled-back">What Data is Rolled Back?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#supporting-rollback-and-roll-forward">Supporting Rollback and Roll Forward</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#supporting-rollback-and-roll-forward">Supporting Rollback and Roll Forward</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.can_rollback"><code class="docutils literal notranslate"><span class="pre">renpy.can_rollback()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.checkpoint"><code class="docutils literal notranslate"><span class="pre">renpy.checkpoint()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.get_identifier_checkpoints"><code class="docutils literal notranslate"><span class="pre">renpy.get_identifier_checkpoints()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.in_rollback"><code class="docutils literal notranslate"><span class="pre">renpy.in_rollback()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.roll_forward_info"><code class="docutils literal notranslate"><span class="pre">renpy.roll_forward_info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.rollback"><code class="docutils literal notranslate"><span class="pre">renpy.rollback()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.suspend_rollback"><code class="docutils literal notranslate"><span class="pre">renpy.suspend_rollback()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#blocking-rollback">Blocking Rollback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#fixing-rollback">Fixing Rollback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#styling-fixed-rollback">Styling Fixed Rollback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#fixed-rollback-and-custom-screens">Fixed Rollback and Custom Screens</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#rollback-blocking-and-fixing-functions">Rollback-blocking and -fixing Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#norollback">NoRollback</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#rollback-supporting-classes">Rollback-Supporting Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rollback-blocking-and-fixing-functions">Rollback-blocking and -fixing Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.block_rollback"><code class="docutils literal notranslate"><span class="pre">renpy.block_rollback()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.fix_rollback"><code class="docutils literal notranslate"><span class="pre">renpy.fix_rollback()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.in_fixed_rollback"><code class="docutils literal notranslate"><span class="pre">renpy.in_fixed_rollback()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ui.ChoiceJump"><code class="docutils literal notranslate"><span class="pre">ui.ChoiceJump()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ui.ChoiceReturn"><code class="docutils literal notranslate"><span class="pre">ui.ChoiceReturn()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#norollback">NoRollback</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#NoRollback"><code class="docutils literal notranslate"><span class="pre">NoRollback</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#SlottedNoRollback"><code class="docutils literal notranslate"><span class="pre">SlottedNoRollback</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#rollback-supporting-classes">Rollback-Supporting Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#MultiRevertable"><code class="docutils literal notranslate"><span class="pre">MultiRevertable</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#defaultdict"><code class="docutils literal notranslate"><span class="pre">defaultdict</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="persistent.html">Persistent Data</a></li>
@@ -200,19 +247,19 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Ren'Py Visual Novel Engine</a>
       </nav>
 
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+          <div role="navigation" aria-label="Навигация по страницам">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Saving, Loading, and Rollback</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/renpy/renpy/blob/master/sphinx/source/save_load_rollback.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/renpy/renpy/blob/master/sphinx/source/save_load_rollback.rst" class="fa fa-github"> Редактировать на GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -221,23 +268,23 @@
            <div itemprop="articleBody">
              
   <section id="saving-loading-and-rollback">
-<h1>Saving, Loading, and Rollback<a class="headerlink" href="#saving-loading-and-rollback" title="Link to this heading"></a></h1>
+<h1>Saving, Loading, and Rollback<a class="headerlink" href="#saving-loading-and-rollback" title="Ссылка на этот заголовок"></a></h1>
 <p>Ren'Py has support for saving game state, loading game state, and rolling
 back to a previous game state. Although implemented in a slightly different
 fashion, rollback can be thought of as saving the game at the start of each
 statement that interacts with the user, and loading saves when the user
 rolls back.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
+<p class="admonition-title">Примечание</p>
 <p>While we usually attempt to keep save compatibility between releases, this
 compatibility is not guaranteed. We may decide to break save-compatibility
 if doing so provides a sufficiently large benefit.</p>
 </div>
 <section id="what-is-saved">
-<h2>What is Saved<a class="headerlink" href="#what-is-saved" title="Link to this heading"></a></h2>
+<h2>What is Saved<a class="headerlink" href="#what-is-saved" title="Ссылка на этот заголовок"></a></h2>
 <p>Ren'Py attempts to save the game state. This includes both internal state
 and Python state.</p>
-<p>The internal state consists of all aspects of Ren'Py that are intented to
+<p>The internal state consists of all aspects of Ren'Py that are intended to
 change once the game has started, and includes:</p>
 <ul class="simple">
 <li><p>The current statement, and all statements that can be returned to.</p></li>
@@ -268,7 +315,7 @@ the game begins. <cite>O</cite> is not saved because it does not change – the 
 refers to changes, but the variable itself does not.</p>
 </section>
 <section id="what-isn-t-saved">
-<h2>What isn't Saved<a class="headerlink" href="#what-isn-t-saved" title="Link to this heading"></a></h2>
+<h2>What isn't Saved<a class="headerlink" href="#what-isn-t-saved" title="Ссылка на этот заголовок"></a></h2>
 <p>Python variables that are not changed after the game begins will not be
 saved. This can be a major problem if a variable that is not saved and one that is
 refer to the same object. (Alias the object.) In this example:</p>
@@ -305,7 +352,7 @@ once the game has started.</p>
 </dl>
 </section>
 <section id="where-ren-py-saves">
-<h2>Where Ren'Py Saves<a class="headerlink" href="#where-ren-py-saves" title="Link to this heading"></a></h2>
+<h2>Where Ren'Py Saves<a class="headerlink" href="#where-ren-py-saves" title="Ссылка на этот заголовок"></a></h2>
 <p>Saves occur at the start of a Ren'Py statement in the outermost interaction
 context.</p>
 <p>What's important here is to note that saving occurs at the <strong>start</strong> of a
@@ -337,7 +384,7 @@ Ren'Py script – rather than Python – to loop avoids this problem.:</p>
 </div>
 </section>
 <section id="what-ren-py-can-save">
-<h2>What Ren'Py Can Save<a class="headerlink" href="#what-ren-py-can-save" title="Link to this heading"></a></h2>
+<h2>What Ren'Py Can Save<a class="headerlink" href="#what-ren-py-can-save" title="Ссылка на этот заголовок"></a></h2>
 <p>Ren'Py uses the Python pickle system to save game state. This module can
 save:</p>
 <ul class="simple">
@@ -350,7 +397,7 @@ original names.</p></li>
 </ul>
 </section>
 <section id="what-ren-py-can-t-save">
-<span id="cant-save"></span><h2>What Ren'Py Can't Save<a class="headerlink" href="#what-ren-py-can-t-save" title="Link to this heading"></a></h2>
+<span id="cant-save"></span><h2>What Ren'Py Can't Save<a class="headerlink" href="#what-ren-py-can-t-save" title="Ссылка на этот заголовок"></a></h2>
 <p>There are certain types that cannot be pickled:</p>
 <ul class="simple">
 <li><p>Render objects.</p></li>
@@ -409,9 +456,52 @@ to a variable:</p>
 </pre></div>
 </div>
 <p>will run fine.</p>
+<section id="save-file-structure">
+<span id="id1"></span><h3>Save File Structure<a class="headerlink" href="#save-file-structure" title="Ссылка на этот заголовок"></a></h3>
+<p>Ren'Py save files (e.g., <code class="docutils literal notranslate"><span class="pre">1-1.save</span></code>) are compressed archives containing:</p>
+<ul>
+<li><p><strong>Game State</strong>: Serialized Python objects representing the game’s state.</p></li>
+<li><p><strong>Metadata</strong>: A dictionary with fields describing the save. The fields available depend on the access method:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#renpy.slot_json" title="renpy.slot_json"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.slot_json()</span></code></a>: Returns a dictionary with <code class="docutils literal notranslate"><span class="pre">_save_name</span></code>, <code class="docutils literal notranslate"><span class="pre">_renpy_version</span></code>, <code class="docutils literal notranslate"><span class="pre">_version</span></code>, <code class="docutils literal notranslate"><span class="pre">_game_runtime</span></code>, <code class="docutils literal notranslate"><span class="pre">_ctime</span></code>, and any custom fields added via <a class="reference internal" href="config.html#var-config.save_json_callbacks"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.save_json_callbacks</span></code></a>.</p></li>
+<li><p><a class="reference internal" href="screen_actions.html#FileJson" title="FileJson"><code class="xref py py-func docutils literal notranslate"><span class="pre">FileJson()</span></code></a>: Returns the same metadata dictionary as <a class="reference internal" href="#renpy.slot_json" title="renpy.slot_json"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.slot_json()</span></code></a> when the <code class="docutils literal notranslate"><span class="pre">key</span></code> parameter is <code class="docutils literal notranslate"><span class="pre">None</span></code> (default), including custom fields. When a <code class="docutils literal notranslate"><span class="pre">key</span></code> is specified (e.g., <code class="docutils literal notranslate"><span class="pre">&quot;_save_name&quot;</span></code>), it returns the value of that field.</p></li>
+<li><p><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.list_saved_games()</span></code>: Returns <code class="docutils literal notranslate"><span class="pre">_save_name</span></code> (as <code class="docutils literal notranslate"><span class="pre">extra_info</span></code>), <code class="docutils literal notranslate"><span class="pre">mtime</span></code> (as <code class="docutils literal notranslate"><span class="pre">time</span></code>), and <code class="docutils literal notranslate"><span class="pre">_screenshot</span></code> (as <code class="docutils literal notranslate"><span class="pre">screenshot</span></code>) in a tuple, but no other metadata fields.</p></li>
+</ul>
+<p>Standard metadata fields include:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">_save_name</span></code>: The string set by the <code class="docutils literal notranslate"><span class="pre">extra_info</span></code> argument in <a class="reference internal" href="#renpy.save" title="renpy.save"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.save()</span></code></a>, typically the global <a class="reference internal" href="store_variables.html#var-save_name"><code class="xref std std-var docutils literal notranslate"><span class="pre">save_name</span></code></a> variable (e.g., &quot;Chapter 1&quot;). If empty, an empty string.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">_renpy_version</span></code>: The version of Ren'Py used to create the save, as a list of integers (e.g., <code class="docutils literal notranslate"><span class="pre">[8,</span> <span class="pre">3,</span> <span class="pre">7,</span> <span class="pre">25031702]</span></code> for Ren'Py 8.3.7.25031702).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">_version</span></code>: The game version set by <a class="reference internal" href="config.html#var-config.version"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.version</span></code></a> at the time of saving (e.g., &quot;1.0&quot;).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">_game_runtime</span></code>: The number of seconds the game has been waiting on user input, as returned by <a class="reference internal" href="other.html#renpy.get_game_runtime" title="renpy.get_game_runtime"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.get_game_runtime()</span></code></a> at the time of saving.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">_ctime</span></code>: The UNIX timestamp (seconds since the epoch) when the save was created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">_screenshot</span></code>: A displayable for the save’s screenshot, accessible via <code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.list_saved_games()</span></code> or <a class="reference internal" href="screen_actions.html#FileScreenshot" title="FileScreenshot"><code class="xref py py-func docutils literal notranslate"><span class="pre">FileScreenshot()</span></code></a>.</p></li>
+</ul>
+</li>
+</ul>
+<p>The metadata is stored in JSON, and so is limited to values JSON can represent, like strings, numbers, lists, and dicts.
+When using <code class="docutils literal notranslate"><span class="pre">_save_name</span></code> (via <a class="reference internal" href="store_variables.html#var-save_name"><code class="xref std std-var docutils literal notranslate"><span class="pre">save_name</span></code></a> or <code class="docutils literal notranslate"><span class="pre">extra_info</span></code>), special characters like
+<code class="docutils literal notranslate"><span class="pre">[]</span></code> or <code class="docutils literal notranslate"><span class="pre">{}</span></code>, may cause issues if they're interpreted directly by Ren'Py’s text parser in the save/load UI,
+causing errors or unexpected rendering. Use <a class="reference internal" href="config.html#var-config.save_json_callbacks"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.save_json_callbacks</span></code></a> to store complex metadata safely,
+or use <code class="docutils literal notranslate"><span class="pre">substitute</span> <span class="pre">False</span></code> when displaying it as <a class="reference internal" href="text.html#Text" title="Text"><code class="xref py py-class docutils literal notranslate"><span class="pre">Text</span></code></a>.</p>
+</section>
+<section id="traceback-saves">
+<h3>Traceback Saves<a class="headerlink" href="#traceback-saves" title="Ссылка на этот заголовок"></a></h3>
+<p>If possible, Ren'Py creates saves when an uncaught exception occurs, containing both the game
+state and the traceback. These saves are stored in slots with the name <code class="file docutils literal notranslate"><span class="pre">_tracesave-1</span></code> to
+<code class="file docutils literal notranslate"><span class="pre">_tracesave-10</span></code>. In these files, the traceback is stored in the file metadata, and can be retrieved
+with:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">traceback</span> <span class="o">=</span> <span class="n">renpy</span><span class="o">.</span><span class="n">slot_json</span><span class="p">(</span><span class="s2">&quot;_tracesave-1&quot;</span><span class="p">)[</span><span class="s2">&quot;_traceback&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>It's also possible to use <a class="reference internal" href="#renpy.get_save_data" title="renpy.get_save_data"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.get_save_data()</span></code></a> to retrieve the variables the game used when the
+traceback save was created.</p>
+<p>The new <a class="reference internal" href="#renpy.get_save_data" title="renpy.get_save_data"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.get_save_data()</span></code></a> function allows you to retrieve the data for a particular save slot,
+without loading the save. This can be used with a traceback save to retrieve the game data without loading
+into an error state.</p>
+</section>
 </section>
 <section id="save-functions-and-variables">
-<span id="save-functions"></span><h2>Save Functions and Variables<a class="headerlink" href="#save-functions-and-variables" title="Link to this heading"></a></h2>
+<span id="save-functions"></span><h2>Save Functions and Variables<a class="headerlink" href="#save-functions-and-variables" title="Ссылка на этот заголовок"></a></h2>
 <p>There is one variable that is used by the high-level save system:
 <a class="reference internal" href="store_variables.html#var-save_name"><code class="xref std std-var docutils literal notranslate"><span class="pre">save_name</span></code></a>.</p>
 <p>This is a string that is stored with each save. It can be used to give
@@ -421,9 +511,132 @@ data system, see <a class="reference internal" href="config.html#var-config.save
 <p>There are a number of high-level save actions and functions defined in the
 <a class="reference internal" href="screen_actions.html"><span class="doc">screen actions</span></a>. In addition, there are the following
 low-level save and load actions.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="renpy.can_load">
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">can_load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.can_load" title="Ссылка на это определение"></a></dt>
+<dd><p>Returns true if <cite>filename</cite> (e.g. '3-2' for page 3, slot 2) exists as a save slot, and False otherwise.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="renpy.copy_save">
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">copy_save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">old</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.copy_save" title="Ссылка на это определение"></a></dt>
+<dd><p>Copies the save at <cite>old</cite> to <cite>new</cite>. (Does nothing if <cite>old</cite> does not
+exist.)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="renpy.get_save_data">
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_save_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_save_data" title="Ссылка на это определение"></a></dt>
+<dd><p>This loads a game's data from the save slot <cite>filename</cite> (e.g. '3-2' for page 3, slot 2), without
+actually changing the game state. It returns a dictionary containing variable names relative to
+the default store, mapped to the value of those variables at the time of the save.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="renpy.list_slots">
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">list_slots</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">regexp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.list_slots" title="Ссылка на это определение"></a></dt>
+<dd><p>Returns a list of non-empty save slots. If <cite>regexp</cite> exists, only slots
+that begin with <cite>regexp</cite> are returned. The slots are sorted in
+string-order.</p>
+<p>For a list of useful regular expressions, see <code class="xref py py-func docutils literal notranslate"><span class="pre">list_saved_games()</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="renpy.load">
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.load" title="Ссылка на это определение"></a></dt>
+<dd><p>Loads the game state from the save slot <cite>filename</cite> (e.g. '3-2' for page 3, slot 2). If the file is loaded
+successfully, this function never returns.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="renpy.newest_slot">
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">newest_slot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">regexp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.newest_slot" title="Ссылка на это определение"></a></dt>
+<dd><p>Returns the name of the newest save slot (the save slot with the most
+recent modification time), or None if there are no (matching) saves.</p>
+<p>If <cite>regexp</cite> exists, only slots that begin with <cite>regexp</cite> are returned.</p>
+<p>For a list of useful regular expressions, see <code class="xref py py-func docutils literal notranslate"><span class="pre">list_saved_games()</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="renpy.rename_save">
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">rename_save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">old</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.rename_save" title="Ссылка на это определение"></a></dt>
+<dd><p>Renames a save from <cite>old</cite> to <cite>new</cite>. (Does nothing if <cite>old</cite> does not
+exist.)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="renpy.save">
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_info</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_json</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.save" title="Ссылка на это определение"></a></dt>
+<dd><p>Saves the game to the slot identified by <cite>filename</cite>.</p>
+<dl class="simple">
+<dt><cite>filename</cite></dt><dd><p>A string giving the name of a save slot. Despite the variable name,
+this corresponds only loosely to filenames (e.g. '3-2' for page 3, slot 2)</p>
+</dd>
+<dt><cite>extra_info</cite></dt><dd><p>A string stored as the <code class="docutils literal notranslate"><span class="pre">_save_name</span></code> field in the save file’s metadata. This can be retrieved via
+<a class="reference internal" href="#renpy.slot_json" title="renpy.slot_json"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.slot_json()</span></code></a> (using the &quot;_savename&quot; key, <a class="reference internal" href="screen_actions.html#FileJson" title="FileJson"><code class="xref py py-func docutils literal notranslate"><span class="pre">FileJson()</span></code></a> (with <code class="docutils literal notranslate"><span class="pre">key=None</span></code> or <code class="docutils literal notranslate"><span class="pre">key=&quot;_save_name&quot;</span></code>),
+or as the <code class="docutils literal notranslate"><span class="pre">extra_info</span></code> field in <code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.list_saved_games()</span></code>. It is typically used with the global
+<a class="reference internal" href="store_variables.html#var-save_name"><code class="xref std std-var docutils literal notranslate"><span class="pre">save_name</span></code></a> variable (e.g., <code class="docutils literal notranslate"><span class="pre">&quot;Chapter</span> <span class="pre">1&quot;</span></code>). If empty, <code class="docutils literal notranslate"><span class="pre">_save_name</span></code> will be an empty string.</p>
+</dd>
+<dt><cite>extra_json</cite></dt><dd><p>A dictionary of additional metadata to be stored in the save file. This is merged with the default metadata
+and the metadata from <a class="reference internal" href="config.html#var-config.save_json_callbacks"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.save_json_callbacks</span></code></a>.</p>
+</dd>
+<dt>Example::</dt><dd><p>$ save_name = &quot;Chapter 1&quot;
+$ renpy.save(&quot;1-1&quot;, extra_info=save_name)</p>
+</dd>
+</dl>
+<p>To store additional or complex metadata, use <a class="reference internal" href="config.html#var-config.save_json_callbacks"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.save_json_callbacks</span></code></a> to add custom fields to the metadata dictionary.</p>
+<p><a class="reference internal" href="#renpy.take_screenshot" title="renpy.take_screenshot"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.take_screenshot()</span></code></a> should be called before this function.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="renpy.slot_json">
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">slot_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">slotname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.slot_json" title="Ссылка на это определение"></a></dt>
+<dd><p>Returns a dictionary containing the metadata of the save file in <cite>slotname</cite>, including <code class="docutils literal notranslate"><span class="pre">_save_name</span></code>, <code class="docutils literal notranslate"><span class="pre">_renpy_version</span></code>, <code class="docutils literal notranslate"><span class="pre">_version</span></code>, <code class="docutils literal notranslate"><span class="pre">_game_runtime</span></code>, <code class="docutils literal notranslate"><span class="pre">_ctime</span></code>, and any custom fields added via <a class="reference internal" href="config.html#var-config.save_json_callbacks"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.save_json_callbacks</span></code></a> at the time of saving. If the slot is empty, <cite>None</cite> is returned. For save/load screen actions, <a class="reference internal" href="screen_actions.html#FileJson" title="FileJson"><code class="xref py py-func docutils literal notranslate"><span class="pre">FileJson()</span></code></a> provides a subset of these fields (excluding custom fields).</p>
+<blockquote>
+<div><p>Example:</p>
+<dl class="simple">
+<dt>def show_game_runtime(slot):</dt><dd><p>metadata = renpy.slot_json(slot)
+name = metadata.get('_save_name', '')
+runtime = metadata.get('_game_runtime', 0)
+hours = int(runtime // 3600)
+minutes = int((runtime % 3600) // 60)
+seconds = int(runtime % 60)
+runtime_formatted = f&quot;{hours:02d}:{minutes:02d}:{seconds:02d}&quot;
+renpy.notify(&quot;Save Name: [name], Game Runtime: [runtime_formatted]&quot;)</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="renpy.slot_mtime">
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">slot_mtime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">slotname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.slot_mtime" title="Ссылка на это определение"></a></dt>
+<dd><p>Returns the modification time for <cite>slot</cite>, or None if the slot is empty.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="renpy.slot_screenshot">
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">slot_screenshot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">slotname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.slot_screenshot" title="Ссылка на это определение"></a></dt>
+<dd><p>Returns a display that can be used as the screenshot for <cite>slotname</cite>,
+or None if the slot is empty.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="renpy.take_screenshot">
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">take_screenshot</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.take_screenshot" title="Ссылка на это определение"></a></dt>
+<dd><p>Causes a screenshot to be taken. This screenshot will be saved as part of
+a saved game.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="renpy.unlink_save">
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">unlink_save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.unlink_save" title="Ссылка на это определение"></a></dt>
+<dd><p>Deletes the save slot with the given name (e.g. '3-2' for page 3, slot 2).</p>
+</dd></dl>
+
 </section>
 <section id="retaining-data-after-load">
-<h2>Retaining Data After Load<a class="headerlink" href="#retaining-data-after-load" title="Link to this heading"></a></h2>
+<h2>Retaining Data After Load<a class="headerlink" href="#retaining-data-after-load" title="Ссылка на этот заголовок"></a></h2>
 <p>When a game is loaded, the state of the game is reset (using the rollback
 system described below) to the state of the game when the current statement
 began executing.</p>
@@ -449,9 +662,16 @@ in place at the start of the statement.</p>
     <span class="k">call</span> <span class="k">screen</span> <span class="n">edit_value</span>
 </pre></div>
 </div>
+<dl class="py function">
+<dt class="sig sig-object py" id="renpy.retain_after_load">
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">retain_after_load</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.retain_after_load" title="Ссылка на это определение"></a></dt>
+<dd><p>Causes data modified between the current statement and the statement
+containing the next checkpoint to be retained when a load occurs.</p>
+</dd></dl>
+
 </section>
 <section id="rollback">
-<span id="id1"></span><h2>Rollback<a class="headerlink" href="#rollback" title="Link to this heading"></a></h2>
+<span id="id2"></span><h2>Rollback<a class="headerlink" href="#rollback" title="Ссылка на этот заголовок"></a></h2>
 <p>Rollback allows the user to revert the game to an earlier state in
 much the same way as undo/redo systems that are available in most
 modern applications. While the system takes care of maintaining the
@@ -459,7 +679,7 @@ visuals and game variables during rollback events, there are several
 things that should be considered while creating a game.</p>
 </section>
 <section id="what-data-is-rolled-back">
-<h2>What Data is Rolled Back?<a class="headerlink" href="#what-data-is-rolled-back" title="Link to this heading"></a></h2>
+<h2>What Data is Rolled Back?<a class="headerlink" href="#what-data-is-rolled-back" title="Ссылка на этот заголовок"></a></h2>
 <p>Rollback affects variables that have been changed after the init phase, and
 objects of revertable types reachable from those variables. The short version
 is that lists, dicts, and sets created in Ren'Py script are revertable as are
@@ -510,9 +730,9 @@ it to a type that does partipate. For example:</p>
 </div>
 </section>
 <section id="supporting-rollback-and-roll-forward">
-<h2>Supporting Rollback and Roll Forward<a class="headerlink" href="#supporting-rollback-and-roll-forward" title="Link to this heading"></a></h2>
+<h2>Supporting Rollback and Roll Forward<a class="headerlink" href="#supporting-rollback-and-roll-forward" title="Ссылка на этот заголовок"></a></h2>
 <p>Most Ren'Py statements automatically support rollback and roll forward. If
-you call <code class="xref py py-func docutils literal notranslate"><span class="pre">ui.interact()</span></code> directly, you'll need to add support for rollback
+you call <a class="reference internal" href="screen_python.html#ui.interact" title="ui.interact"><code class="xref py py-func docutils literal notranslate"><span class="pre">ui.interact()</span></code></a> directly, you'll need to add support for rollback
 and roll-forward yourself. This can be done using the following structure:</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is None if we&#39;re not rolling back, or else the value that was</span>
 <span class="c1"># passed to checkpoint last time if we&#39;re rolling forward.</span>
@@ -529,11 +749,95 @@ and roll-forward yourself. This can be done using the following structure:</p>
 </div>
 <p>It's important that your game does not interact with the user after renpy.checkpoint
 has been called. (If you do, the user may not be able to rollback.)</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="renpy.can_rollback">
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">can_rollback</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.can_rollback" title="Ссылка на это определение"></a></dt>
+<dd><p>Returns true if we can rollback.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="renpy.checkpoint">
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">checkpoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">hard</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.checkpoint" title="Ссылка на это определение"></a></dt>
+<dd><p>Makes the current statement a checkpoint that the user can rollback to. Once
+this function has been called, there should be no more interaction with the
+user in the current statement.</p>
+<p>This will also clear the current screenshot used by saved games.</p>
+<dl class="simple">
+<dt><cite>data</cite></dt><dd><p>This data is returned by <a class="reference internal" href="#renpy.roll_forward_info" title="renpy.roll_forward_info"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.roll_forward_info()</span></code></a> when the
+game is being rolled back.</p>
+</dd>
+<dt><cite>hard</cite></dt><dd><p>If true, this is a hard checkpoint that rollback will stop at. If false,
+this is a soft checkpoint that will not stop rollback.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="renpy.get_identifier_checkpoints">
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_identifier_checkpoints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_identifier_checkpoints" title="Ссылка на это определение"></a></dt>
+<dd><p>Given a rollback_identifier from a HistoryEntry object, returns the number
+of checkpoints that need to be passed to <a class="reference internal" href="#renpy.rollback" title="renpy.rollback"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.rollback()</span></code></a> to reach
+that identifier. Returns None of the identifier is not in the rollback
+history.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="renpy.in_rollback">
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">in_rollback</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.in_rollback" title="Ссылка на это определение"></a></dt>
+<dd><p>Returns true if the game has been rolled back.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="renpy.roll_forward_info">
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">roll_forward_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.roll_forward_info" title="Ссылка на это определение"></a></dt>
+<dd><p>When in rollback, returns the data that was supplied to <a class="reference internal" href="#renpy.checkpoint" title="renpy.checkpoint"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.checkpoint()</span></code></a>
+the last time this statement executed. Outside of rollback, returns None.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="renpy.rollback">
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">rollback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">checkpoints</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">greedy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">abnormal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.rollback" title="Ссылка на это определение"></a></dt>
+<dd><p>Rolls the state of the game back to the last checkpoint.</p>
+<dl class="simple">
+<dt><cite>force</cite></dt><dd><p>If true, the rollback will occur in all circumstances. Otherwise,
+the rollback will only occur if rollback is enabled in the store,
+context, and config.</p>
+</dd>
+<dt><cite>checkpoints</cite></dt><dd><p>Ren'Py will roll back through this many calls to renpy.checkpoint. It
+will roll back as far as it can, subject to this condition.</p>
+</dd>
+<dt><cite>defer</cite></dt><dd><p>If true, the call will be deferred until control returns to the main
+context.</p>
+</dd>
+<dt><cite>greedy</cite></dt><dd><p>If true, rollback will finish just after the previous checkpoint.
+If false, rollback finish just before the current checkpoint.</p>
+</dd>
+<dt><cite>label</cite></dt><dd><p>If not None, a label that is called when rollback completes.</p>
+</dd>
+<dt><cite>abnormal</cite></dt><dd><p>If true, the default, script executed after the transition is run in
+an abnormal mode that skips transitions that would have otherwise
+occurred. Abnormal mode ends when an interaction begins.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="renpy.suspend_rollback">
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">suspend_rollback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flag</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.suspend_rollback" title="Ссылка на это определение"></a></dt>
+<dd><p>Rollback will skip sections of the game where rollback has been
+suspended.</p>
+<dl class="simple">
+<dt><cite>flag</cite>:</dt><dd><p>When <cite>flag</cite> is true, rollback is suspended. When false,
+rollback is resumed.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 <section id="blocking-rollback">
-<h2>Blocking Rollback<a class="headerlink" href="#blocking-rollback" title="Link to this heading"></a></h2>
+<h2>Blocking Rollback<a class="headerlink" href="#blocking-rollback" title="Ссылка на этот заголовок"></a></h2>
 <div class="admonition warning">
-<p class="admonition-title">Warning</p>
+<p class="admonition-title">Предупреждение</p>
 <p>Blocking rollback is a user-unfriendly thing to do. If a user mistakenly
 clicks on an unintended choice, he or she will be unable to correct their
 mistake. Since rollback is equivalent to saving and loading, your users
@@ -543,7 +847,7 @@ will be forced to save more often, breaking game engagement.</p>
 not wanted at all, it can simply be turned off through the
 <a class="reference internal" href="config.html#var-config.rollback_enabled"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.rollback_enabled</span></code></a> option.</p>
 <p>More common is a partial block of rollback. This can be achieved by the
-<code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.block_rollback()</span></code> function. When called, it will instruct
+<a class="reference internal" href="#renpy.block_rollback" title="renpy.block_rollback"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.block_rollback()</span></code></a> function. When called, it will instruct
 Ren'Py not to roll back before that point. For example:</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">label</span> <span class="n">final_answer</span><span class="p">:</span>
     <span class="s2">&quot;Is that your final answer?&quot;</span>
@@ -567,11 +871,11 @@ Ren'Py not to roll back before that point. For example:</p>
 back to the menu.</p>
 </section>
 <section id="fixing-rollback">
-<h2>Fixing Rollback<a class="headerlink" href="#fixing-rollback" title="Link to this heading"></a></h2>
+<h2>Fixing Rollback<a class="headerlink" href="#fixing-rollback" title="Ссылка на этот заголовок"></a></h2>
 <p>Fixing rollback provides for an intermediate choice between
 unconstrained rollback and blocking rollback entirely. Rollback is
 allowed, but the user is not allowed to make changes to their
-decisions. Fixing rollback is done with the <code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.fix_rollback()</span></code>
+decisions. Fixing rollback is done with the <a class="reference internal" href="#renpy.fix_rollback" title="renpy.fix_rollback"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.fix_rollback()</span></code></a>
 function, as shown in the following example:</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">label</span> <span class="n">final_answer</span><span class="p">:</span>
     <span class="s2">&quot;Is that your final answer?&quot;</span>
@@ -600,11 +904,11 @@ of Ren'Py, it is possible to write scripts that bypass this and
 change things in ways that may have unpredictable results.  Most notably,
 <code class="docutils literal notranslate"><span class="pre">call</span> <span class="pre">screen</span></code> doesn't work well with fixed rollback. It is up
 to the creator to block rollback at problematic locations.</p>
-<p>The internal user interaction options for menus, <code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.input()</span></code>
+<p>The internal user interaction options for menus, <a class="reference internal" href="input.html#renpy.input" title="renpy.input"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.input()</span></code></a>
 and <code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.imagemap()</span></code> are designed to fully work with fix_rollback.</p>
 </section>
 <section id="styling-fixed-rollback">
-<h2>Styling Fixed Rollback<a class="headerlink" href="#styling-fixed-rollback" title="Link to this heading"></a></h2>
+<h2>Styling Fixed Rollback<a class="headerlink" href="#styling-fixed-rollback" title="Ссылка на этот заголовок"></a></h2>
 <p>Because fix_rollback changes the functionality of menus and imagemaps,
 it is advisable to reflect this in the appearance. To do this, it is
 important to understand how the widget states of the menu buttons are
@@ -622,11 +926,11 @@ properties while the other buttons use properties with the
 &quot;insensitive_&quot; prefix.</p>
 </section>
 <section id="fixed-rollback-and-custom-screens">
-<h2>Fixed Rollback and Custom Screens<a class="headerlink" href="#fixed-rollback-and-custom-screens" title="Link to this heading"></a></h2>
+<h2>Fixed Rollback and Custom Screens<a class="headerlink" href="#fixed-rollback-and-custom-screens" title="Ссылка на этот заголовок"></a></h2>
 <p>To simplify the creation of custom screens, two actions are
-provided to help with the most common uses. The <code class="xref py py-func docutils literal notranslate"><span class="pre">ui.ChoiceReturn()</span></code> action
+provided to help with the most common uses. The <a class="reference internal" href="#ui.ChoiceReturn" title="ui.ChoiceReturn"><code class="xref py py-func docutils literal notranslate"><span class="pre">ui.ChoiceReturn()</span></code></a> action
 returns the value when the button it is attached to is clicked. The
-<code class="xref py py-func docutils literal notranslate"><span class="pre">ui.ChoiceJump()</span></code> action can be used to jump to a script label. However, this
+<a class="reference internal" href="#ui.ChoiceJump" title="ui.ChoiceJump"><code class="xref py py-func docutils literal notranslate"><span class="pre">ui.ChoiceJump()</span></code></a> action can be used to jump to a script label. However, this
 action only works properly when the screen is called trough a
 <code class="docutils literal notranslate"><span class="pre">call</span> <span class="pre">screen</span></code> statement.</p>
 <p>Examples:</p>
@@ -679,18 +983,115 @@ action only works properly when the screen is called trough a
 </div>
 <p>When writing custom Python routines that must play nice with the
 fix_rollback system there are a few simple things to know. First of all
-the <code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.in_fixed_rollback()</span></code> function can be used to determine whether
+the <a class="reference internal" href="#renpy.in_fixed_rollback" title="renpy.in_fixed_rollback"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.in_fixed_rollback()</span></code></a> function can be used to determine whether
 the game is currently in fixed rollback state. Second, when in
-fixed rollback state, <code class="xref py py-func docutils literal notranslate"><span class="pre">ui.interact()</span></code> will always return the
+fixed rollback state, <a class="reference internal" href="screen_python.html#ui.interact" title="ui.interact"><code class="xref py py-func docutils literal notranslate"><span class="pre">ui.interact()</span></code></a> will always return the
 supplied roll_forward data regardless of what action was performed. This
-effectively means that when the <code class="xref py py-func docutils literal notranslate"><span class="pre">ui.interact()</span></code>/<code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.checkpoint()</span></code>
+effectively means that when the <a class="reference internal" href="screen_python.html#ui.interact" title="ui.interact"><code class="xref py py-func docutils literal notranslate"><span class="pre">ui.interact()</span></code></a>/<a class="reference internal" href="#renpy.checkpoint" title="renpy.checkpoint"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.checkpoint()</span></code></a>
 functions are used, most of the work is done.</p>
 </section>
 <section id="rollback-blocking-and-fixing-functions">
-<h2>Rollback-blocking and -fixing Functions<a class="headerlink" href="#rollback-blocking-and-fixing-functions" title="Link to this heading"></a></h2>
+<h2>Rollback-blocking and -fixing Functions<a class="headerlink" href="#rollback-blocking-and-fixing-functions" title="Ссылка на этот заголовок"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="renpy.block_rollback">
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">block_rollback</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.block_rollback" title="Ссылка на это определение"></a></dt>
+<dd><p>Prevents the game from rolling back to before the current
+statement.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="renpy.fix_rollback">
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">fix_rollback</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.fix_rollback" title="Ссылка на это определение"></a></dt>
+<dd><p>Prevents the user from changing decisions made before the current
+statement.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="renpy.in_fixed_rollback">
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">in_fixed_rollback</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.in_fixed_rollback" title="Ссылка на это определение"></a></dt>
+<dd><p>Returns true if rollback is currently occurring and the current
+context is before an executed renpy.fix_rollback() statement.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ui.ChoiceJump">
+<span class="sig-prename descclassname"><span class="pre">ui.</span></span><span class="sig-name descname"><span class="pre">ChoiceJump</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">location</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block_all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sensitive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ui.ChoiceJump" title="Ссылка на это определение"></a></dt>
+<dd><p>A menu choice action that returns <cite>value</cite>, while managing the button
+state in a manner consistent with fixed rollback. (See block_all for
+a description of the behavior.)</p>
+<dl>
+<dt><cite>label</cite></dt><dd><p>The label text of the button. For imagebuttons and hotspots this
+can be anything. This label is used as a unique identifier of
+the options within the current screen. Together with <cite>location</cite>
+it is used to store whether this option has been chosen.</p>
+</dd>
+<dt><cite>value</cite></dt><dd><p>The location to jump to.</p>
+</dd>
+<dt><cite>location</cite></dt><dd><p>A unique location identifier for the current choices screen.</p>
+</dd>
+<dt><cite>block_all</cite></dt><dd><p>If false, the button is given the selected role if it was
+the chosen choice, and insensitive if it was not selected.</p>
+<p>If true, the button is always insensitive during fixed
+rollback.</p>
+<p>If None, the value is taken from the <a class="reference internal" href="config.html#var-config.fix_rollback_without_choice"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.fix_rollback_without_choice</span></code></a>
+variable.</p>
+<p>When true is given to all items in a screen, it will
+become unclickable (rolling forward will still work).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ui.ChoiceReturn">
+<span class="sig-prename descclassname"><span class="pre">ui.</span></span><span class="sig-name descname"><span class="pre">ChoiceReturn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">location</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block_all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sensitive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ui.ChoiceReturn" title="Ссылка на это определение"></a></dt>
+<dd><p>A menu choice action that returns <cite>value</cite>, while managing the button
+state in a manner consistent with fixed rollback. (See block_all for
+a description of the behavior.)</p>
+<dl>
+<dt><cite>label</cite></dt><dd><p>The label text of the button. For imagebuttons and hotspots this
+can be anything. This label is used as a unique identifier of
+the options within the current screen. Together with <cite>location</cite>
+it is used to store whether this option has been chosen.</p>
+</dd>
+<dt><cite>value</cite></dt><dd><p>The value this is returned when the choice is chosen.</p>
+</dd>
+<dt><cite>location</cite></dt><dd><p>A unique location identifier for the current choices screen.</p>
+</dd>
+<dt><cite>block_all</cite></dt><dd><p>If false, the button is given the selected role if it was
+the chosen choice, and insensitive if it was not selected.</p>
+<p>If true, the button is always insensitive during fixed
+rollback.</p>
+<p>If None, the value is taken from the <a class="reference internal" href="config.html#var-config.fix_rollback_without_choice"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.fix_rollback_without_choice</span></code></a>
+variable.</p>
+<p>When true is given to all items in a screen, it will
+become unclickable (rolling forward will still work).</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 <section id="norollback">
-<h2>NoRollback<a class="headerlink" href="#norollback" title="Link to this heading"></a></h2>
+<h2>NoRollback<a class="headerlink" href="#norollback" title="Ссылка на этот заголовок"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="NoRollback">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">NoRollback</span></span><a class="headerlink" href="#NoRollback" title="Ссылка на это определение"></a></dt>
+<dd><p>Instances of this class, and classes inheriting from this class,
+do not participate in rollback. Objects reachable through an instance
+of a NoRollback class only participate in rollback if they are
+reachable through other paths.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="SlottedNoRollback">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SlottedNoRollback</span></span><a class="headerlink" href="#SlottedNoRollback" title="Ссылка на это определение"></a></dt>
+<dd><p>Instances of classes inheriting from this class do not participate
+in rollback. The difference between this and <a class="reference internal" href="#NoRollback" title="NoRollback"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoRollback</span></code></a> is that
+this class does not have an associated dictionary, hence can be used
+with <code class="docutils literal notranslate"><span class="pre">__slots__</span></code> to reduce memory usage.</p>
+<p>Objects reachable through an instance of a NoRollback class only participate
+in rollback if they are reachable through other paths.</p>
+</dd></dl>
+
 <p>For example:</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">init</span> <span class="k">python</span><span class="p">:</span>
 
@@ -710,18 +1111,44 @@ functions are used, most of the work is done.</p>
 </div>
 </section>
 <section id="rollback-supporting-classes">
-<h2>Rollback-Supporting Classes<a class="headerlink" href="#rollback-supporting-classes" title="Link to this heading"></a></h2>
+<h2>Rollback-Supporting Classes<a class="headerlink" href="#rollback-supporting-classes" title="Ссылка на этот заголовок"></a></h2>
 <p>The following classes exist to help support the use of rollback in your
 game. They may be useful in some circumstances.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="MultiRevertable">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultiRevertable</span></span><a class="headerlink" href="#MultiRevertable" title="Ссылка на это определение"></a></dt>
+<dd><p>MultiRevertable is a mixin class that allows an object to inherit
+from more than one kind of revertable object. To use it, from MultiRevertable,
+then from the revertable classes you want to inherit from.</p>
+<p>For example:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyDict</span><span class="p">(</span><span class="n">MultiRevertable</span><span class="p">,</span> <span class="nb">dict</span><span class="p">,</span> <span class="nb">object</span><span class="p">):</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+<p>will create an class that will rollback both its dict contents and
+object fields.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="defaultdict">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">defaultdict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">default_factory</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#defaultdict" title="Ссылка на это определение"></a></dt>
+<dd><p>This is a revertable version of collections.defaultdict. It takes a
+factory function. If a key is accessed that does not exist, the <cite>default_factory</cite>
+function is called with the key as an argument, and the result is
+returned.</p>
+<p>While the default_factory attribute is present on this object, it does not
+participate in rollback, and so should not be changed.</p>
+</dd></dl>
+
 </section>
 </section>
 
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="statement_equivalents.html" class="btn btn-neutral float-left" title="Statement Equivalents" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="persistent.html" class="btn btn-neutral float-right" title="Persistent Data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Нижняя область">
+        <a href="statement_equivalents.html" class="btn btn-neutral float-left" title="Statement Equivalents" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+        <a href="persistent.html" class="btn btn-neutral float-right" title="Persistent Data" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -730,9 +1157,9 @@ game. They may be useful in some circumstances.</p>
     <p></p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

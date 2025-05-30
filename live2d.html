@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" data-content_root="./">
+<html class="writer-html5" lang="ru" data-content_root="./">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -17,16 +17,17 @@
     <link rel="canonical" href="https://www.renpy.org/doc/html/live2d.html" />
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=ea47c46f"></script>
+      <script src="_static/documentation_options.js?v=8441e6a0"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=cd1d70c9"></script>
       <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
       <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
     <link rel="next" title="Styles" href="style.html" />
-    <link rel="prev" title="3D Stage" href="3dstage.html" /> 
+    <link rel="prev" title="3D Сцена" href="3dstage.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -36,18 +37,18 @@
         <div class="wy-side-nav-search" >
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
 
 <a href="https://www.renpy.org/" style="margin-bottom: 0">Ren'Py Visual Novel Engine
-<img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
+<img src="_static/navbar-logo.png" alt="Логотип" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
 <a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
@@ -77,7 +78,7 @@
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Сцена</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Live2D Cubism</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#installing-live2d">Installing Live2D</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#defining-animations">Defining Animations</a><ul>
@@ -93,7 +94,10 @@
 <li class="toctree-l2"><a class="reference internal" href="#motion-fading">Motion Fading</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#aliasing">Aliasing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#loop-and-image-prediction">Loop and Image Prediction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.has_live2d"><code class="docutils literal notranslate"><span class="pre">renpy.has_live2d()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -198,19 +202,19 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Ren'Py Visual Novel Engine</a>
       </nav>
 
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+          <div role="navigation" aria-label="Навигация по страницам">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Live2D Cubism</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/renpy/renpy/blob/master/sphinx/source/live2d.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/renpy/renpy/blob/master/sphinx/source/live2d.rst" class="fa fa-github"> Редактировать на GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -219,7 +223,7 @@
            <div itemprop="articleBody">
              
   <section id="live2d-cubism">
-<span id="live2d"></span><h1>Live2D Cubism<a class="headerlink" href="#live2d-cubism" title="Link to this heading"></a></h1>
+<span id="live2d"></span><h1>Live2D Cubism<a class="headerlink" href="#live2d-cubism" title="Ссылка на этот заголовок"></a></h1>
 <p><a class="reference external" href="https://www.live2d.com/en/">Live2D Cubism</a> is a system that allows you
 to animate 2D images, such as the character sprites in a visual novel. These
 images are drawn in a series of layers - for example, a layer for pupils and
@@ -238,13 +242,13 @@ Ren'Py back a list of meshes to show. Ren'Py then renders these meshes, and the 
 <p>Ren'Py supports Live2D animations in the Cubism 3 and Cubism 4 formats.
 It supports the playback of expressions and motions.</p>
 <div class="admonition warning">
-<p class="admonition-title">Warning</p>
+<p class="admonition-title">Предупреждение</p>
 <p>Live2D is not supported on the web platform.</p>
 <p>Installing Live2D on iOS requires copying the static libraries into your
 iOS project by hand.</p>
 </div>
 <section id="installing-live2d">
-<h2>Installing Live2D<a class="headerlink" href="#installing-live2d" title="Link to this heading"></a></h2>
+<h2>Installing Live2D<a class="headerlink" href="#installing-live2d" title="Ссылка на этот заголовок"></a></h2>
 <p>Before you can use Live2D, you'll need to download and install the Cubism
 SDK for Native, found on the
 <a class="reference external" href="https://www.live2d.com/en/download/cubism-sdk/download-native/">Live2D website</a>.
@@ -258,11 +262,11 @@ screen. Then click &quot;Install Live2D Cubism SDK for Native&quot;. After a sho
 amount of time, Live2D will be installed.</p>
 </section>
 <section id="defining-animations">
-<h2>Defining Animations<a class="headerlink" href="#defining-animations" title="Link to this heading"></a></h2>
+<h2>Defining Animations<a class="headerlink" href="#defining-animations" title="Ссылка на этот заголовок"></a></h2>
 <p>Live2D animations are defined using the Live2D displayable and the image statement:</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="Live2D">
-<span class="sig-name descname"><span class="pre">Live2D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zoom</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">top</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alias</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fade</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seamless</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute_function</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute_filter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update_function</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Live2D" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">Live2D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zoom</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">top</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alias</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fade</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seamless</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute_function</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute_filter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update_function</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Live2D" title="Ссылка на это определение"></a></dt>
 <dd><p>This displayable displays a Live2D animation.</p>
 <dl>
 <dt><cite>filename</cite></dt><dd><p>This may either be a model3.json file defining a Live2D animation, or a
@@ -294,13 +298,13 @@ alias.</p>
 should not be enabled, and None to use the value of <a class="reference internal" href="#var-_live2d_fade"><code class="xref std std-var docutils literal notranslate"><span class="pre">_live2d_fade</span></code></a>.</p>
 </dd>
 <dt><cite>nonexclusive</cite></dt><dd><p>If not None, this should be a list of names of nonexclusive expressions.
-Expressions default to being exlcusive, with only one beign shown at
+Expressions default to being exclusive, with only one being shown at
 a time. If listed here, any number of nonexclusive expressions can be
 shown, in addition to one exclusive expression.</p>
 </dd>
 <dt><cite>seamless</cite></dt><dd><p>This determines if seamless looping should be used. Seamless looping
 avoids fading between loops of a single motion. This may be True to
-enable seamless looping all the time, False to dispable it all the
+enable seamless looping all the time, False to disable it all the
 time, or a set of motions to be looped.</p>
 </dd>
 <dt><cite>default_fade</cite></dt><dd><p>The default amount of time that is spending fading into our out of
@@ -316,7 +320,7 @@ that at most one attribute corresponding to an expression is given.</p>
 </dd>
 <dt><cite>attribute_filter</cite></dt><dd><p>If not None, this is a function that takes a tuple of attributes,
 and returns a second tuple of attributes. This is usually used to
-filter out nonexclusice attributes that conflict with each other. The attributes
+filter out nonexclusive attributes that conflict with each other. The attributes
 are ordered such that more recently requested attributes come first,
 meaning that in the case of a conflict, the first attribute should
 win.</p>
@@ -349,7 +353,7 @@ such that these only need to be supplied once as part of the first Live2D object
 use <cite>filename</cite>.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="blend_parameter">
-<span class="sig-name descname"><span class="pre">blend_parameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blend</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blend_parameter" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">blend_parameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blend</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blend_parameter" title="Ссылка на это определение"></a></dt>
 <dd><p>This method blends the current value of the parameter with <cite>value</cite>
 This has no effect outside of <cite>update_function</cite>.</p>
 <dl class="simple">
@@ -366,7 +370,7 @@ This has no effect outside of <cite>update_function</cite>.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="blend_opacity">
-<span class="sig-name descname"><span class="pre">blend_opacity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blend</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blend_opacity" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">blend_opacity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blend</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blend_opacity" title="Ссылка на это определение"></a></dt>
 <dd><p>This method blends the current value of the part opacity with <cite>value</cite>
 This has no effect outside of <cite>update_function</cite>.</p>
 <dl class="simple">
@@ -387,7 +391,7 @@ This has no effect outside of <cite>update_function</cite>.</p>
 expressions were loaded from .model3.json files:</p>
 <dl class="std var">
 <dt class="sig sig-object std" id="var-config.log_live2d_loading">
-<span class="pre">define</span> <span class="sig-name descname"><span class="pre">config.log_live2d_loading</span></span> <span class="pre">=</span> <span class="pre">False</span><a class="headerlink" href="#var-config.log_live2d_loading" title="Link to this definition"></a></dt>
+<span class="pre">define</span> <span class="sig-name descname"><span class="pre">config.log_live2d_loading</span></span> <span class="pre">=</span> <span class="pre">False</span><a class="headerlink" href="#var-config.log_live2d_loading" title="Ссылка на это определение"></a></dt>
 <dd><p>If True, loaded path and used motions and expressions will be written to
 log.txt on start.</p>
 </dd></dl>
@@ -419,7 +423,7 @@ to work even without Live2D, you could use a wrapper or workaround, for example:
 </div>
 </section>
 <section id="using-animations">
-<h2>Using Animations<a class="headerlink" href="#using-animations" title="Link to this heading"></a></h2>
+<h2>Using Animations<a class="headerlink" href="#using-animations" title="Ссылка на этот заголовок"></a></h2>
 <p>The usual way to display a Live2D image is to display it using the
 show statement. In addition to any attributes added as part of the
 image statement, the names of expressions and motions can be used.</p>
@@ -448,7 +452,7 @@ default expression. The <code class="docutils literal notranslate"><span class="
 </div>
 </section>
 <section id="scaling">
-<h2>Scaling<a class="headerlink" href="#scaling" title="Link to this heading"></a></h2>
+<h2>Scaling<a class="headerlink" href="#scaling" title="Ссылка на этот заголовок"></a></h2>
 <p>Many Live2D models are defined at high resolutions, at least in the internal
 coordinate system that the models use. To compensate for this, Ren'Py includes
 two ways to scale down the Live2D model.</p>
@@ -473,7 +477,7 @@ space above the animation.</p></li>
 </ul>
 </section>
 <section id="motion-fading">
-<h2>Motion Fading<a class="headerlink" href="#motion-fading" title="Link to this heading"></a></h2>
+<h2>Motion Fading<a class="headerlink" href="#motion-fading" title="Ссылка на этот заголовок"></a></h2>
 <p>Ren'Py's support for Live2D includes motion fading. Normally, when Ren'Py
 changes from one animation to another, the transition is abrupt - one
 animation is stopped, and the other starts. If a transition occurs,
@@ -487,14 +491,14 @@ motion fading is used, and if it's false, then abrupt changes occur. If None,
 motion fading is controlled by the <code class="docutils literal notranslate"><span class="pre">_live2d_fade</span></code> variable:</p>
 <dl class="std var">
 <dt class="sig sig-object std" id="var-_live2d_fade">
-<span class="sig-name descname"><span class="pre">_live2d_fade</span></span> <span class="pre">=</span> <span class="pre">True</span><a class="headerlink" href="#var-_live2d_fade" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">_live2d_fade</span></span> <span class="pre">=</span> <span class="pre">True</span><a class="headerlink" href="#var-_live2d_fade" title="Ссылка на это определение"></a></dt>
 <dd><p>If true, Live2D animations use motion fading. If False, animations
 are transitioned abruptly.</p>
 </dd></dl>
 
 </section>
 <section id="aliasing">
-<h2>Aliasing<a class="headerlink" href="#aliasing" title="Link to this heading"></a></h2>
+<h2>Aliasing<a class="headerlink" href="#aliasing" title="Ссылка на этот заголовок"></a></h2>
 <p>The <cite>alias</cite> parameter lets you specify your own names for the motions
 that would otherwise be automatically defined. For example, one could do:</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">image</span> <span class="n">hiyori</span> <span class="o">=</span> <span class="n">Live2D</span><span class="p">(</span><span class="s2">&quot;Resources/Hiyori&quot;</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="mf">.6</span><span class="p">,</span> <span class="n">aliases</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;idle&quot;</span> <span class="p">:</span> <span class="s2">&quot;m01&quot;</span><span class="p">})</span>
@@ -510,7 +514,7 @@ that would otherwise be automatically defined. For example, one could do:</p>
 </div>
 </section>
 <section id="loop-and-image-prediction">
-<h2>Loop and Image Prediction<a class="headerlink" href="#loop-and-image-prediction" title="Link to this heading"></a></h2>
+<h2>Loop and Image Prediction<a class="headerlink" href="#loop-and-image-prediction" title="Ссылка на этот заголовок"></a></h2>
 <p>Ren'Py's Live2D support can loop the final animation if the <cite>loop</cite> parameter
 is set to True. If the animation is being looped, it is important to add
 greater than .2 second pauses that Ren'Py can exploit to perform expensive
@@ -518,16 +522,23 @@ image prediction. (This may not be necessary if image prediction and loading
 can happen at other times.)</p>
 </section>
 <section id="functions">
-<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading"></a></h2>
+<h2>Functions<a class="headerlink" href="#functions" title="Ссылка на этот заголовок"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="renpy.has_live2d">
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">has_live2d</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.has_live2d" title="Ссылка на это определение"></a></dt>
+<dd><p>Returns True if Live2d is supported on the current platform, and
+False otherwise.</p>
+</dd></dl>
+
 </section>
 </section>
 
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="3dstage.html" class="btn btn-neutral float-left" title="3D Stage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="style.html" class="btn btn-neutral float-right" title="Styles" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Нижняя область">
+        <a href="3dstage.html" class="btn btn-neutral float-left" title="3D Сцена" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+        <a href="style.html" class="btn btn-neutral float-right" title="Styles" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -536,9 +547,9 @@ can happen at other times.)</p>
     <p></p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

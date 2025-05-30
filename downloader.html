@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" data-content_root="./">
+<html class="writer-html5" lang="ru" data-content_root="./">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -17,14 +17,15 @@
     <link rel="canonical" href="https://www.renpy.org/doc/html/downloader.html" />
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=ea47c46f"></script>
+      <script src="_static/documentation_options.js?v=8441e6a0"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=cd1d70c9"></script>
       <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
       <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
     <link rel="next" title="Gestures" href="gesture.html" />
     <link rel="prev" title="HTTPS/HTTP Updater" href="updater.html" /> 
 </head>
@@ -36,18 +37,18 @@
         <div class="wy-side-nav-search" >
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
 
 <a href="https://www.renpy.org/" style="margin-bottom: 0">Ren'Py Visual Novel Engine
-<img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
+<img src="_static/navbar-logo.png" alt="Логотип" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
 <a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
@@ -77,7 +78,7 @@
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Сцена</a></li>
 <li class="toctree-l1"><a class="reference internal" href="live2d.html">Live2D Cubism</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Customizing Ren'Py</span></p>
@@ -152,7 +153,11 @@
 <li class="toctree-l2"><a class="reference internal" href="#building-and-uploading-the-main-game">Building and Uploading the Main Game</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#making-a-downloader-game">Making a Downloader Game</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#downloader-screen">Downloader Screen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#downloader-functions">Downloader Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#downloader-functions">Downloader Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#updater.continue_game_download"><code class="docutils literal notranslate"><span class="pre">updater.continue_game_download()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#updater.start_game_download"><code class="docutils literal notranslate"><span class="pre">updater.start_game_download()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="gesture.html">Gestures</a></li>
@@ -189,19 +194,19 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Ren'Py Visual Novel Engine</a>
       </nav>
 
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+          <div role="navigation" aria-label="Навигация по страницам">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Downloader for Large Games on Mobile</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/renpy/renpy/blob/master/sphinx/source/downloader.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/renpy/renpy/blob/master/sphinx/source/downloader.rst" class="fa fa-github"> Редактировать на GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -210,12 +215,12 @@
            <div itemprop="articleBody">
              
   <section id="downloader-for-large-games-on-mobile">
-<h1>Downloader for Large Games on Mobile<a class="headerlink" href="#downloader-for-large-games-on-mobile" title="Link to this heading"></a></h1>
+<h1>Downloader for Large Games on Mobile<a class="headerlink" href="#downloader-for-large-games-on-mobile" title="Ссылка на этот заголовок"></a></h1>
 <p>Platforms like Android and iOS have a limit on the size of an app that can
 be downloaded from their app stores. To support larger games, Ren'Py supports
 a downloader, which is a small game that downloads the main game.</p>
 <section id="requirements">
-<h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading"></a></h2>
+<h2>Requirements<a class="headerlink" href="#requirements" title="Ссылка на этот заголовок"></a></h2>
 <p>To make this work, you'll need a web hosting service that is reasonably
 capable. Uploader services like mega or game hosting sites like itch.io won't work.
 The downloader has been tested with a Digital Ocean droplet that
@@ -224,7 +229,7 @@ runs Nginx, and also with Cloudflare's R2, which is free to host 10GB on.</p>
 work better if it supports many HTTP Range requests at once.</p>
 </section>
 <section id="how-it-works">
-<h2>How it Works<a class="headerlink" href="#how-it-works" title="Link to this heading"></a></h2>
+<h2>How it Works<a class="headerlink" href="#how-it-works" title="Ссылка на этот заголовок"></a></h2>
 <p>To use the downloader, you'll need to build two games. The first is the
 downloader game, which contains the Ren'Py engine and the downloader,
 and is what the user will get delivered to their phone.</p>
@@ -241,7 +246,7 @@ start. Otherwise the downloader will run and prompt the player to
 download the main game.</p>
 </section>
 <section id="building-and-uploading-the-main-game">
-<h2>Building and Uploading the Main Game<a class="headerlink" href="#building-and-uploading-the-main-game" title="Link to this heading"></a></h2>
+<h2>Building and Uploading the Main Game<a class="headerlink" href="#building-and-uploading-the-main-game" title="Ссылка на этот заголовок"></a></h2>
 <p>The main change you need to make to your main game is to add the line:</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">define</span> <span class="n">build</span><span class="o">.</span><span class="n">game_only_update</span> <span class="o">=</span> <span class="kc">True</span>
 </pre></div>
@@ -258,7 +263,7 @@ want to upload the <code class="docutils literal notranslate"><span class="pre">
 the two update files, and the .rpu files are inside the <code class="docutils literal notranslate"><span class="pre">rpu</span></code> directory.)</p>
 </section>
 <section id="making-a-downloader-game">
-<h2>Making a Downloader Game<a class="headerlink" href="#making-a-downloader-game" title="Link to this heading"></a></h2>
+<h2>Making a Downloader Game<a class="headerlink" href="#making-a-downloader-game" title="Ссылка на этот заголовок"></a></h2>
 <p>The downloader game is a Ren'Py game, but it should stay well under 100MB
 in size. You can do anything you can in a small game - have an opening
 scene, play music, etc. You will need to make it separately, and build
@@ -266,6 +271,9 @@ it for Android or iOS using the usual techniques.</p>
 <p>At the same time, it should ask the player if they want to download, mention
 that this can cost money if they're not on WiFi, and then download the the
 game.</p>
+<p>For the highest security, the <code class="docutils literal notranslate"><span class="pre">public_key.pem</span></code> file produced by building
+the main game should be copied to the base directory of the downloader game.
+This is the public key that will be used to verify the download.</p>
 <p>Here's an example script for a downloader game, using assets from the
 tutorial game:</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="c1"># The url to updates.json, on your web server.</span>
@@ -305,7 +313,7 @@ loading, including preferences, so the downloader's saves don't influence
 the main game.</p>
 <p>It's also all happening in the splashscreen, to start immediately and to
 disable entering the game menu.</p>
-<p>Early on, the game calls <code class="xref py py-func docutils literal notranslate"><span class="pre">updater.start_game_download()</span></code>, to gather information
+<p>Early on, the game calls <a class="reference internal" href="#updater.start_game_download" title="updater.start_game_download"><code class="xref py py-func docutils literal notranslate"><span class="pre">updater.start_game_download()</span></code></a>, to gather information
 about the download. After this, the game kills some time, having Eileen
 say some things as the game checks to find out the size of the download.</p>
 <p>After the player makes multiple clicks, the game may know the size of the
@@ -313,14 +321,14 @@ download, or it may not, so we use a conditional to check the download
 size. If the real number is known, it's converted to megabytes and displayed.
 If not, more general text is displayed. (It would also hard-code an estimate
 of the download size into the game.)</p>
-<p>Finally, <code class="xref py py-func docutils literal notranslate"><span class="pre">updater.continue_game_download()</span></code> is called, which starts the download
+<p>Finally, <a class="reference internal" href="#updater.continue_game_download" title="updater.continue_game_download"><code class="xref py py-func docutils literal notranslate"><span class="pre">updater.continue_game_download()</span></code></a> is called, which starts the download
 process. A screen will show up, and you can't do much - but music will play,
 and ATL will keep running.</p>
 <p>When the download is complete, the main game will automatically start. If it
 fails, the downloader will restart, and the player will be able to try again</p>
 </section>
 <section id="downloader-screen">
-<h2>Downloader Screen<a class="headerlink" href="#downloader-screen" title="Link to this heading"></a></h2>
+<h2>Downloader Screen<a class="headerlink" href="#downloader-screen" title="Ссылка на этот заголовок"></a></h2>
 <p>The downloader is a screen that shows the progress of the download. A default
 screen is in <code class="file docutils literal notranslate"><span class="pre">renpy/common/00updater.rpy</span></code>, and can be customized by
 creating a copy in your game directory.</p>
@@ -340,7 +348,7 @@ creating a copy in your game directory.</p>
         <span class="k">elif</span> <span class="n">u</span><span class="o">.</span><span class="n">state</span> <span class="o">==</span> <span class="n">u</span><span class="o">.</span><span class="n">FINISHING</span> <span class="k">or</span> <span class="n">u</span><span class="o">.</span><span class="n">state</span> <span class="o">==</span> <span class="n">u</span><span class="o">.</span><span class="n">DONE</span><span class="p">:</span>
             <span class="k">text</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;The game data has been downloaded.&quot;</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span> <span class="c1"># An error or unknown state.</span>
-            <span class="k">text</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;An error occured when trying to download game data:&quot;</span><span class="p">)</span>
+            <span class="k">text</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;An error occurred when trying to download game data:&quot;</span><span class="p">)</span>
 
             <span class="k">if</span> <span class="n">u</span><span class="o">.</span><span class="n">message</span> <span class="k">is</span> <span class="k">not</span> <span class="kc">None</span><span class="p">:</span>
                 <span class="k">text</span> <span class="s2">&quot;[u.message!q]&quot;</span>
@@ -380,16 +388,30 @@ creating a copy in your game directory.</p>
 </div>
 </section>
 <section id="downloader-functions">
-<h2>Downloader Functions<a class="headerlink" href="#downloader-functions" title="Link to this heading"></a></h2>
+<h2>Downloader Functions<a class="headerlink" href="#downloader-functions" title="Ссылка на этот заголовок"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="updater.continue_game_download">
+<span class="sig-prename descclassname"><span class="pre">updater.</span></span><span class="sig-name descname"><span class="pre">continue_game_download</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'downloader'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#updater.continue_game_download" title="Ссылка на это определение"></a></dt>
+<dd><p>Continues downloading the game data. This will loop until the
+download is complete, or the user exits the game.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="updater.start_game_download">
+<span class="sig-prename descclassname"><span class="pre">updater.</span></span><span class="sig-name descname"><span class="pre">start_game_download</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#updater.start_game_download" title="Ссылка на это определение"></a></dt>
+<dd><p>Starts downloading the game data from <cite>url</cite>. This begins the process
+of determining what needs to be downloaded, and returns an Update object.</p>
+</dd></dl>
+
 </section>
 </section>
 
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="updater.html" class="btn btn-neutral float-left" title="HTTPS/HTTP Updater" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="gesture.html" class="btn btn-neutral float-right" title="Gestures" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Нижняя область">
+        <a href="updater.html" class="btn btn-neutral float-left" title="HTTPS/HTTP Updater" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+        <a href="gesture.html" class="btn btn-neutral float-right" title="Gestures" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -398,9 +420,9 @@ creating a copy in your game directory.</p>
     <p></p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

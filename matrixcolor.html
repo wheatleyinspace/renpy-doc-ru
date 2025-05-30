@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" data-content_root="./">
+<html class="writer-html5" lang="ru" data-content_root="./">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -17,14 +17,15 @@
     <link rel="canonical" href="https://www.renpy.org/doc/html/matrixcolor.html" />
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=ea47c46f"></script>
+      <script src="_static/documentation_options.js?v=8441e6a0"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=cd1d70c9"></script>
       <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
       <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
     <link rel="next" title="Layered Images" href="layeredimage.html" />
     <link rel="prev" title="Transitions" href="transitions.html" /> 
 </head>
@@ -36,18 +37,18 @@
         <div class="wy-side-nav-search" >
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
 
 <a href="https://www.renpy.org/" style="margin-bottom: 0">Ren'Py Visual Novel Engine
-<img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
+<img src="_static/navbar-logo.png" alt="Логотип" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
 <a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
@@ -82,11 +83,23 @@
 <li class="toctree-l3"><a class="reference internal" href="#structural-similarity">Structural Similarity</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#built-in-colormatrix-subclasses">Built-In ColorMatrix Subclasses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#built-in-colormatrix-subclasses">Built-In ColorMatrix Subclasses</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#BrightnessMatrix"><code class="docutils literal notranslate"><span class="pre">BrightnessMatrix</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ColorizeMatrix"><code class="docutils literal notranslate"><span class="pre">ColorizeMatrix</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ContrastMatrix"><code class="docutils literal notranslate"><span class="pre">ContrastMatrix</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#HueMatrix"><code class="docutils literal notranslate"><span class="pre">HueMatrix</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#IdentityMatrix"><code class="docutils literal notranslate"><span class="pre">IdentityMatrix</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#InvertMatrix"><code class="docutils literal notranslate"><span class="pre">InvertMatrix</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#OpacityMatrix"><code class="docutils literal notranslate"><span class="pre">OpacityMatrix</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#SaturationMatrix"><code class="docutils literal notranslate"><span class="pre">SaturationMatrix</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#SepiaMatrix"><code class="docutils literal notranslate"><span class="pre">SepiaMatrix()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#TintMatrix"><code class="docutils literal notranslate"><span class="pre">TintMatrix</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Сцена</a></li>
 <li class="toctree-l1"><a class="reference internal" href="live2d.html">Live2D Cubism</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Customizing Ren'Py</span></p>
@@ -190,19 +203,19 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Ren'Py Visual Novel Engine</a>
       </nav>
 
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+          <div role="navigation" aria-label="Навигация по страницам">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Matrixcolor</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/renpy/renpy/blob/master/sphinx/source/matrixcolor.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/renpy/renpy/blob/master/sphinx/source/matrixcolor.rst" class="fa fa-github"> Редактировать на GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -211,12 +224,12 @@
            <div itemprop="articleBody">
              
   <section id="matrixcolor">
-<h1>Matrixcolor<a class="headerlink" href="#matrixcolor" title="Link to this heading"></a></h1>
+<h1>Matrixcolor<a class="headerlink" href="#matrixcolor" title="Ссылка на этот заголовок"></a></h1>
 <p>Ren'Py supports recoloring images using the <a class="reference internal" href="transform_properties.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> transform
-property. This property can take either a <code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code> or a ColorMatrix
+property. This property can take either a <a class="reference internal" href="matrix.html#Matrix" title="Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a> or a ColorMatrix
 object.</p>
 <section id="premultiplied-alpha-color">
-<h2>Premultiplied Alpha Color<a class="headerlink" href="#premultiplied-alpha-color" title="Link to this heading"></a></h2>
+<h2>Premultiplied Alpha Color<a class="headerlink" href="#premultiplied-alpha-color" title="Ссылка на этот заголовок"></a></h2>
 <p>When an image is loaded, Ren'Py decompresses the image, and then copies it
 to the GPU of your computer or mobile device. As part of the copying, each
 of the four color channels (red, green, blue, and alpha - with alpha representing
@@ -228,22 +241,23 @@ green, and blue channels are multiplied by the alpha channel. This means that
 an opaque white pixel will have the value (1.0, 1.0, 1.0, 1.0), a 50% transparent
 red pixel will have the value (0.5, 0.0, 0.0, 0.5), and a transparent pixel
 will have the value (0.0, 0.0, 0.0, 0.0).</p>
-<p>Premultiplied alph allows Ren'Py to scale images
+<p>Premultiplied alpha allows Ren'Py to scale images
 up and down without causing dark artifacts that come from representing
 colors more directly. Scaling images is similar to averaging two pixels
 together. Without premultiplied alpha, we might have a solid white pixel
 and a transparent pixel - (1.0, 1.0, 1.0, 1.0) and (0.0, 0.0, 0.0, 0.0),
-respectively. Average those together gets (0.5, 0.5, 0.5, 0.5).
-But that's not right - averaging solid white and transparent black should
-get 50% opaque white, not 50% opaque gray.</p>
-<p>In the premultiplied alpha system, the starting value is the same, and so is the
-result - except now, (0.5, 0.5, 0.5, 0.5) has been pre-defined to be 50% opaque
-white. By storing colors in this way, Ren'Py can draw them to the screen
-correctly, and not get weird artifacts when scaling.</p>
+respectively. Average those together gets (0.5, 0.5, 0.5, 0.5), representing
+50% opaque gray in the straight alpha system.</p>
+<p>However, since a fully transparent pixel doesn't really have
+any color, it shouldn't affect the resulting color, either - only the resulting
+transparency. In the premultiplied alpha system, the starting values are the same,
+and so is the result - except now, (0.5, 0.5, 0.5, 0.5) has been pre-defined to
+be 50% opaque white. By storing colors in this way, Ren'Py can draw them to the
+screen correctly, and not get weird artifacts when scaling.</p>
 </section>
 <section id="using-a-matrix-to-change-colors">
-<h2>Using a Matrix to Change Colors<a class="headerlink" href="#using-a-matrix-to-change-colors" title="Link to this heading"></a></h2>
-<p>The <code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code> objects used to change colors can consist of 16
+<h2>Using a Matrix to Change Colors<a class="headerlink" href="#using-a-matrix-to-change-colors" title="Ссылка на этот заголовок"></a></h2>
+<p>The <a class="reference internal" href="matrix.html#Matrix" title="Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a> objects used to change colors can consist of 16
 numbers, which can in turn be arranged into a 4x4 grid. Here's a
 way of doing this that assigns a letter to each number:</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">define</span> <span class="n">mymatrix</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">([</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span>
@@ -279,7 +293,7 @@ expressed in this way. Matrices can be combined by multiplying them
 together, and when that happens the matrices are combined right to left.</p>
 </section>
 <section id="colormatrix">
-<span id="id1"></span><h2>ColorMatrix<a class="headerlink" href="#colormatrix" title="Link to this heading"></a></h2>
+<span id="id1"></span><h2>ColorMatrix<a class="headerlink" href="#colormatrix" title="Ссылка на этот заголовок"></a></h2>
 <p>While Matrix objects are suitable for static color changes, they're not
 useful for animating color changes. It's also useful to have a way of
 taking common matrices and encapsulating them in a way that allows the
@@ -303,7 +317,7 @@ and may be None if no old object exists.</p></li>
 <li><p>A value between 0.0 and 1.0, representing the point to interpolate.
 0.0 is entirely the old object, and 1.0 is entirely the new object.</p></li>
 </ul>
-<p>And should return a <code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code>.</p>
+<p>And should return a <a class="reference internal" href="matrix.html#Matrix" title="Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a>.</p>
 <p>As an example of a ColorMatrix, here is the implementation of Ren'Py's
 TintMatrix class.</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">TintMatrix</span><span class="p">(</span><span class="n">ColorMatrix</span><span class="p">):</span>
@@ -349,7 +363,7 @@ TintMatrix class.</p>
 </pre></div>
 </div>
 <section id="structural-similarity">
-<h3>Structural Similarity<a class="headerlink" href="#structural-similarity" title="Link to this heading"></a></h3>
+<h3>Structural Similarity<a class="headerlink" href="#structural-similarity" title="Ссылка на этот заголовок"></a></h3>
 <p>In ATL, interpolating a the <a class="reference internal" href="transform_properties.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> property requires the
 use of ColorMatrixes that have structural similarity. That means the same
 types of ColorMatrix, multiplied together in the same order.</p>
@@ -367,18 +381,145 @@ interpolation would be skipped.</p>
 </section>
 </section>
 <section id="built-in-colormatrix-subclasses">
-<h2>Built-In ColorMatrix Subclasses<a class="headerlink" href="#built-in-colormatrix-subclasses" title="Link to this heading"></a></h2>
+<h2>Built-In ColorMatrix Subclasses<a class="headerlink" href="#built-in-colormatrix-subclasses" title="Ссылка на этот заголовок"></a></h2>
 <p>The following is the list of ColorMatrix subclasses that are built into
 Ren'Py.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="BrightnessMatrix">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">BrightnessMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BrightnessMatrix" title="Ссылка на это определение"></a></dt>
+<dd><p>A ColorMatrix that can be used with <a class="reference internal" href="transform_properties.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> to change
+the brightness of an image, while leaving the Alpha channel
+alone.</p>
+<dl class="simple">
+<dt><cite>value</cite></dt><dd><p>The amount of change in image brightness. This should be
+a number between -1 and 1, with -1 the darkest possible
+image and 1 the brightest.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ColorizeMatrix">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ColorizeMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">black_color</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">white_color</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ColorizeMatrix" title="Ссылка на это определение"></a></dt>
+<dd><p>A ColorMatrix that can be used with <a class="reference internal" href="transform_properties.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> to colorize
+black and white displayables. It uses the color of each pixel
+in the black and white to interpolate between the black color
+and the white color.</p>
+<p>The alpha channel is not touched.</p>
+<p>This is intended for use with a black and white image (or one that
+has been desaturated with <a class="reference internal" href="#SaturationMatrix" title="SaturationMatrix"><code class="xref py py-func docutils literal notranslate"><span class="pre">SaturationMatrix()</span></code></a>), and will yield
+strange results when used with images that are not black and white.</p>
+<dl class="simple">
+<dt><cite>black_color</cite>, <cite>white_color</cite></dt><dd><p>The colors used in the interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ContrastMatrix">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ContrastMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ContrastMatrix" title="Ссылка на это определение"></a></dt>
+<dd><p>A ColorMatrix that can be used with <a class="reference internal" href="transform_properties.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> to change
+the brightness of an image, while leaving the Alpha channel
+alone.</p>
+<dl class="simple">
+<dt><cite>value</cite></dt><dd><p>The contrast value. Values between 0.0 and 1.0 decrease
+the contrast, while values above 1.0 increase the contrast.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="HueMatrix">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">HueMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#HueMatrix" title="Ссылка на это определение"></a></dt>
+<dd><p>A ColorMatrix that can be used with <a class="reference internal" href="transform_properties.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> to rotate the hue by
+<cite>value</cite> degrees. While <cite>value</cite> can be any number, positive or negative,
+360 degrees makes a complete rotation. The alpha channel is left alone.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="IdentityMatrix">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">IdentityMatrix</span></span><a class="headerlink" href="#IdentityMatrix" title="Ссылка на это определение"></a></dt>
+<dd><p>A ColorMatrix that can be used with <a class="reference internal" href="transform_properties.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> that does not
+change the color or alpha of what is supplied to it.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="InvertMatrix">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">InvertMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#InvertMatrix" title="Ссылка на это определение"></a></dt>
+<dd><p>A ColorMatrix that can be used with <a class="reference internal" href="transform_properties.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> to invert
+each of the color channels. The alpha channel is left alone.</p>
+<dl class="simple">
+<dt><cite>value</cite></dt><dd><p>The amount to inverty by. 0.0 is not inverted, 1.0 is fully
+inverted. Used to animate inversion.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="OpacityMatrix">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OpacityMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#OpacityMatrix" title="Ссылка на это определение"></a></dt>
+<dd><p>A ColorMatrix that can be used with <a class="reference internal" href="transform_properties.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> to change
+the opacity of an image, while leaving color channels alone.</p>
+<dl class="simple">
+<dt><cite>value</cite></dt><dd><p>The amount the alpha channel should be multiplied by,
+a number between 0.0 and 1.0.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="SaturationMatrix">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SaturationMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0.2126,</span> <span class="pre">0.7152,</span> <span class="pre">0.0722)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SaturationMatrix" title="Ссылка на это определение"></a></dt>
+<dd><p>A ColorMatrix that can be used with <a class="reference internal" href="transform_properties.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> that alters
+the saturation of an image, while leaving the alpha channel
+alone.</p>
+<dl class="simple">
+<dt><cite>value</cite></dt><dd><p>The amount of saturation in the resulting image. 1.0 is
+the unaltered image, while 0.0 is grayscale.</p>
+</dd>
+<dt><cite>desat</cite></dt><dd><p>This is a 3-element tuple that controls how much of the
+red, green, and blue channels will be placed into all
+three channels of a fully desaturated image. The default
+is based on the constants used for the luminance channel
+of an NTSC television signal. Since the human eye is
+mostly sensitive to green, more of the green channel is
+kept than the other two channels.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="SepiaMatrix">
+<span class="sig-name descname"><span class="pre">SepiaMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tint</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#ffeec2'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0.2126,</span> <span class="pre">0.7152,</span> <span class="pre">0.0722)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SepiaMatrix" title="Ссылка на это определение"></a></dt>
+<dd><p>A function that returns a ColorMatrix that can be used with <a class="reference internal" href="transform_properties.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a>
+to sepia-tone a displayable. This is the equivalent of:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="n">TintMatrix</span><span class="p">(</span><span class="n">tint</span><span class="p">)</span> <span class="o">*</span> <span class="n">SaturationMatrix</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">desat</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="TintMatrix">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TintMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">color</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#TintMatrix" title="Ссылка на это определение"></a></dt>
+<dd><p>A ColorMatrix can be used with <a class="reference internal" href="transform_properties.html#transform-property-matrixcolor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">matrixcolor</span></code></a> to tint
+an image, while leaving the alpha channel alone.</p>
+<dl class="simple">
+<dt><cite>color</cite></dt><dd><p>The color that the matrix will tint things to. This is passed
+to <a class="reference internal" href="color_class.html#Color" title="Color"><code class="xref py py-func docutils literal notranslate"><span class="pre">Color()</span></code></a>, and so may be anything that Color supports
+as its first argument.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 </section>
 
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="transitions.html" class="btn btn-neutral float-left" title="Transitions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="layeredimage.html" class="btn btn-neutral float-right" title="Layered Images" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Нижняя область">
+        <a href="transitions.html" class="btn btn-neutral float-left" title="Transitions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+        <a href="layeredimage.html" class="btn btn-neutral float-right" title="Layered Images" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -387,9 +528,9 @@ Ren'Py.</p>
     <p></p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

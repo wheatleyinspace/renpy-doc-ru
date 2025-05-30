@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" data-content_root="./">
+<html class="writer-html5" lang="ru" data-content_root="./">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -17,14 +17,15 @@
     <link rel="canonical" href="https://www.renpy.org/doc/html/history.html" />
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=ea47c46f"></script>
+      <script src="_static/documentation_options.js?v=8441e6a0"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=cd1d70c9"></script>
       <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
       <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
     <link rel="next" title="Multiple Character Dialogue" href="multiple.html" />
     <link rel="prev" title="Achievements" href="achievement.html" /> 
 </head>
@@ -36,18 +37,18 @@
         <div class="wy-side-nav-search" >
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
 
 <a href="https://www.renpy.org/" style="margin-bottom: 0">Ren'Py Visual Novel Engine
-<img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
+<img src="_static/navbar-logo.png" alt="Логотип" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
 <a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
@@ -77,7 +78,7 @@
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Сцена</a></li>
 <li class="toctree-l1"><a class="reference internal" href="live2d.html">Live2D Cubism</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Customizing Ren'Py</span></p>
@@ -196,19 +197,19 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Ren'Py Visual Novel Engine</a>
       </nav>
 
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+          <div role="navigation" aria-label="Навигация по страницам">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Dialogue History</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/renpy/renpy/blob/master/sphinx/source/history.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/renpy/renpy/blob/master/sphinx/source/history.rst" class="fa fa-github"> Редактировать на GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -217,7 +218,7 @@
            <div itemprop="articleBody">
              
   <section id="dialogue-history">
-<span id="history"></span><h1>Dialogue History<a class="headerlink" href="#dialogue-history" title="Link to this heading"></a></h1>
+<span id="history"></span><h1>Dialogue History<a class="headerlink" href="#dialogue-history" title="Ссылка на этот заголовок"></a></h1>
 <p>Ren'Py includes a dialogue history system that stores each line of dialogue
 after it has been shown to the player. This stored dialogue can then be
 retrieved and re-shown to the player.</p>
@@ -231,10 +232,10 @@ a list of HistoryEntry objects. HistoryEntry objects contain data in
 their fields, as defined below.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="HistoryEntry">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">HistoryEntry</span></span><a class="headerlink" href="#HistoryEntry" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">HistoryEntry</span></span><a class="headerlink" href="#HistoryEntry" title="Ссылка на это определение"></a></dt>
 <dd><dl class="py attribute">
 <dt class="sig sig-object py" id="HistoryEntry.kind">
-<span class="sig-name descname"><span class="pre">kind</span></span><a class="headerlink" href="#HistoryEntry.kind" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">kind</span></span><a class="headerlink" href="#HistoryEntry.kind" title="Ссылка на это определение"></a></dt>
 <dd><p>The kind of character that created this history. Ren'Py sets this
 to &quot;current&quot; while a line of dialogue is displaying, and then
 to either &quot;adv&quot; or &quot;nvl&quot;.</p>
@@ -242,63 +243,63 @@ to either &quot;adv&quot; or &quot;nvl&quot;.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="HistoryEntry.who">
-<span class="sig-name descname"><span class="pre">who</span></span><a class="headerlink" href="#HistoryEntry.who" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">who</span></span><a class="headerlink" href="#HistoryEntry.who" title="Ссылка на это определение"></a></dt>
 <dd><p>A string giving the name of the character that is speaking, or None
 if no such string exists.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="HistoryEntry.what">
-<span class="sig-name descname"><span class="pre">what</span></span><a class="headerlink" href="#HistoryEntry.what" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">what</span></span><a class="headerlink" href="#HistoryEntry.what" title="Ссылка на это определение"></a></dt>
 <dd><p>A string giving the dialogue text.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="HistoryEntry.who_args">
-<span class="sig-name descname"><span class="pre">who_args</span></span><a class="headerlink" href="#HistoryEntry.who_args" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">who_args</span></span><a class="headerlink" href="#HistoryEntry.who_args" title="Ссылка на это определение"></a></dt>
 <dd><p>A dictionary giving the properties that were supplied to the who
 text widget when the dialogue was originally shown.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="HistoryEntry.what_args">
-<span class="sig-name descname"><span class="pre">what_args</span></span><a class="headerlink" href="#HistoryEntry.what_args" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">what_args</span></span><a class="headerlink" href="#HistoryEntry.what_args" title="Ссылка на это определение"></a></dt>
 <dd><p>A dictionary giving the properties that were supplied to the what
 text widget when the dialogue was originally shown.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="HistoryEntry.window_args">
-<span class="sig-name descname"><span class="pre">window_args</span></span><a class="headerlink" href="#HistoryEntry.window_args" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">window_args</span></span><a class="headerlink" href="#HistoryEntry.window_args" title="Ссылка на это определение"></a></dt>
 <dd><p>A dictionary giving the properties that were supplied to the
 dialogue window when the dialogue was originally shown.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="HistoryEntry.show_args">
-<span class="sig-name descname"><span class="pre">show_args</span></span><a class="headerlink" href="#HistoryEntry.show_args" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">show_args</span></span><a class="headerlink" href="#HistoryEntry.show_args" title="Ссылка на это определение"></a></dt>
 <dd><p>A dictionary giving the properties that were supplied to the say
 screen when the dialogue was originally shown.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="HistoryEntry.image_tag">
-<span class="sig-name descname"><span class="pre">image_tag</span></span><a class="headerlink" href="#HistoryEntry.image_tag" title="Link to this definition"></a></dt>
-<dd><p>The image tag given to the <code class="xref py py-func docutils literal notranslate"><span class="pre">Character()</span></code>, or None if no such
+<span class="sig-name descname"><span class="pre">image_tag</span></span><a class="headerlink" href="#HistoryEntry.image_tag" title="Ссылка на это определение"></a></dt>
+<dd><p>The image tag given to the <a class="reference internal" href="dialogue.html#Character" title="Character"><code class="xref py py-func docutils literal notranslate"><span class="pre">Character()</span></code></a>, or None if no such
 tag was given.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="HistoryEntry.voice">
-<span class="sig-name descname"><span class="pre">voice</span></span><a class="headerlink" href="#HistoryEntry.voice" title="Link to this definition"></a></dt>
-<dd><p>This is the object returned from <code class="xref py py-func docutils literal notranslate"><span class="pre">_get_voice_info()</span></code>, storing
+<span class="sig-name descname"><span class="pre">voice</span></span><a class="headerlink" href="#HistoryEntry.voice" title="Ссылка на это определение"></a></dt>
+<dd><p>This is the object returned from <a class="reference internal" href="voice.html#get_voice_info" title="_get_voice_info"><code class="xref py py-func docutils literal notranslate"><span class="pre">_get_voice_info()</span></code></a>, storing
 information about the voice that is being played.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="HistoryEntry.rollback_identifier">
-<span class="sig-name descname"><span class="pre">rollback_identifier</span></span><a class="headerlink" href="#HistoryEntry.rollback_identifier" title="Link to this definition"></a></dt>
-<dd><p>This is an identifier that can be passed to the <code class="xref py py-func docutils literal notranslate"><span class="pre">RollbackToIdentifier()</span></code>
+<span class="sig-name descname"><span class="pre">rollback_identifier</span></span><a class="headerlink" href="#HistoryEntry.rollback_identifier" title="Ссылка на это определение"></a></dt>
+<dd><p>This is an identifier that can be passed to the <a class="reference internal" href="screen_actions.html#RollbackToIdentifier" title="RollbackToIdentifier"><code class="xref py py-func docutils literal notranslate"><span class="pre">RollbackToIdentifier()</span></code></a>
 action, to cause a rollback to the line of script that generated
 this history entry. The rollback only occurs if the location is still in
 the script log, otherwise the action is insensitive.</p>
@@ -314,9 +315,9 @@ code to add new fields.</p>
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="achievement.html" class="btn btn-neutral float-left" title="Achievements" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="multiple.html" class="btn btn-neutral float-right" title="Multiple Character Dialogue" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Нижняя область">
+        <a href="achievement.html" class="btn btn-neutral float-left" title="Achievements" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+        <a href="multiple.html" class="btn btn-neutral float-right" title="Multiple Character Dialogue" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -325,9 +326,9 @@ code to add new fields.</p>
     <p></p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

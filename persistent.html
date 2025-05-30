@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" data-content_root="./">
+<html class="writer-html5" lang="ru" data-content_root="./">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -17,14 +17,15 @@
     <link rel="canonical" href="https://www.renpy.org/doc/html/persistent.html" />
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=ea47c46f"></script>
+      <script src="_static/documentation_options.js?v=8441e6a0"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=cd1d70c9"></script>
       <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
       <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
     <link rel="next" title="Advanced GUI" href="gui_advanced.html" />
     <link rel="prev" title="Saving, Loading, and Rollback" href="save_load_rollback.html" /> 
 </head>
@@ -36,18 +37,18 @@
         <div class="wy-side-nav-search" >
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
 
 <a href="https://www.renpy.org/" style="margin-bottom: 0">Ren'Py Visual Novel Engine
-<img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
+<img src="_static/navbar-logo.png" alt="Логотип" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
 <a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
@@ -77,7 +78,7 @@
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Сцена</a></li>
 <li class="toctree-l1"><a class="reference internal" href="live2d.html">Live2D Cubism</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Customizing Ren'Py</span></p>
@@ -125,6 +126,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#persistent-functions">Persistent Functions</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#persistent._hasattr"><code class="docutils literal notranslate"><span class="pre">persistent._hasattr()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#persistent._clear"><code class="docutils literal notranslate"><span class="pre">persistent._clear()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.register_persistent"><code class="docutils literal notranslate"><span class="pre">renpy.register_persistent()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.save_persistent"><code class="docutils literal notranslate"><span class="pre">renpy.save_persistent()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#multi-game-persistence">Multi-Game Persistence</a><ul>
@@ -196,19 +199,19 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Ren'Py Visual Novel Engine</a>
       </nav>
 
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+          <div role="navigation" aria-label="Навигация по страницам">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Persistent Data</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/renpy/renpy/blob/master/sphinx/source/persistent.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/renpy/renpy/blob/master/sphinx/source/persistent.rst" class="fa fa-github"> Редактировать на GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -217,13 +220,13 @@
            <div itemprop="articleBody">
              
   <section id="persistent-data">
-<h1>Persistent Data<a class="headerlink" href="#persistent-data" title="Link to this heading"></a></h1>
+<h1>Persistent Data<a class="headerlink" href="#persistent-data" title="Ссылка на этот заголовок"></a></h1>
 <p>Ren'Py supports persistent data, saved data that is not
 associated with a particular point in a game. Persistent data is
 accessed through fields of the persistent object, which is bound to the
 variable <code class="docutils literal notranslate"><span class="pre">persistent</span></code>.</p>
 <p>All data reachable through fields on <code class="docutils literal notranslate"><span class="pre">persistent</span></code> is saved when
-Ren'Py terminates, or when <code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.save_persistent()</span></code> is called.
+Ren'Py terminates, or when <a class="reference internal" href="#renpy.save_persistent" title="renpy.save_persistent"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.save_persistent()</span></code></a> is called.
 Persistent data is loaded when Ren'Py starts, and when Ren'Py detects
 that the persistent data has been updated on disk.</p>
 <p>The persistent object is special in that an access to an undefined field will
@@ -265,13 +268,13 @@ method.</p>
 <p>As a reminder, fields starting with a single underscore <code class="docutils literal notranslate"><span class="pre">_</span></code> are reserved and
 should not be used.</p>
 <section id="merging-persistent-data">
-<h2>Merging Persistent Data<a class="headerlink" href="#merging-persistent-data" title="Link to this heading"></a></h2>
+<h2>Merging Persistent Data<a class="headerlink" href="#merging-persistent-data" title="Ссылка на этот заголовок"></a></h2>
 <p>There are cases where Ren'Py has to merge persistent data from two
 sources. For example, Ren'Py may need to merge persistent data stored
 on a USB drive with persistent data from the local machine.</p>
 <p>Ren'Py does this merging on a field-by-field basis, taking the value
 of the field that was updated more recently. In some cases, this is
-not the desired behavior. In that case, the <code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.register_persistent()</span></code>
+not the desired behavior. In that case, the <a class="reference internal" href="#renpy.register_persistent" title="renpy.register_persistent"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.register_persistent()</span></code></a>
 function can be used.</p>
 <p>For example, if we have a set of seen endings, we'd like to take the
 union of that set when merging data.</p>
@@ -289,10 +292,10 @@ union of that set when merging data.</p>
 </div>
 </section>
 <section id="persistent-functions">
-<h2>Persistent Functions<a class="headerlink" href="#persistent-functions" title="Link to this heading"></a></h2>
+<h2>Persistent Functions<a class="headerlink" href="#persistent-functions" title="Ссылка на этот заголовок"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="persistent._hasattr">
-<span class="sig-prename descclassname"><span class="pre">persistent.</span></span><span class="sig-name descname"><span class="pre">_hasattr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#persistent._hasattr" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">persistent.</span></span><span class="sig-name descname"><span class="pre">_hasattr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#persistent._hasattr" title="Ссылка на это определение"></a></dt>
 <dd><p>Tests whether the <cite>field_name</cite> persistent field has been set or not.
 This allows you to distinguish fields that have been explicitly set
 to None from fields that have never been set.</p>
@@ -300,7 +303,7 @@ to None from fields that have never been set.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="persistent._clear">
-<span class="sig-prename descclassname"><span class="pre">persistent.</span></span><span class="sig-name descname"><span class="pre">_clear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">progress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#persistent._clear" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">persistent.</span></span><span class="sig-name descname"><span class="pre">_clear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">progress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#persistent._clear" title="Ссылка на это определение"></a></dt>
 <dd><p>Resets the persistent data, except for fields starting with <code class="docutils literal notranslate"><span class="pre">__</span></code>.</p>
 <dl class="simple">
 <dt><cite>progress</cite></dt><dd><p>If true, also resets progress data that Ren'Py keeps.</p>
@@ -309,9 +312,41 @@ to None from fields that have never been set.</p>
 <p>Note that this will re-apply defaults.</p>
 </dd></dl>
 
+<dl class="py function">
+<dt class="sig sig-object py" id="renpy.register_persistent">
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">register_persistent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#renpy.register_persistent" title="Ссылка на это определение"></a></dt>
+<dd><p>Registers a function that is used to merge values of a persistent field
+loaded from disk with values of current persistent object.</p>
+<dl>
+<dt><cite>field</cite></dt><dd><p>The name of a field on the persistent object.</p>
+</dd>
+<dt><cite>function</cite></dt><dd><p>A function that is called with three parameters, <cite>old</cite>, <cite>new</cite>, and
+<cite>current</cite>:</p>
+<dl class="simple">
+<dt><cite>old</cite></dt><dd><p>The value of the field in the older object.</p>
+</dd>
+<dt><cite>new</cite></dt><dd><p>The value of the field in the newer object.</p>
+</dd>
+<dt><cite>current</cite></dt><dd><p>The value of the field in the current persistent object. This is
+provided for cases where the identity of the object referred to
+by the field can't change.</p>
+</dd>
+</dl>
+<p>The function is expected to return the new value of the field in the
+persistent object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="renpy.save_persistent">
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">save_persistent</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.save_persistent" title="Ссылка на это определение"></a></dt>
+<dd><p>Saves the persistent data to disk.</p>
+</dd></dl>
+
 </section>
 <section id="multi-game-persistence">
-<h2>Multi-Game Persistence<a class="headerlink" href="#multi-game-persistence" title="Link to this heading"></a></h2>
+<h2>Multi-Game Persistence<a class="headerlink" href="#multi-game-persistence" title="Ссылка на этот заголовок"></a></h2>
 <p>Multi-Game persistence is a feature that lets you share information between
 Ren'Py games. This may be useful if you plan to make a series of games, and
 want to have them share information.</p>
@@ -323,7 +358,7 @@ object can be loaded again in a different game, we strongly advise against
 storing instances of user-defined types in the object.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="MultiPersistent">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultiPersistent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_on_quit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#MultiPersistent" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultiPersistent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_on_quit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#MultiPersistent" title="Ссылка на это определение"></a></dt>
 <dd><p>Creates a new <code class="docutils literal notranslate"><span class="pre">MultiPersistent</span></code> object. This should only be called at init time,
 and it returns a new <code class="docutils literal notranslate"><span class="pre">MultiPersistent</span></code> with the given key.</p>
 <dl class="simple">
@@ -335,7 +370,7 @@ same key will access the same multipersistent data.</p>
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="MultiPersistent.save">
-<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MultiPersistent.save" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MultiPersistent.save" title="Ссылка на это определение"></a></dt>
 <dd><p>Saves the multipersistent data to disk. This must be called after
 the data is modified.</p>
 </dd></dl>
@@ -374,9 +409,9 @@ the data is modified.</p>
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="save_load_rollback.html" class="btn btn-neutral float-left" title="Saving, Loading, and Rollback" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="gui_advanced.html" class="btn btn-neutral float-right" title="Advanced GUI" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Нижняя область">
+        <a href="save_load_rollback.html" class="btn btn-neutral float-left" title="Saving, Loading, and Rollback" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+        <a href="gui_advanced.html" class="btn btn-neutral float-right" title="Advanced GUI" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -385,9 +420,9 @@ the data is modified.</p>
     <p></p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

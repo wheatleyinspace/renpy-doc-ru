@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" data-content_root="./">
+<html class="writer-html5" lang="ru" data-content_root="./">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -17,14 +17,15 @@
     <link rel="canonical" href="https://www.renpy.org/doc/html/director.html" />
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=ea47c46f"></script>
+      <script src="_static/documentation_options.js?v=8441e6a0"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=cd1d70c9"></script>
       <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
       <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
     <link rel="next" title="NVL-Mode Tutorial" href="nvl_mode.html" />
     <link rel="prev" title="Developer Tools" href="developer_tools.html" /> 
 </head>
@@ -36,18 +37,18 @@
         <div class="wy-side-nav-search" >
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
 
 <a href="https://www.renpy.org/" style="margin-bottom: 0">Ren'Py Visual Novel Engine
-<img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
+<img src="_static/navbar-logo.png" alt="Логотип" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
 <a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
@@ -77,7 +78,7 @@
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Сцена</a></li>
 <li class="toctree-l1"><a class="reference internal" href="live2d.html">Live2D Cubism</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Customizing Ren'Py</span></p>
@@ -194,19 +195,19 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Ren'Py Visual Novel Engine</a>
       </nav>
 
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+          <div role="navigation" aria-label="Навигация по страницам">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Interactive Director</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/renpy/renpy/blob/master/sphinx/source/director.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/renpy/renpy/blob/master/sphinx/source/director.rst" class="fa fa-github"> Редактировать на GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -215,7 +216,7 @@
            <div itemprop="articleBody">
              
   <section id="interactive-director">
-<h1>Interactive Director<a class="headerlink" href="#interactive-director" title="Link to this heading"></a></h1>
+<h1>Interactive Director<a class="headerlink" href="#interactive-director" title="Ссылка на этот заголовок"></a></h1>
 <p>The Interactive Director is a tool that allows you to edit the script of
 your game from inside Ren'Py itself, with a live preview of the results
 of your editing. The director is not not meant as a complete
@@ -228,7 +229,7 @@ writing the dialogue, choices, and logic of the visual novel.</p>
 <li><p>Audio (play, queue, stop, and voice) statements.</p></li>
 </ul>
 <section id="using-the-director">
-<h2>Using the Director<a class="headerlink" href="#using-the-director" title="Link to this heading"></a></h2>
+<h2>Using the Director<a class="headerlink" href="#using-the-director" title="Ссылка на этот заголовок"></a></h2>
 <p>You can access the director after starting your game by pressing the D
 (without Shift) key on your keyboard. If this is your first time in
 a session running the director, Ren'Py will reload your game to ensure
@@ -244,36 +245,36 @@ existing line.</p>
 <p>Click &quot;Done&quot; when finished editing.</p>
 </section>
 <section id="variables">
-<h2>Variables<a class="headerlink" href="#variables" title="Link to this heading"></a></h2>
+<h2>Variables<a class="headerlink" href="#variables" title="Ссылка на этот заголовок"></a></h2>
 <p>There are a number of variables defined in the <code class="docutils literal notranslate"><span class="pre">director</span></code> namespace that control
 how the interactive director functions. These can be set using the define statement,
 or modified using Python.</p>
 <section id="scene-show-and-hide">
-<h3>Scene, Show, and Hide<a class="headerlink" href="#scene-show-and-hide" title="Link to this heading"></a></h3>
+<h3>Scene, Show, and Hide<a class="headerlink" href="#scene-show-and-hide" title="Ссылка на этот заголовок"></a></h3>
 <dl class="std var">
 <dt class="sig sig-object std" id="var-director.tag_blacklist">
-<span class="sig-name descname"><span class="pre">director.tag_blacklist</span></span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">&quot;black&quot;,</span> <span class="pre">&quot;text&quot;,</span> <span class="pre">&quot;vtext&quot;</span> <span class="pre">}</span><a class="headerlink" href="#var-director.tag_blacklist" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">director.tag_blacklist</span></span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">&quot;black&quot;,</span> <span class="pre">&quot;text&quot;,</span> <span class="pre">&quot;vtext&quot;</span> <span class="pre">}</span><a class="headerlink" href="#var-director.tag_blacklist" title="Ссылка на это определение"></a></dt>
 <dd><p>A blacklist of tags that will not be shown for the show, scene, or hide
 statements.</p>
 </dd></dl>
 
 <dl class="std var">
 <dt class="sig sig-object std" id="var-director.scene_tags">
-<span class="sig-name descname"><span class="pre">director.scene_tags</span></span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">&quot;bg&quot;</span> <span class="pre">}</span><a class="headerlink" href="#var-director.scene_tags" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">director.scene_tags</span></span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">&quot;bg&quot;</span> <span class="pre">}</span><a class="headerlink" href="#var-director.scene_tags" title="Ссылка на это определение"></a></dt>
 <dd><p>The set of tags that will be presented for the scene statement, and hidden
 from the show statement.</p>
 </dd></dl>
 
 <dl class="std var">
 <dt class="sig sig-object std" id="var-director.show_tags">
-<span class="sig-name descname"><span class="pre">director.show_tags</span></span> <span class="pre">=</span> <span class="pre">set()</span><a class="headerlink" href="#var-director.show_tags" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">director.show_tags</span></span> <span class="pre">=</span> <span class="pre">set()</span><a class="headerlink" href="#var-director.show_tags" title="Ссылка на это определение"></a></dt>
 <dd><p>If not empty, only the tags present in this set will be presented for the
 show statement.</p>
 </dd></dl>
 
 <dl class="std var">
 <dt class="sig sig-object std" id="var-director.transforms">
-<span class="sig-name descname"><span class="pre">director.transforms</span></span> <span class="pre">=</span> <span class="pre">[</span> <span class="pre">&quot;left&quot;,</span> <span class="pre">&quot;center&quot;,</span> <span class="pre">&quot;right&quot;</span> <span class="pre">]</span><a class="headerlink" href="#var-director.transforms" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">director.transforms</span></span> <span class="pre">=</span> <span class="pre">[</span> <span class="pre">&quot;left&quot;,</span> <span class="pre">&quot;center&quot;,</span> <span class="pre">&quot;right&quot;</span> <span class="pre">]</span><a class="headerlink" href="#var-director.transforms" title="Ссылка на это определение"></a></dt>
 <dd><p>A list of transforms that will be presented as part of the editor.
 In addition to these, any transform defined using the transform
 statement outside of Ren'Py itself will be added to the list of
@@ -282,40 +283,40 @@ transforms, which is then sorted.</p>
 
 </section>
 <section id="with">
-<h3>With<a class="headerlink" href="#with" title="Link to this heading"></a></h3>
+<h3>With<a class="headerlink" href="#with" title="Ссылка на этот заголовок"></a></h3>
 <dl class="std var">
 <dt class="sig sig-object std" id="var-director.transitions">
-<span class="sig-name descname"><span class="pre">director.transitions</span></span> <span class="pre">=</span> <span class="pre">[</span> <span class="pre">&quot;dissolve&quot;,</span> <span class="pre">&quot;pixellate&quot;</span> <span class="pre">]</span><a class="headerlink" href="#var-director.transitions" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">director.transitions</span></span> <span class="pre">=</span> <span class="pre">[</span> <span class="pre">&quot;dissolve&quot;,</span> <span class="pre">&quot;pixellate&quot;</span> <span class="pre">]</span><a class="headerlink" href="#var-director.transitions" title="Ссылка на это определение"></a></dt>
 <dd><p>A list of transitions that are available to the with statement. Since
 transitions can't be auto-detected, these must be added manually.</p>
 </dd></dl>
 
 </section>
 <section id="play-queue-stop-and-voice">
-<h3>Play, Queue, Stop, and Voice<a class="headerlink" href="#play-queue-stop-and-voice" title="Link to this heading"></a></h3>
+<h3>Play, Queue, Stop, and Voice<a class="headerlink" href="#play-queue-stop-and-voice" title="Ссылка на этот заголовок"></a></h3>
 <dl class="std var">
 <dt class="sig sig-object std" id="var-director.audio_channels">
-<span class="sig-name descname"><span class="pre">director.audio_channels</span></span> <span class="pre">=</span> <span class="pre">[</span> <span class="pre">&quot;music&quot;,</span> <span class="pre">&quot;sound&quot;,</span> <span class="pre">&quot;audio&quot;</span> <span class="pre">]</span><a class="headerlink" href="#var-director.audio_channels" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">director.audio_channels</span></span> <span class="pre">=</span> <span class="pre">[</span> <span class="pre">&quot;music&quot;,</span> <span class="pre">&quot;sound&quot;,</span> <span class="pre">&quot;audio&quot;</span> <span class="pre">]</span><a class="headerlink" href="#var-director.audio_channels" title="Ссылка на это определение"></a></dt>
 <dd><p>The name of the audio channels that can be used with the play, show
 and stop statements.</p>
 </dd></dl>
 
 <dl class="std var">
 <dt class="sig sig-object std" id="var-director.voice_channel">
-<span class="sig-name descname"><span class="pre">director.voice_channel</span></span> <span class="pre">=</span> <span class="pre">&quot;voice&quot;</span><a class="headerlink" href="#var-director.voice_channel" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">director.voice_channel</span></span> <span class="pre">=</span> <span class="pre">&quot;voice&quot;</span><a class="headerlink" href="#var-director.voice_channel" title="Ссылка на это определение"></a></dt>
 <dd><p>The name of the audio channel used by voice.</p>
 </dd></dl>
 
 <dl class="std var">
 <dt class="sig sig-object std" id="var-director.audio_patterns">
-<span class="sig-name descname"><span class="pre">director.audio_patterns</span></span> <span class="pre">=</span> <span class="pre">[</span> <span class="pre">&quot;*.opus&quot;,</span> <span class="pre">&quot;*.ogg&quot;,</span> <span class="pre">&quot;*.mp3&quot;</span> <span class="pre">]</span><a class="headerlink" href="#var-director.audio_patterns" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">director.audio_patterns</span></span> <span class="pre">=</span> <span class="pre">[</span> <span class="pre">&quot;*.opus&quot;,</span> <span class="pre">&quot;*.ogg&quot;,</span> <span class="pre">&quot;*.mp3&quot;</span> <span class="pre">]</span><a class="headerlink" href="#var-director.audio_patterns" title="Ссылка на это определение"></a></dt>
 <dd><p>The default list of audio patterns that are used to match the files
 available in an audio channel.</p>
 </dd></dl>
 
 <dl class="std var">
 <dt class="sig sig-object std" id="var-director.audio_channel_patterns">
-<span class="sig-name descname"><span class="pre">director.audio_channel_patterns</span></span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">}</span><a class="headerlink" href="#var-director.audio_channel_patterns" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">director.audio_channel_patterns</span></span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">}</span><a class="headerlink" href="#var-director.audio_channel_patterns" title="Ссылка на это определение"></a></dt>
 <dd><p>A map from a channel name to the list of audio patterns that are
 available in that audio channel. For example, if this is set to
 <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">'sound'</span> <span class="pre">:</span> <span class="pre">[</span> <span class="pre">'sound/*.opus'</span> <span class="pre">],</span> <span class="pre">'music'</span> <span class="pre">:</span> <span class="pre">[</span> <span class="pre">'music/*.opus'</span> <span class="pre">]</span> <span class="pre">}</span></code> the
@@ -324,10 +325,10 @@ music and sound channels get their own lists of patterns.</p>
 
 </section>
 <section id="access">
-<h3>Access<a class="headerlink" href="#access" title="Link to this heading"></a></h3>
+<h3>Access<a class="headerlink" href="#access" title="Ссылка на этот заголовок"></a></h3>
 <dl class="std var">
 <dt class="sig sig-object std" id="var-director.button">
-<span class="sig-name descname"><span class="pre">director.button</span></span> <span class="pre">=</span> <span class="pre">True</span><a class="headerlink" href="#var-director.button" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">director.button</span></span> <span class="pre">=</span> <span class="pre">True</span><a class="headerlink" href="#var-director.button" title="Ссылка на это определение"></a></dt>
 <dd><p>If True, the director displays a screen with a button to access the
 director window. If False, the game can provide it's own access, by
 making available the director.Start action.</p>
@@ -335,10 +336,10 @@ making available the director.Start action.</p>
 
 </section>
 <section id="line-spacing">
-<h3>Line Spacing<a class="headerlink" href="#line-spacing" title="Link to this heading"></a></h3>
+<h3>Line Spacing<a class="headerlink" href="#line-spacing" title="Ссылка на этот заголовок"></a></h3>
 <dl class="std var">
 <dt class="sig sig-object std" id="var-director.spacing">
-<span class="sig-name descname"><span class="pre">director.spacing</span></span> <span class="pre">=</span> <span class="pre">1</span><a class="headerlink" href="#var-director.spacing" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">director.spacing</span></span> <span class="pre">=</span> <span class="pre">1</span><a class="headerlink" href="#var-director.spacing" title="Ссылка на это определение"></a></dt>
 <dd><p>The spacing between a director (scene, show, hide, with, play, queue, and voice) line
 and a non-director line, or vice versa. These spacings should be 0 or 1 lines, a higher spacing
 may not work.</p>
@@ -346,29 +347,29 @@ may not work.</p>
 
 <dl class="std var">
 <dt class="sig sig-object std" id="var-director.director_spacing">
-<span class="sig-name descname"><span class="pre">director.director_spacing</span></span> <span class="pre">=</span> <span class="pre">0</span><a class="headerlink" href="#var-director.director_spacing" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">director.director_spacing</span></span> <span class="pre">=</span> <span class="pre">0</span><a class="headerlink" href="#var-director.director_spacing" title="Ссылка на это определение"></a></dt>
 <dd><p>The spacing between two consecutive director lines.</p>
 </dd></dl>
 
 <dl class="std var">
 <dt class="sig sig-object std" id="var-director.other_spacing">
-<span class="sig-name descname"><span class="pre">director.other_spacing</span></span> <span class="pre">=</span> <span class="pre">0</span><a class="headerlink" href="#var-director.other_spacing" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">director.other_spacing</span></span> <span class="pre">=</span> <span class="pre">0</span><a class="headerlink" href="#var-director.other_spacing" title="Ссылка на это определение"></a></dt>
 <dd><p>The spacing between two consecutive non-director lines.</p>
 </dd></dl>
 
 </section>
 <section id="viewport">
-<h3>Viewport<a class="headerlink" href="#viewport" title="Link to this heading"></a></h3>
+<h3>Viewport<a class="headerlink" href="#viewport" title="Ссылка на этот заголовок"></a></h3>
 <dl class="std var">
 <dt class="sig sig-object std" id="var-director.viewport_height">
-<span class="sig-name descname"><span class="pre">director.viewport_height</span></span> <span class="pre">=</span> <span class="pre">280</span><a class="headerlink" href="#var-director.viewport_height" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">director.viewport_height</span></span> <span class="pre">=</span> <span class="pre">280</span><a class="headerlink" href="#var-director.viewport_height" title="Ссылка на это определение"></a></dt>
 <dd><p>The maximum height of scrolling viewports used by the director.</p>
 </dd></dl>
 
 </section>
 </section>
 <section id="audio-filename-functions">
-<h2>Audio Filename Functions<a class="headerlink" href="#audio-filename-functions" title="Link to this heading"></a></h2>
+<h2>Audio Filename Functions<a class="headerlink" href="#audio-filename-functions" title="Ссылка на этот заголовок"></a></h2>
 <p>There are a number of audio filename functions that can be used to convert
 filenames on disk to filenames in Python source code. This can be used to
 match Ren'Py functionality that maps filenames. For example, if one has:</p>
@@ -419,9 +420,9 @@ match Ren'Py functionality that maps filenames. For example, if one has:</p>
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="developer_tools.html" class="btn btn-neutral float-left" title="Developer Tools" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="nvl_mode.html" class="btn btn-neutral float-right" title="NVL-Mode Tutorial" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Нижняя область">
+        <a href="developer_tools.html" class="btn btn-neutral float-left" title="Developer Tools" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+        <a href="nvl_mode.html" class="btn btn-neutral float-right" title="NVL-Mode Tutorial" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -430,9 +431,9 @@ match Ren'Py functionality that maps filenames. For example, if one has:</p>
     <p></p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>
