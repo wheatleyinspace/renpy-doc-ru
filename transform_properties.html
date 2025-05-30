@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" data-content_root="./">
+<html class="writer-html5" lang="ru" data-content_root="./">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -17,14 +17,15 @@
     <link rel="canonical" href="https://www.renpy.org/doc/html/transform_properties.html" />
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=ea47c46f"></script>
+      <script src="_static/documentation_options.js?v=8441e6a0"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=cd1d70c9"></script>
       <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
       <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
     <link rel="next" title="Transitions" href="transitions.html" />
     <link rel="prev" title="Transforms" href="transforms.html" /> 
 </head>
@@ -36,18 +37,18 @@
         <div class="wy-side-nav-search" >
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
 
 <a href="https://www.renpy.org/" style="margin-bottom: 0">Ren'Py Visual Novel Engine
-<img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
+<img src="_static/navbar-logo.png" alt="Логотип" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
 <a href="index.html" style="margin-bottom: 0px">8.4.0 Documentation</a>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
@@ -94,7 +95,7 @@
 <li class="toctree-l1"><a class="reference internal" href="transitions.html">Transitions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrixcolor.html">Matrixcolor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layeredimage.html">Layered Images</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Stage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3dstage.html">3D Сцена</a></li>
 <li class="toctree-l1"><a class="reference internal" href="live2d.html">Live2D Cubism</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Customizing Ren'Py</span></p>
@@ -198,19 +199,19 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Ren'Py Visual Novel Engine</a>
       </nav>
 
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+          <div role="navigation" aria-label="Навигация по страницам">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Transform Properties</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/renpy/renpy/blob/master/sphinx/source/transform_properties.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/renpy/renpy/blob/master/sphinx/source/transform_properties.rst" class="fa fa-github"> Редактировать на GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -219,12 +220,12 @@
            <div itemprop="articleBody">
              
   <section id="transform-properties">
-<h1>Transform Properties<a class="headerlink" href="#transform-properties" title="Link to this heading"></a></h1>
+<h1>Transform Properties<a class="headerlink" href="#transform-properties" title="Ссылка на этот заголовок"></a></h1>
 <p>Transform properties are used by <a class="reference internal" href="transforms.html"><span class="doc">Transforms</span></a> to influence how a
 displayable is drawn. They are usually set using <a class="reference internal" href="transforms.html#atl"><span class="std std-ref">ATL</span></a> or the
 <a class="reference internal" href="transforms.html#Transform" title="Transform"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transform</span></code></a> class.</p>
 <section id="list-of-transform-properties">
-<span id="id1"></span><h2>List of Transform Properties<a class="headerlink" href="#list-of-transform-properties" title="Link to this heading"></a></h2>
+<span id="id1"></span><h2>List of Transform Properties<a class="headerlink" href="#list-of-transform-properties" title="Ссылка на этот заголовок"></a></h2>
 <p>The following transform properties exist.</p>
 <p>When the type is given as a <a class="reference internal" href="style_properties.html#term-position"><span class="xref std std-term">position</span></a>, its relative component is
 interpreted as a fraction of the size of the containing area (for
@@ -234,10 +235,10 @@ interpreted as a fraction of the size of the containing area (for
 statement, not more than one block should adjust properties sharing the same data.
 The angle and radius properties set both horizontal and vertical positions.</p>
 <section id="positioning">
-<h3>Positioning<a class="headerlink" href="#positioning" title="Link to this heading"></a></h3>
+<h3>Positioning<a class="headerlink" href="#positioning" title="Ссылка на этот заголовок"></a></h3>
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-pos">
-<span class="sig-name descname"><span class="pre">pos</span></span><a class="headerlink" href="#transform-property-pos" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">pos</span></span><a class="headerlink" href="#transform-property-pos" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>(position, position)</p>
@@ -251,7 +252,7 @@ The angle and radius properties set both horizontal and vertical positions.</p>
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-xpos">
-<span class="sig-name descname"><span class="pre">xpos</span></span><a class="headerlink" href="#transform-property-xpos" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">xpos</span></span><a class="headerlink" href="#transform-property-xpos" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>position</p>
@@ -265,7 +266,7 @@ The angle and radius properties set both horizontal and vertical positions.</p>
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-ypos">
-<span class="sig-name descname"><span class="pre">ypos</span></span><a class="headerlink" href="#transform-property-ypos" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">ypos</span></span><a class="headerlink" href="#transform-property-ypos" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>position</p>
@@ -279,7 +280,7 @@ The angle and radius properties set both horizontal and vertical positions.</p>
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-anchor">
-<span class="sig-name descname"><span class="pre">anchor</span></span><a class="headerlink" href="#transform-property-anchor" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">anchor</span></span><a class="headerlink" href="#transform-property-anchor" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>(position, position)</p>
@@ -293,7 +294,7 @@ The angle and radius properties set both horizontal and vertical positions.</p>
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-xanchor">
-<span class="sig-name descname"><span class="pre">xanchor</span></span><a class="headerlink" href="#transform-property-xanchor" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">xanchor</span></span><a class="headerlink" href="#transform-property-xanchor" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>position</p>
@@ -308,7 +309,7 @@ displayable.</p>
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-yanchor">
-<span class="sig-name descname"><span class="pre">yanchor</span></span><a class="headerlink" href="#transform-property-yanchor" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">yanchor</span></span><a class="headerlink" href="#transform-property-yanchor" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>position</p>
@@ -322,7 +323,7 @@ displayable.</p>
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-align">
-<span class="sig-name descname"><span class="pre">align</span></span><a class="headerlink" href="#transform-property-align" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">align</span></span><a class="headerlink" href="#transform-property-align" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>(float, float)</p>
@@ -336,7 +337,7 @@ displayable.</p>
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-xalign">
-<span class="sig-name descname"><span class="pre">xalign</span></span><a class="headerlink" href="#transform-property-xalign" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">xalign</span></span><a class="headerlink" href="#transform-property-xalign" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>float</p>
@@ -350,7 +351,7 @@ displayable.</p>
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-yalign">
-<span class="sig-name descname"><span class="pre">yalign</span></span><a class="headerlink" href="#transform-property-yalign" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">yalign</span></span><a class="headerlink" href="#transform-property-yalign" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>float</p>
@@ -364,7 +365,7 @@ displayable.</p>
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-offset">
-<span class="sig-name descname"><span class="pre">offset</span></span><a class="headerlink" href="#transform-property-offset" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">offset</span></span><a class="headerlink" href="#transform-property-offset" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>(absolute, absolute)</p>
@@ -379,7 +380,7 @@ Positive values offset towards the bottom-right.</p>
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-xoffset">
-<span class="sig-name descname"><span class="pre">xoffset</span></span><a class="headerlink" href="#transform-property-xoffset" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">xoffset</span></span><a class="headerlink" href="#transform-property-xoffset" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>absolute</p>
@@ -394,7 +395,7 @@ direction. Positive values offset toward the right.</p>
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-yoffset">
-<span class="sig-name descname"><span class="pre">yoffset</span></span><a class="headerlink" href="#transform-property-yoffset" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">yoffset</span></span><a class="headerlink" href="#transform-property-yoffset" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>absolute</p>
@@ -409,7 +410,7 @@ Positive values offset toward the bottom.</p>
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-xycenter">
-<span class="sig-name descname"><span class="pre">xycenter</span></span><a class="headerlink" href="#transform-property-xycenter" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">xycenter</span></span><a class="headerlink" href="#transform-property-xycenter" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>(position, position)</p>
@@ -424,7 +425,7 @@ Positive values offset toward the bottom.</p>
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-xcenter">
-<span class="sig-name descname"><span class="pre">xcenter</span></span><a class="headerlink" href="#transform-property-xcenter" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">xcenter</span></span><a class="headerlink" href="#transform-property-xcenter" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>position</p>
@@ -439,7 +440,7 @@ Positive values offset toward the bottom.</p>
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-ycenter">
-<span class="sig-name descname"><span class="pre">ycenter</span></span><a class="headerlink" href="#transform-property-ycenter" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">ycenter</span></span><a class="headerlink" href="#transform-property-ycenter" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>position</p>
@@ -454,7 +455,7 @@ Positive values offset toward the bottom.</p>
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-subpixel">
-<span class="sig-name descname"><span class="pre">subpixel</span></span><a class="headerlink" href="#transform-property-subpixel" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">subpixel</span></span><a class="headerlink" href="#transform-property-subpixel" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>boolean</p>
@@ -477,10 +478,10 @@ area, as the edges will not be seen.</p>
 
 </section>
 <section id="rotation">
-<h3>Rotation<a class="headerlink" href="#rotation" title="Link to this heading"></a></h3>
+<h3>Rotation<a class="headerlink" href="#rotation" title="Ссылка на этот заголовок"></a></h3>
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-rotate">
-<span class="sig-name descname"><span class="pre">rotate</span></span><a class="headerlink" href="#transform-property-rotate" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">rotate</span></span><a class="headerlink" href="#transform-property-rotate" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>float or None</p>
@@ -497,7 +498,7 @@ change if xanchor and yanchor are not 0.5.</p>
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-rotate_pad">
-<span class="sig-name descname"><span class="pre">rotate_pad</span></span><a class="headerlink" href="#transform-property-rotate_pad" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">rotate_pad</span></span><a class="headerlink" href="#transform-property-rotate_pad" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>boolean</p>
@@ -515,7 +516,7 @@ displayable. This is more suited to fixed rotations.</p>
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-transform_anchor">
-<span class="sig-name descname"><span class="pre">transform_anchor</span></span><a class="headerlink" href="#transform-property-transform_anchor" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">transform_anchor</span></span><a class="headerlink" href="#transform-property-transform_anchor" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>boolean</p>
@@ -531,10 +532,10 @@ point that the child is rotated and scaled around.</p>
 
 </section>
 <section id="zoom-and-flip">
-<h3>Zoom and Flip<a class="headerlink" href="#zoom-and-flip" title="Link to this heading"></a></h3>
+<h3>Zoom and Flip<a class="headerlink" href="#zoom-and-flip" title="Ссылка на этот заголовок"></a></h3>
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-zoom">
-<span class="sig-name descname"><span class="pre">zoom</span></span><a class="headerlink" href="#transform-property-zoom" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">zoom</span></span><a class="headerlink" href="#transform-property-zoom" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>float</p>
@@ -548,7 +549,7 @@ point that the child is rotated and scaled around.</p>
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-xzoom">
-<span class="sig-name descname"><span class="pre">xzoom</span></span><a class="headerlink" href="#transform-property-xzoom" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">xzoom</span></span><a class="headerlink" href="#transform-property-xzoom" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>float</p>
@@ -563,7 +564,7 @@ factor. A negative value causes the image to be flipped horizontally.</p>
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-yzoom">
-<span class="sig-name descname"><span class="pre">yzoom</span></span><a class="headerlink" href="#transform-property-yzoom" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">yzoom</span></span><a class="headerlink" href="#transform-property-yzoom" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>float</p>
@@ -578,10 +579,10 @@ factor. A negative value causes the image to be flipped vertically.</p>
 
 </section>
 <section id="pixel-effects">
-<h3>Pixel Effects<a class="headerlink" href="#pixel-effects" title="Link to this heading"></a></h3>
+<h3>Pixel Effects<a class="headerlink" href="#pixel-effects" title="Ссылка на этот заголовок"></a></h3>
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-nearest">
-<span class="sig-name descname"><span class="pre">nearest</span></span><a class="headerlink" href="#transform-property-nearest" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">nearest</span></span><a class="headerlink" href="#transform-property-nearest" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>boolean</p>
@@ -598,7 +599,7 @@ bilinear filtering. If None, this is inherited from the parent, or
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-alpha">
-<span class="sig-name descname"><span class="pre">alpha</span></span><a class="headerlink" href="#transform-property-alpha" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">alpha</span></span><a class="headerlink" href="#transform-property-alpha" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>float</p>
@@ -611,12 +612,12 @@ bilinear filtering. If None, this is inherited from the parent, or
 <p>The alpha transform is applied to each image comprising the child of the
 transform independently. This can lead to unexpected results when the
 children overlap, such as seeing a character through clothing. The
-<code class="xref py py-func docutils literal notranslate"><span class="pre">Flatten()</span></code> displayable can help with these problems.</p>
+<a class="reference internal" href="displayables.html#Flatten" title="Flatten"><code class="xref py py-func docutils literal notranslate"><span class="pre">Flatten()</span></code></a> displayable can help with these problems.</p>
 </dd></dl>
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-additive">
-<span class="sig-name descname"><span class="pre">additive</span></span><a class="headerlink" href="#transform-property-additive" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">additive</span></span><a class="headerlink" href="#transform-property-additive" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>float</p>
@@ -631,14 +632,14 @@ operator.</p>
 <p>Additive blending is performed on each child of the transform independently.</p>
 <p>Fully additive blending doesn't alter the alpha channel of the destination,
 and additive images may not be visible if they're not drawn directly onto an
-opaque surface. (Complex operations, like viewport, <code class="xref py py-func docutils literal notranslate"><span class="pre">Flatten()</span></code>,
-<code class="xref py py-func docutils literal notranslate"><span class="pre">Frame()</span></code>, and certain transitions may cause problems with additive
+opaque surface. (Complex operations, like viewport, <a class="reference internal" href="displayables.html#Flatten" title="Flatten"><code class="xref py py-func docutils literal notranslate"><span class="pre">Flatten()</span></code></a>,
+<a class="reference internal" href="displayables.html#Frame" title="Frame"><code class="xref py py-func docutils literal notranslate"><span class="pre">Frame()</span></code></a>, and certain transitions may cause problems with additive
 blending.)</p>
 </dd></dl>
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-matrixcolor">
-<span class="sig-name descname"><span class="pre">matrixcolor</span></span><a class="headerlink" href="#transform-property-matrixcolor" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">matrixcolor</span></span><a class="headerlink" href="#transform-property-matrixcolor" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>None or Matrix or MatrixColor</p>
@@ -655,7 +656,7 @@ MatrixColors are used, and the MatrixColors are structurally similar. See
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-blur">
-<span class="sig-name descname"><span class="pre">blur</span></span><a class="headerlink" href="#transform-property-blur" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">blur</span></span><a class="headerlink" href="#transform-property-blur" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>None or float</p>
@@ -668,14 +669,16 @@ MatrixColors are used, and the MatrixColors are structurally similar. See
 of the displayable. The precise details of the blurring may change between
 Ren'Py versions, and the blurring may exhibit artifacts, especially when the
 image being blurred is changing.</p>
+<p>Blurring causes its child to be flattened, with the child drawn onto a transparent
+background before the blurring happens.</p>
 </dd></dl>
 
 </section>
 <section id="polar-positioning">
-<h3>Polar Positioning<a class="headerlink" href="#polar-positioning" title="Link to this heading"></a></h3>
+<h3>Polar Positioning<a class="headerlink" href="#polar-positioning" title="Ссылка на этот заголовок"></a></h3>
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-around">
-<span class="sig-name descname"><span class="pre">around</span></span><a class="headerlink" href="#transform-property-around" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">around</span></span><a class="headerlink" href="#transform-property-around" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>(position, position)</p>
@@ -692,7 +695,7 @@ and <a class="reference internal" href="#transform-property-radius"><code class=
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-angle">
-<span class="sig-name descname"><span class="pre">angle</span></span><a class="headerlink" href="#transform-property-angle" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">angle</span></span><a class="headerlink" href="#transform-property-angle" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>float</p>
@@ -709,7 +712,7 @@ the equivalent of setting it to 350.)</p>
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-radius">
-<span class="sig-name descname"><span class="pre">radius</span></span><a class="headerlink" href="#transform-property-radius" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">radius</span></span><a class="headerlink" href="#transform-property-radius" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>position</p>
@@ -722,16 +725,16 @@ available to the transform.</p>
 
 </section>
 <section id="polar-positioning-of-the-anchor">
-<h3>Polar Positioning of the Anchor<a class="headerlink" href="#polar-positioning-of-the-anchor" title="Link to this heading"></a></h3>
+<h3>Polar Positioning of the Anchor<a class="headerlink" href="#polar-positioning-of-the-anchor" title="Ссылка на этот заголовок"></a></h3>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
+<p class="admonition-title">Примечание</p>
 <p>While using polar coordinates to position the anchor is possible, it's often
 more convenient to simply set <a class="reference internal" href="#transform-property-anchor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">anchor</span></code></a> to (0.5, 0.5), and position
 the center of your displayable.</p>
 </div>
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-anchoraround">
-<span class="sig-name descname"><span class="pre">anchoraround</span></span><a class="headerlink" href="#transform-property-anchoraround" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">anchoraround</span></span><a class="headerlink" href="#transform-property-anchoraround" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>(position, position)</p>
@@ -745,7 +748,7 @@ resulting <a class="reference internal" href="#transform-property-anchor"><code 
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-anchorangle">
-<span class="sig-name descname"><span class="pre">anchorangle</span></span><a class="headerlink" href="#transform-property-anchorangle" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">anchorangle</span></span><a class="headerlink" href="#transform-property-anchorangle" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>(float)</p>
@@ -761,7 +764,7 @@ the equivalent of setting it to 350.)</p>
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-anchorradius">
-<span class="sig-name descname"><span class="pre">anchorradius</span></span><a class="headerlink" href="#transform-property-anchorradius" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">anchorradius</span></span><a class="headerlink" href="#transform-property-anchorradius" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>(position)</p>
@@ -777,10 +780,10 @@ anchorangle. For that reason, it is recommended to only pass <code class="docuti
 
 </section>
 <section id="cropping-and-resizing">
-<h3>Cropping and Resizing<a class="headerlink" href="#cropping-and-resizing" title="Link to this heading"></a></h3>
+<h3>Cropping and Resizing<a class="headerlink" href="#cropping-and-resizing" title="Ссылка на этот заголовок"></a></h3>
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-crop">
-<span class="sig-name descname"><span class="pre">crop</span></span><a class="headerlink" href="#transform-property-crop" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">crop</span></span><a class="headerlink" href="#transform-property-crop" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>None or (position, position, position, position)</p>
@@ -800,7 +803,7 @@ be positive.</p>
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-corner1">
-<span class="sig-name descname"><span class="pre">corner1</span></span><a class="headerlink" href="#transform-property-corner1" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">corner1</span></span><a class="headerlink" href="#transform-property-corner1" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>None or (position, position)</p>
@@ -816,7 +819,7 @@ corners.</p>
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-corner2">
-<span class="sig-name descname"><span class="pre">corner2</span></span><a class="headerlink" href="#transform-property-corner2" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">corner2</span></span><a class="headerlink" href="#transform-property-corner2" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>None or (position, position)</p>
@@ -832,7 +835,7 @@ inferior to <a class="reference internal" href="#transform-property-corner1"><co
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-xysize">
-<span class="sig-name descname"><span class="pre">xysize</span></span><a class="headerlink" href="#transform-property-xysize" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">xysize</span></span><a class="headerlink" href="#transform-property-xysize" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>None or (position, position)</p>
@@ -849,7 +852,7 @@ the first and second components.</p>
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-xsize">
-<span class="sig-name descname"><span class="pre">xsize</span></span><a class="headerlink" href="#transform-property-xsize" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">xsize</span></span><a class="headerlink" href="#transform-property-xsize" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>None or position</p>
@@ -864,7 +867,7 @@ the first and second components.</p>
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-ysize">
-<span class="sig-name descname"><span class="pre">ysize</span></span><a class="headerlink" href="#transform-property-ysize" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">ysize</span></span><a class="headerlink" href="#transform-property-ysize" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>None or position</p>
@@ -879,7 +882,7 @@ the first and second components.</p>
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-fit">
-<span class="sig-name descname"><span class="pre">fit</span></span><a class="headerlink" href="#transform-property-fit" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">fit</span></span><a class="headerlink" href="#transform-property-fit" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>None or string</p>
@@ -935,10 +938,10 @@ displayable.</p></td>
 
 </section>
 <section id="panning-and-tiling">
-<h3>Panning and Tiling<a class="headerlink" href="#panning-and-tiling" title="Link to this heading"></a></h3>
+<h3>Panning and Tiling<a class="headerlink" href="#panning-and-tiling" title="Ссылка на этот заголовок"></a></h3>
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-xpan">
-<span class="sig-name descname"><span class="pre">xpan</span></span><a class="headerlink" href="#transform-property-xpan" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">xpan</span></span><a class="headerlink" href="#transform-property-xpan" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>None or float</p>
@@ -955,7 +958,7 @@ respectively.</p>
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-ypan">
-<span class="sig-name descname"><span class="pre">ypan</span></span><a class="headerlink" href="#transform-property-ypan" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">ypan</span></span><a class="headerlink" href="#transform-property-ypan" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>None or float</p>
@@ -972,7 +975,7 @@ respectively.</p>
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-xtile">
-<span class="sig-name descname"><span class="pre">xtile</span></span><a class="headerlink" href="#transform-property-xtile" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">xtile</span></span><a class="headerlink" href="#transform-property-xtile" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>int</p>
@@ -986,7 +989,7 @@ respectively.</p>
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-ytile">
-<span class="sig-name descname"><span class="pre">ytile</span></span><a class="headerlink" href="#transform-property-ytile" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">ytile</span></span><a class="headerlink" href="#transform-property-ytile" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>int</p>
@@ -1000,11 +1003,11 @@ respectively.</p>
 
 </section>
 <section id="transitions">
-<h3>Transitions<a class="headerlink" href="#transitions" title="Link to this heading"></a></h3>
+<h3>Transitions<a class="headerlink" href="#transitions" title="Ссылка на этот заголовок"></a></h3>
 <p>See <a class="reference internal" href="transitions.html#atl-transitions"><span class="std std-ref">ATL Transitions</span></a>.</p>
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-delay">
-<span class="sig-name descname"><span class="pre">delay</span></span><a class="headerlink" href="#transform-property-delay" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">delay</span></span><a class="headerlink" href="#transform-property-delay" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>float</p>
@@ -1019,7 +1022,7 @@ of the transition. See <a class="reference internal" href="transitions.html#atl-
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-events">
-<span class="sig-name descname"><span class="pre">events</span></span><a class="headerlink" href="#transform-property-events" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">events</span></span><a class="headerlink" href="#transform-property-events" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>boolean</p>
@@ -1035,10 +1038,10 @@ reaching the old_widget.)</p>
 
 </section>
 <section id="other">
-<h3>Other<a class="headerlink" href="#other" title="Link to this heading"></a></h3>
+<h3>Other<a class="headerlink" href="#other" title="Ссылка на этот заголовок"></a></h3>
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-fps">
-<span class="sig-name descname"><span class="pre">fps</span></span><a class="headerlink" href="#transform-property-fps" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">fps</span></span><a class="headerlink" href="#transform-property-fps" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>float or None</p>
@@ -1055,7 +1058,7 @@ used to simulate a lower frame rate.</p>
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-show_cancels_hide">
-<span class="sig-name descname"><span class="pre">show_cancels_hide</span></span><a class="headerlink" href="#transform-property-show_cancels_hide" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">show_cancels_hide</span></span><a class="headerlink" href="#transform-property-show_cancels_hide" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>boolean</p>
@@ -1086,7 +1089,7 @@ elsewhere:</p>
 </section>
 </section>
 <section id="property-order">
-<h2>Property Order<a class="headerlink" href="#property-order" title="Link to this heading"></a></h2>
+<h2>Property Order<a class="headerlink" href="#property-order" title="Ссылка на этот заголовок"></a></h2>
 <p>Transform properties are applied in the following order:</p>
 <ol class="arabic simple">
 <li><p>fps</p></li>
@@ -1112,16 +1115,16 @@ elsewhere:</p>
 </ol>
 </section>
 <section id="deprecated-transform-properties">
-<h2>Deprecated Transform Properties<a class="headerlink" href="#deprecated-transform-properties" title="Link to this heading"></a></h2>
+<h2>Deprecated Transform Properties<a class="headerlink" href="#deprecated-transform-properties" title="Ссылка на этот заголовок"></a></h2>
 <div class="admonition warning">
-<p class="admonition-title">Warning</p>
+<p class="admonition-title">Предупреждение</p>
 <p>The following properties should not be used in modern games, as they may
 conflict with more recent features. They are only kept here for
 compatibility, along with the new way of achieving the same behavior.</p>
 </div>
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-alignaround">
-<span class="sig-name descname"><span class="pre">alignaround</span></span><a class="headerlink" href="#transform-property-alignaround" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">alignaround</span></span><a class="headerlink" href="#transform-property-alignaround" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>(float, float)</p>
@@ -1133,7 +1136,7 @@ same value.</p>
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-crop_relative">
-<span class="sig-name descname"><span class="pre">crop_relative</span></span><a class="headerlink" href="#transform-property-crop_relative" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">crop_relative</span></span><a class="headerlink" href="#transform-property-crop_relative" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>boolean</p>
@@ -1153,7 +1156,7 @@ in the <a class="reference internal" href="style_properties.html#absolute" title
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-size">
-<span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#transform-property-size" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#transform-property-size" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>None or (int, int)</p>
@@ -1168,7 +1171,7 @@ values as an absolute number of pixels.</p>
 
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-maxsize">
-<span class="sig-name descname"><span class="pre">maxsize</span></span><a class="headerlink" href="#transform-property-maxsize" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">maxsize</span></span><a class="headerlink" href="#transform-property-maxsize" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>None or (int, int)</p>
@@ -1190,9 +1193,9 @@ and set the <a class="reference internal" href="#transform-property-fit"><code c
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="transforms.html" class="btn btn-neutral float-left" title="Transforms" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="transitions.html" class="btn btn-neutral float-right" title="Transitions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Нижняя область">
+        <a href="transforms.html" class="btn btn-neutral float-left" title="Transforms" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+        <a href="transitions.html" class="btn btn-neutral float-right" title="Transitions" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -1201,9 +1204,9 @@ and set the <a class="reference internal" href="#transform-property-fit"><code c
     <p></p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>
