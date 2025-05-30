@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="ru" data-content_root="./">
 <head>
@@ -94,7 +95,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#ScaleMatrix"><code class="docutils literal notranslate"><span class="pre">ScaleMatrix</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#transform-properties">Transform Properties</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id7">Свойства трансформации</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#Camera"><code class="docutils literal notranslate"><span class="pre">Camera</span></code></a></li>
 </ul>
 </li>
@@ -438,25 +439,22 @@
 
 <p>        Факторы масштабирования по каждой оси.</p>
 </section>
-<section id="transform-properties">
-<h2>Transform Properties<a class="headerlink" href="#transform-properties" title="Ссылка на этот заголовок"></a></h2>
-<p>The following transform properties are used by the 3D Stage.</p>
+<section id="id7">
+<h2>Свойства трансформации<a class="headerlink" href="#id7" title="Ссылка на этот заголовок"></a></h2>
+<p>Ниже перечислены свойства трансформации, используемые на 3D сцене.</p>
 <dl class="std transform-property">
 <dt class="sig sig-object std" id="transform-property-matrixanchor">
 <span class="sig-name descname"><span class="pre">matrixanchor</span></span><a class="headerlink" href="#transform-property-matrixanchor" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>(position, position)</p>
+<dd class="field-odd"><p>(позиция, позиция)</p>
 </dd>
 <dt class="field-even">Default<span class="colon">:</span></dt>
 <dd class="field-even"><p>(0.5, 0.5)</p>
 </dd>
 </dl>
-<p>This gives the position of the matrix anchor relative to the image. If the
-variables are floats, this is relative to the size of the child, otherwise
-it's absolute pixels.</p>
-<p>This sets the location of the (0, 0, 0) point that point_to, orientation,
-xrotate, yrotate, zrotate and matrixtransform apply their transforms to.</p>
+<p>Определяет позицию якоря матрицы относительно изображения. Если значения — числа с плавающей точкой, позиция задаётся относительно размера дочернего объекта, иначе — в абсолютных пикселях.</p>
+<p>Устанавливает точку (0, 0, 0), относительно которой применяются трансформации point_to, orientation, xrotate, yrotate, zrotate и matrixtransform.</p>
 </dd></dl>
 
 <dl class="std transform-property">
@@ -464,22 +462,17 @@ xrotate, yrotate, zrotate and matrixtransform apply their transforms to.</p>
 <span class="sig-name descname"><span class="pre">point_to</span></span><a class="headerlink" href="#transform-property-point_to" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>(float, float, float), Camera, or None</p>
+<dd class="field-odd"><p>(float, float, float), Camera или None</p>
 </dd>
 <dt class="field-even">Default<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
-<p>This gives a position to which to point. The camera or the
-displayable being transformed are rotated to face that point,
-even if the position of the camera or the displayable is changed.</p>
-<p>If this is None, no point-of-interest rotation is applied.</p>
-<p>If this is not None, this is a 3-tuple or an instance of <a class="reference internal" href="#Camera" title="Camera"><code class="xref py py-func docutils literal notranslate"><span class="pre">Camera()</span></code></a>.
-An (x, y, z) format tuple represents the position of the point of interest.
-An instance of Camera means to point at the camera.</p>
-<p>Note point_to isn't updated automatically. so, you should write like below if
-you want it is updated:</p>
-<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="c1"># eileen always faces to the camera.</span>
+<p>Задаёт точку, на которую будет направлен объект. Камера или отображаемый объект будут повёрнуты лицом к этой точке, даже если их позиции изменятся.</p>
+<p>Если значение None, поворот на точку интереса не применяется.</p>
+<p>Если значение не None, это либо 3-элементный кортеж (x, y, z) с координатами точки интереса, либо экземпляр <a class="reference internal" href="#Camera" title="Camera"><code class="xref py py-func docutils literal notranslate"><span class="pre">Camera()</span></code></a>. В случае камеры объект будет смотреть в её сторону.</p>
+<p>Учтите, что point_to не обновляется автоматически, поэтому, если хотите, чтобы оно обновлялось, используйте следующий код:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="c1"># Eileen всегда смотрит на камеру.</span>
 <span class="k">show</span> <span class="n">eileen</span> <span class="n">happy</span> <span class="k">at</span> <span class="n">center</span><span class="p">:</span>
     <span class="na">point_to</span> <span class="n">Camera</span><span class="p">()</span>
     <span class="mi">0</span>
@@ -504,18 +497,15 @@ at the location of the camera for a particular layer.</p>
 <span class="sig-name descname"><span class="pre">orientation</span></span><a class="headerlink" href="#transform-property-orientation" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>(float, float, float) or None</p>
+<dd class="field-odd"><p>(float, float, float) или None</p>
 </dd>
 <dt class="field-even">Default<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
-<p>This rotates the camera or the displayable. The three values are the
-x, y, and z rotations, in degrees. The rotations are applied in x, y, z
-order for displayables, and z, y, x order for the camera.</p>
-<p>When interpolation is used with orientation, the shortest path is taken
-between the old and new orientations.</p>
-<p>If this is None, no orientation is applied.</p>
+<p>Выполняет поворот камеры или отображаемого объекта. Три значения — это углы поворота вокруг осей x, y и z в градусах. Повороты применяются в порядке x, y, z для объектов и в порядке z, y, x для камеры.</p>
+<p>При интерполяции значения orientation выбирается кратчайший путь между старой и новой ориентацией.</p>
+<p>Если значение None, поворот не применяется.</p>
 </dd></dl>
 
 <dl class="std transform-property">
@@ -523,16 +513,14 @@ between the old and new orientations.</p>
 <span class="sig-name descname"><span class="pre">xrotate</span></span><a class="headerlink" href="#transform-property-xrotate" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>float or None</p>
+<dd class="field-odd"><p>float или None</p>
 </dd>
 <dt class="field-even">Default<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
-<p>This rotates the camera or the displayable around the x axis. The value is
-the rotation, in degrees. Rotations are applied to displayables in x, y, z
-order. Rotations are applied to the camera in z, y, x order.</p>
-<p>If this is None, no x-axis rotation is applied.</p>
+<p>Выполняет поворот камеры или отображаемого объекта вокруг оси x. Значение — угол поворота в градусах. Для объектов повороты применяются в порядке x, y, z. Для камеры — в порядке z, y, x.</p>
+<p>Если значение None, поворот вокруг оси x не применяется.</p>
 </dd></dl>
 
 <dl class="std transform-property">
@@ -540,16 +528,14 @@ order. Rotations are applied to the camera in z, y, x order.</p>
 <span class="sig-name descname"><span class="pre">yrotate</span></span><a class="headerlink" href="#transform-property-yrotate" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>float or None</p>
+<dd class="field-odd"><p>float или None</p>
 </dd>
 <dt class="field-even">Default<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
-<p>This rotates the camera or the displayable around the y axis. The value is
-the rotation, in degrees. Rotations are applied to displayables in x, y, z
-order. Rotations are applied to the camera in z, y, x order.</p>
-<p>If this is None, no y-axis rotation is applied.</p>
+<p>Выполняет поворот камеры или отображаемого объекта вокруг оси y. Значение — угол поворота в градусах. Для объектов повороты применяются в порядке x, y, z. Для камеры — в порядке z, y, x.</p>
+<p>Если значение None, поворот вокруг оси y не применяется.</p>
 </dd></dl>
 
 <dl class="std transform-property">
@@ -557,16 +543,14 @@ order. Rotations are applied to the camera in z, y, x order.</p>
 <span class="sig-name descname"><span class="pre">zrotate</span></span><a class="headerlink" href="#transform-property-zrotate" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>float or None</p>
+<dd class="field-odd"><p>float или None</p>
 </dd>
 <dt class="field-even">Default<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
-<p>This rotates the camera or the displayable around the z axis. The value is
-the rotation, in degrees. Rotations are applied to displayables in x, y, z
-order. Rotations are applied to the camera in z, y, x order.</p>
-<p>If this is None, no z-axis rotation is applied.</p>
+<p>Выполняет поворот камеры или отображаемого объекта вокруг оси z. Значение — угол поворота в градусах. Для объектов повороты применяются в порядке x, y, z. Для камеры — в порядке z, y, x.</p>
+<p>Если значение None, поворот вокруг оси z не применяется.</p>
 </dd></dl>
 
 <dl class="std transform-property">
@@ -574,18 +558,14 @@ order. Rotations are applied to the camera in z, y, x order.</p>
 <span class="sig-name descname"><span class="pre">matrixtransform</span></span><a class="headerlink" href="#transform-property-matrixtransform" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>None or Matrix or TransformMatrix</p>
+<dd class="field-odd"><p>None, Matrix или TransformMatrix</p>
 </dd>
 <dt class="field-even">Default<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
-<p>If not None, this gives a matrix that is used to transform the vertices
-of the child of the transform. The transformation goes from the coordinates
-used by the screen to the coordinates used by the child of the transform.</p>
-<p>Interpolations involving this property are only supported when using a
-TransformMatrix, and when the TransformMatrix values are structurally similar,
-as described above.</p>
+<p>Если не None, задаёт матрицу, используемую для преобразования вершин дочернего объекта трансформации. Преобразование идёт из координат экрана в координаты дочернего объекта.</p>
+<p>Интерполяция с этой свойством поддерживается только при использовании TransformMatrix и при структурном сходстве TransformMatrix, как описано выше.</p>
 </dd></dl>
 
 <dl class="std transform-property">
@@ -593,25 +573,16 @@ as described above.</p>
 <span class="sig-name descname"><span class="pre">perspective</span></span><a class="headerlink" href="#transform-property-perspective" title="Ссылка на это определение"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>True or False or Float or (Float, Float, Float)</p>
+<dd class="field-odd"><p>True, False, Float или (Float, Float, Float)</p>
 </dd>
 <dt class="field-even">Default<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
-<p>When applied to a transform, this enables perspective rendering. This
-takes a triple, giving the near plane, z-distance to the 1:1 plane, and
-far plane.</p>
-<p>If a single float, the distances to the near and far planes are taken
-from <a class="reference internal" href="#var-config.perspective"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.perspective</span></code></a>. If True, all three values are taken
-from that variable.</p>
-<p>When perspective is not false, the meaning of the <a class="reference internal" href="transform_properties.html#transform-property-xpos"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">xpos</span></code></a>, <a class="reference internal" href="transform_properties.html#transform-property-ypos"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">ypos</span></code></a>,
-<a class="reference internal" href="#transform-property-zpos"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">zpos</span></code></a>, and <a class="reference internal" href="transform_properties.html#transform-property-rotate"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">rotate</span></code></a> are inverted, providing the effect of positioning the
-camera rather than the child.</p>
-<p>As the perspective transformation assumes it's aligned with the window,
-it doesn't make sense to reposition it using <a class="reference internal" href="transform_properties.html#transform-property-xanchor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">xanchor</span></code></a>, and <a class="reference internal" href="transform_properties.html#transform-property-yanchor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">yanchor</span></code></a>,
-or properties that set those, such as <a class="reference internal" href="transform_properties.html#transform-property-anchor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">anchor</span></code></a>, <a class="reference internal" href="transform_properties.html#transform-property-align"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">align</span></code></a>, <code class="xref std std-tpref docutils literal notranslate"><span class="pre">center</span></code>,
-etc.</p>
+<p>При применении к трансформации включает перспективную отрисовку. Принимает тройку значений: ближняя плоскость, расстояние по оси z до плоскости 1:1 и дальняя плоскость.</p>
+<p>Если задано одно число (float), расстояния до ближней и дальней плоскостей берутся из переменной <a class="reference internal" href="#var-config.perspective"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.perspective</span></code></a>. Если True — все три значения берутся из неё.</p>
+<p>Если perspective не false, значения <a class="reference internal" href="transform_properties.html#transform-property-xpos"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">xpos</span></code></a>, <a class="reference internal" href="transform_properties.html#transform-property-ypos"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">ypos</span></code></a>, <a class="reference internal" href="#transform-property-zpos"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">zpos</span></code></a> и <a class="reference internal" href="transform_properties.html#transform-property-rotate"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">rotate</span></code></a> инвертируются, создавая эффект позиционирования камеры, а не дочернего объекта.</p>
+<p>Поскольку перспективное преобразование предполагает выравнивание по окну, не имеет смысла менять позицию с помощью <a class="reference internal" href="transform_properties.html#transform-property-xanchor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">xanchor</span></code></a>, <a class="reference internal" href="transform_properties.html#transform-property-yanchor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">yanchor</span></code></a> или их производных, таких как <a class="reference internal" href="transform_properties.html#transform-property-anchor"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">anchor</span></code></a>, <a class="reference internal" href="transform_properties.html#transform-property-align"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">align</span></code></a>, <code class="xref std std-tpref docutils literal notranslate"><span class="pre">center</span></code> и т.п.</p>
 </dd></dl>
 
 <dl class="std transform-property">
@@ -625,10 +596,8 @@ etc.</p>
 <dd class="field-even"><p>0</p>
 </dd>
 </dl>
-<p>This offsets the child along the z-axis. When perspective is false,
-this is used directly, otherwise it is multiplied by -1 and used.</p>
-<p>If setting this causes the child to disappear, it's likely that the
-transform is not being used with a displayable where zpos is False.</p>
+<p>Смещает дочерний объект вдоль оси z. Если perspective выключена, значение используется напрямую, иначе умножается на -1.</p>
+<p>Если при установке исчезает объект, вероятно, трансформация применяется не к отображаемому объекту, где zpos включён.</p>
 </dd></dl>
 
 <dl class="std transform-property">
@@ -642,12 +611,8 @@ transform is not being used with a displayable where zpos is False.</p>
 <dd class="field-even"><p>False</p>
 </dd>
 </dl>
-<p>If this is true, the z-distance to the 1:1 plane (<cite>zone</cite>) is determined,
-along with this displayable's zpos. The child is then scaled by (<cite>zone</cite> - <cite>zpos</cite>) / <cite>zone</cite>
-in the x and y axes.</p>
-<p>The intended use for this is in displaying a background with a negative <cite>zpos</cite>, which
-would normally make the background small. Setting this to true means that the background
-will be displayed at 1:1 size.</p>
+<p>Если True, определяется расстояние до плоскости 1:1 (<cite>zone</cite>) и берётся zpos объекта. Затем дочерний объект масштабируется по осям x и y на величину (<cite>zone</cite> - <cite>zpos</cite>) / <cite>zone</cite>.</p>
+<p>Это удобно для фоновых изображений с отрицательным <cite>zpos</cite>, которые обычно уменьшаются. Установка True позволяет отображать фон в масштабе 1:1.</p>
 </dd></dl>
 
 </section>
